@@ -22,7 +22,7 @@ GL/glx.h
 GL/glu.h
 -
 
-/home/twittumz/Desktop/localgit/ParalyzedEngineCpp/Demos/SpaceInvaders/main.cpp
+/home/twittumz/Desktop/git/ParalyzedEngine/Demos/SpaceInvaders/main.cpp
 iostream
 -
 X11/X.h
@@ -46,9 +46,9 @@ ParalyzedEngineWindow.h
 vector
 -
 projectile.hpp
-/home/twittumz/Desktop/localgit/ParalyzedEngineCpp/Demos/SpaceInvaders/projectile.hpp
+/home/twittumz/Desktop/git/ParalyzedEngine/Demos/SpaceInvaders/projectile.hpp
 
-/home/twittumz/Desktop/localgit/ParalyzedEngineCpp/Demos/SpaceInvaders/projectile.hpp
+/home/twittumz/Desktop/git/ParalyzedEngine/Demos/SpaceInvaders/projectile.hpp
 ParalyzedEngine.h
 -
 

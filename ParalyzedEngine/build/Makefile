@@ -48,24 +48,13 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/twittumz/Desktop/git/ParalyzedEngine/Demos/SpaceInvaders
+CMAKE_SOURCE_DIR = /home/twittumz/Desktop/git/ParalyzedEngine/ParalyzedEngnine
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/twittumz/Desktop/git/ParalyzedEngine/Demos/SpaceInvaders/build
+CMAKE_BINARY_DIR = /home/twittumz/Desktop/git/ParalyzedEngine/ParalyzedEngnine/build
 
 #=============================================================================
 # Targets provided globally by CMake.
-
-# Special rule for the target rebuild_cache
-rebuild_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/usr/bin/cmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
-.PHONY : rebuild_cache
-
-# Special rule for the target rebuild_cache
-rebuild_cache/fast: rebuild_cache
-
-.PHONY : rebuild_cache/fast
 
 # Special rule for the target edit_cache
 edit_cache:
@@ -78,11 +67,22 @@ edit_cache/fast: edit_cache
 
 .PHONY : edit_cache/fast
 
+# Special rule for the target rebuild_cache
+rebuild_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
+	/usr/bin/cmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+.PHONY : rebuild_cache
+
+# Special rule for the target rebuild_cache
+rebuild_cache/fast: rebuild_cache
+
+.PHONY : rebuild_cache/fast
+
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/twittumz/Desktop/git/ParalyzedEngine/Demos/SpaceInvaders/build/CMakeFiles /home/twittumz/Desktop/git/ParalyzedEngine/Demos/SpaceInvaders/build/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/twittumz/Desktop/git/ParalyzedEngine/ParalyzedEngnine/build/CMakeFiles /home/twittumz/Desktop/git/ParalyzedEngine/ParalyzedEngnine/build/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/twittumz/Desktop/git/ParalyzedEngine/Demos/SpaceInvaders/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/twittumz/Desktop/git/ParalyzedEngine/ParalyzedEngnine/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -111,44 +111,71 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named SpaceInvaders
+# Target rules for targets named ParalyzedEngine
 
 # Build rule for target.
-SpaceInvaders: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 SpaceInvaders
-.PHONY : SpaceInvaders
+ParalyzedEngine: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 ParalyzedEngine
+.PHONY : ParalyzedEngine
 
 # fast build rule for target.
-SpaceInvaders/fast:
-	$(MAKE) -f CMakeFiles/SpaceInvaders.dir/build.make CMakeFiles/SpaceInvaders.dir/build
-.PHONY : SpaceInvaders/fast
+ParalyzedEngine/fast:
+	$(MAKE) -f CMakeFiles/ParalyzedEngine.dir/build.make CMakeFiles/ParalyzedEngine.dir/build
+.PHONY : ParalyzedEngine/fast
 
-main.o: main.cpp.o
+ParalyzedEngine.o: ParalyzedEngine.c.o
 
-.PHONY : main.o
+.PHONY : ParalyzedEngine.o
 
 # target to build an object file
-main.cpp.o:
-	$(MAKE) -f CMakeFiles/SpaceInvaders.dir/build.make CMakeFiles/SpaceInvaders.dir/main.cpp.o
-.PHONY : main.cpp.o
+ParalyzedEngine.c.o:
+	$(MAKE) -f CMakeFiles/ParalyzedEngine.dir/build.make CMakeFiles/ParalyzedEngine.dir/ParalyzedEngine.c.o
+.PHONY : ParalyzedEngine.c.o
 
-main.i: main.cpp.i
+ParalyzedEngine.i: ParalyzedEngine.c.i
 
-.PHONY : main.i
+.PHONY : ParalyzedEngine.i
 
 # target to preprocess a source file
-main.cpp.i:
-	$(MAKE) -f CMakeFiles/SpaceInvaders.dir/build.make CMakeFiles/SpaceInvaders.dir/main.cpp.i
-.PHONY : main.cpp.i
+ParalyzedEngine.c.i:
+	$(MAKE) -f CMakeFiles/ParalyzedEngine.dir/build.make CMakeFiles/ParalyzedEngine.dir/ParalyzedEngine.c.i
+.PHONY : ParalyzedEngine.c.i
 
-main.s: main.cpp.s
+ParalyzedEngine.s: ParalyzedEngine.c.s
 
-.PHONY : main.s
+.PHONY : ParalyzedEngine.s
 
 # target to generate assembly for a file
-main.cpp.s:
-	$(MAKE) -f CMakeFiles/SpaceInvaders.dir/build.make CMakeFiles/SpaceInvaders.dir/main.cpp.s
-.PHONY : main.cpp.s
+ParalyzedEngine.c.s:
+	$(MAKE) -f CMakeFiles/ParalyzedEngine.dir/build.make CMakeFiles/ParalyzedEngine.dir/ParalyzedEngine.c.s
+.PHONY : ParalyzedEngine.c.s
+
+ParalyzedEngineWindow.o: ParalyzedEngineWindow.c.o
+
+.PHONY : ParalyzedEngineWindow.o
+
+# target to build an object file
+ParalyzedEngineWindow.c.o:
+	$(MAKE) -f CMakeFiles/ParalyzedEngine.dir/build.make CMakeFiles/ParalyzedEngine.dir/ParalyzedEngineWindow.c.o
+.PHONY : ParalyzedEngineWindow.c.o
+
+ParalyzedEngineWindow.i: ParalyzedEngineWindow.c.i
+
+.PHONY : ParalyzedEngineWindow.i
+
+# target to preprocess a source file
+ParalyzedEngineWindow.c.i:
+	$(MAKE) -f CMakeFiles/ParalyzedEngine.dir/build.make CMakeFiles/ParalyzedEngine.dir/ParalyzedEngineWindow.c.i
+.PHONY : ParalyzedEngineWindow.c.i
+
+ParalyzedEngineWindow.s: ParalyzedEngineWindow.c.s
+
+.PHONY : ParalyzedEngineWindow.s
+
+# target to generate assembly for a file
+ParalyzedEngineWindow.c.s:
+	$(MAKE) -f CMakeFiles/ParalyzedEngine.dir/build.make CMakeFiles/ParalyzedEngine.dir/ParalyzedEngineWindow.c.s
+.PHONY : ParalyzedEngineWindow.c.s
 
 # Help Target
 help:
@@ -156,12 +183,15 @@ help:
 	@echo "... all (the default if no target is provided)"
 	@echo "... clean"
 	@echo "... depend"
-	@echo "... rebuild_cache"
 	@echo "... edit_cache"
-	@echo "... SpaceInvaders"
-	@echo "... main.o"
-	@echo "... main.i"
-	@echo "... main.s"
+	@echo "... rebuild_cache"
+	@echo "... ParalyzedEngine"
+	@echo "... ParalyzedEngine.o"
+	@echo "... ParalyzedEngine.i"
+	@echo "... ParalyzedEngine.s"
+	@echo "... ParalyzedEngineWindow.o"
+	@echo "... ParalyzedEngineWindow.i"
+	@echo "... ParalyzedEngineWindow.s"
 .PHONY : help
 
 

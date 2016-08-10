@@ -4,6 +4,7 @@ project (SpaceInvaders)
 find_package(PkgConfig REQUIRED)
 
 set(CMAKE_BUILD_TYPE Release)
+
 INCLUDE_DIRECTORIES(${CMAKE_CURRENT_SOURCE_DIR}/../../ParalyzedEngine/)
 LINK_DIRECTORIES(${CMAKE_CURRENT_SOURCE_DIR}/../../ParalyzedEngine/build/)
 add_executable(SpaceInvaders main.cpp)

@@ -54,45 +54,45 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/twittumz/Desktop/git/ParalyzedEngine/Demos/SpaceInvaders
+CMAKE_SOURCE_DIR = /home/twittumz/Desktop/git/ParalyzedEngine/ParalyzedEngnine
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/twittumz/Desktop/git/ParalyzedEngine/Demos/SpaceInvaders/build
+CMAKE_BINARY_DIR = /home/twittumz/Desktop/git/ParalyzedEngine/ParalyzedEngnine/build
 
 #=============================================================================
-# Target rules for target CMakeFiles/SpaceInvaders.dir
+# Target rules for target CMakeFiles/ParalyzedEngine.dir
 
 # All Build rule for target.
-CMakeFiles/SpaceInvaders.dir/all:
-	$(MAKE) -f CMakeFiles/SpaceInvaders.dir/build.make CMakeFiles/SpaceInvaders.dir/depend
-	$(MAKE) -f CMakeFiles/SpaceInvaders.dir/build.make CMakeFiles/SpaceInvaders.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/twittumz/Desktop/git/ParalyzedEngine/Demos/SpaceInvaders/build/CMakeFiles --progress-num=1,2 "Built target SpaceInvaders"
-.PHONY : CMakeFiles/SpaceInvaders.dir/all
+CMakeFiles/ParalyzedEngine.dir/all:
+	$(MAKE) -f CMakeFiles/ParalyzedEngine.dir/build.make CMakeFiles/ParalyzedEngine.dir/depend
+	$(MAKE) -f CMakeFiles/ParalyzedEngine.dir/build.make CMakeFiles/ParalyzedEngine.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/twittumz/Desktop/git/ParalyzedEngine/ParalyzedEngnine/build/CMakeFiles --progress-num=1,2,3 "Built target ParalyzedEngine"
+.PHONY : CMakeFiles/ParalyzedEngine.dir/all
 
 # Include target in all.
-all: CMakeFiles/SpaceInvaders.dir/all
+all: CMakeFiles/ParalyzedEngine.dir/all
 
 .PHONY : all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/SpaceInvaders.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/twittumz/Desktop/git/ParalyzedEngine/Demos/SpaceInvaders/build/CMakeFiles 2
-	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/SpaceInvaders.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/twittumz/Desktop/git/ParalyzedEngine/Demos/SpaceInvaders/build/CMakeFiles 0
-.PHONY : CMakeFiles/SpaceInvaders.dir/rule
+CMakeFiles/ParalyzedEngine.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/twittumz/Desktop/git/ParalyzedEngine/ParalyzedEngnine/build/CMakeFiles 3
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/ParalyzedEngine.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/twittumz/Desktop/git/ParalyzedEngine/ParalyzedEngnine/build/CMakeFiles 0
+.PHONY : CMakeFiles/ParalyzedEngine.dir/rule
 
 # Convenience name for target.
-SpaceInvaders: CMakeFiles/SpaceInvaders.dir/rule
+ParalyzedEngine: CMakeFiles/ParalyzedEngine.dir/rule
 
-.PHONY : SpaceInvaders
-
-# clean rule for target.
-CMakeFiles/SpaceInvaders.dir/clean:
-	$(MAKE) -f CMakeFiles/SpaceInvaders.dir/build.make CMakeFiles/SpaceInvaders.dir/clean
-.PHONY : CMakeFiles/SpaceInvaders.dir/clean
+.PHONY : ParalyzedEngine
 
 # clean rule for target.
-clean: CMakeFiles/SpaceInvaders.dir/clean
+CMakeFiles/ParalyzedEngine.dir/clean:
+	$(MAKE) -f CMakeFiles/ParalyzedEngine.dir/build.make CMakeFiles/ParalyzedEngine.dir/clean
+.PHONY : CMakeFiles/ParalyzedEngine.dir/clean
+
+# clean rule for target.
+clean: CMakeFiles/ParalyzedEngine.dir/clean
 
 .PHONY : clean
 

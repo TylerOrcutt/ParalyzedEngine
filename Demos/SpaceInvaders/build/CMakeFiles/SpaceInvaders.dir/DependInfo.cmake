@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/twittumz/Desktop/localgit/ParalyzedEngineCpp/Demos/SpaceInvaders/main.cpp" "/home/twittumz/Desktop/localgit/ParalyzedEngineCpp/Demos/SpaceInvaders/build/CMakeFiles/SpaceInvaders.dir/main.cpp.o"
+  "/home/twittumz/Desktop/git/ParalyzedEngine/Demos/SpaceInvaders/main.cpp" "/home/twittumz/Desktop/git/ParalyzedEngine/Demos/SpaceInvaders/build/CMakeFiles/SpaceInvaders.dir/main.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

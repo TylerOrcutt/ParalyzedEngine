@@ -1,0 +1,2 @@
+/usr/bin/ar qc libParalyzedEngine.a  CMakeFiles/ParalyzedEngine.dir/ParalyzedEngine.c.o CMakeFiles/ParalyzedEngine.dir/ParalyzedEngineWindow.c.o
+/usr/bin/ranlib libParalyzedEngine.a

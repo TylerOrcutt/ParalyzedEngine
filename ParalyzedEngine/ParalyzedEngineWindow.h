@@ -16,10 +16,8 @@ typedef struct PEWindow {
     GC gc;
 }PEWindow;
  
-extern PEWindow* createPEWindow(int,int, char*);
-    
-
-  extern  void getNextEvent(PEWindow *,XEvent*);
+extern PEWindow* createPEWindow(int,int, const char*);
+extern  void getNextEvent(PEWindow *,XEvent*);
 
 #ifdef __cplusplus
  }

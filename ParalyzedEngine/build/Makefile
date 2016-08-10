@@ -48,10 +48,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/twittumz/Desktop/git/ParalyzedEngine/ParalyzedEngnine
+CMAKE_SOURCE_DIR = /home/twittumz/Desktop/git/ParalyzedEngine/ParalyzedEngine
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/twittumz/Desktop/git/ParalyzedEngine/ParalyzedEngnine/build
+CMAKE_BINARY_DIR = /home/twittumz/Desktop/git/ParalyzedEngine/ParalyzedEngine/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -80,9 +80,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/twittumz/Desktop/git/ParalyzedEngine/ParalyzedEngnine/build/CMakeFiles /home/twittumz/Desktop/git/ParalyzedEngine/ParalyzedEngnine/build/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/twittumz/Desktop/git/ParalyzedEngine/ParalyzedEngine/build/CMakeFiles /home/twittumz/Desktop/git/ParalyzedEngine/ParalyzedEngine/build/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/twittumz/Desktop/git/ParalyzedEngine/ParalyzedEngnine/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/twittumz/Desktop/git/ParalyzedEngine/ParalyzedEngine/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -123,6 +123,87 @@ ParalyzedEngine/fast:
 	$(MAKE) -f CMakeFiles/ParalyzedEngine.dir/build.make CMakeFiles/ParalyzedEngine.dir/build
 .PHONY : ParalyzedEngine/fast
 
+JSON/JSONParser.o: JSON/JSONParser.cpp.o
+
+.PHONY : JSON/JSONParser.o
+
+# target to build an object file
+JSON/JSONParser.cpp.o:
+	$(MAKE) -f CMakeFiles/ParalyzedEngine.dir/build.make CMakeFiles/ParalyzedEngine.dir/JSON/JSONParser.cpp.o
+.PHONY : JSON/JSONParser.cpp.o
+
+JSON/JSONParser.i: JSON/JSONParser.cpp.i
+
+.PHONY : JSON/JSONParser.i
+
+# target to preprocess a source file
+JSON/JSONParser.cpp.i:
+	$(MAKE) -f CMakeFiles/ParalyzedEngine.dir/build.make CMakeFiles/ParalyzedEngine.dir/JSON/JSONParser.cpp.i
+.PHONY : JSON/JSONParser.cpp.i
+
+JSON/JSONParser.s: JSON/JSONParser.cpp.s
+
+.PHONY : JSON/JSONParser.s
+
+# target to generate assembly for a file
+JSON/JSONParser.cpp.s:
+	$(MAKE) -f CMakeFiles/ParalyzedEngine.dir/build.make CMakeFiles/ParalyzedEngine.dir/JSON/JSONParser.cpp.s
+.PHONY : JSON/JSONParser.cpp.s
+
+Network/WebClient.o: Network/WebClient.c.o
+
+.PHONY : Network/WebClient.o
+
+# target to build an object file
+Network/WebClient.c.o:
+	$(MAKE) -f CMakeFiles/ParalyzedEngine.dir/build.make CMakeFiles/ParalyzedEngine.dir/Network/WebClient.c.o
+.PHONY : Network/WebClient.c.o
+
+Network/WebClient.i: Network/WebClient.c.i
+
+.PHONY : Network/WebClient.i
+
+# target to preprocess a source file
+Network/WebClient.c.i:
+	$(MAKE) -f CMakeFiles/ParalyzedEngine.dir/build.make CMakeFiles/ParalyzedEngine.dir/Network/WebClient.c.i
+.PHONY : Network/WebClient.c.i
+
+Network/WebClient.s: Network/WebClient.c.s
+
+.PHONY : Network/WebClient.s
+
+# target to generate assembly for a file
+Network/WebClient.c.s:
+	$(MAKE) -f CMakeFiles/ParalyzedEngine.dir/build.make CMakeFiles/ParalyzedEngine.dir/Network/WebClient.c.s
+.PHONY : Network/WebClient.c.s
+
+PEDictionary.o: PEDictionary.cpp.o
+
+.PHONY : PEDictionary.o
+
+# target to build an object file
+PEDictionary.cpp.o:
+	$(MAKE) -f CMakeFiles/ParalyzedEngine.dir/build.make CMakeFiles/ParalyzedEngine.dir/PEDictionary.cpp.o
+.PHONY : PEDictionary.cpp.o
+
+PEDictionary.i: PEDictionary.cpp.i
+
+.PHONY : PEDictionary.i
+
+# target to preprocess a source file
+PEDictionary.cpp.i:
+	$(MAKE) -f CMakeFiles/ParalyzedEngine.dir/build.make CMakeFiles/ParalyzedEngine.dir/PEDictionary.cpp.i
+.PHONY : PEDictionary.cpp.i
+
+PEDictionary.s: PEDictionary.cpp.s
+
+.PHONY : PEDictionary.s
+
+# target to generate assembly for a file
+PEDictionary.cpp.s:
+	$(MAKE) -f CMakeFiles/ParalyzedEngine.dir/build.make CMakeFiles/ParalyzedEngine.dir/PEDictionary.cpp.s
+.PHONY : PEDictionary.cpp.s
+
 ParalyzedEngine.o: ParalyzedEngine.c.o
 
 .PHONY : ParalyzedEngine.o
@@ -149,6 +230,33 @@ ParalyzedEngine.s: ParalyzedEngine.c.s
 ParalyzedEngine.c.s:
 	$(MAKE) -f CMakeFiles/ParalyzedEngine.dir/build.make CMakeFiles/ParalyzedEngine.dir/ParalyzedEngine.c.s
 .PHONY : ParalyzedEngine.c.s
+
+ParalyzedEngineSpriteRenderer.o: ParalyzedEngineSpriteRenderer.c.o
+
+.PHONY : ParalyzedEngineSpriteRenderer.o
+
+# target to build an object file
+ParalyzedEngineSpriteRenderer.c.o:
+	$(MAKE) -f CMakeFiles/ParalyzedEngine.dir/build.make CMakeFiles/ParalyzedEngine.dir/ParalyzedEngineSpriteRenderer.c.o
+.PHONY : ParalyzedEngineSpriteRenderer.c.o
+
+ParalyzedEngineSpriteRenderer.i: ParalyzedEngineSpriteRenderer.c.i
+
+.PHONY : ParalyzedEngineSpriteRenderer.i
+
+# target to preprocess a source file
+ParalyzedEngineSpriteRenderer.c.i:
+	$(MAKE) -f CMakeFiles/ParalyzedEngine.dir/build.make CMakeFiles/ParalyzedEngine.dir/ParalyzedEngineSpriteRenderer.c.i
+.PHONY : ParalyzedEngineSpriteRenderer.c.i
+
+ParalyzedEngineSpriteRenderer.s: ParalyzedEngineSpriteRenderer.c.s
+
+.PHONY : ParalyzedEngineSpriteRenderer.s
+
+# target to generate assembly for a file
+ParalyzedEngineSpriteRenderer.c.s:
+	$(MAKE) -f CMakeFiles/ParalyzedEngine.dir/build.make CMakeFiles/ParalyzedEngine.dir/ParalyzedEngineSpriteRenderer.c.s
+.PHONY : ParalyzedEngineSpriteRenderer.c.s
 
 ParalyzedEngineWindow.o: ParalyzedEngineWindow.c.o
 
@@ -186,9 +294,21 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... ParalyzedEngine"
+	@echo "... JSON/JSONParser.o"
+	@echo "... JSON/JSONParser.i"
+	@echo "... JSON/JSONParser.s"
+	@echo "... Network/WebClient.o"
+	@echo "... Network/WebClient.i"
+	@echo "... Network/WebClient.s"
+	@echo "... PEDictionary.o"
+	@echo "... PEDictionary.i"
+	@echo "... PEDictionary.s"
 	@echo "... ParalyzedEngine.o"
 	@echo "... ParalyzedEngine.i"
 	@echo "... ParalyzedEngine.s"
+	@echo "... ParalyzedEngineSpriteRenderer.o"
+	@echo "... ParalyzedEngineSpriteRenderer.i"
+	@echo "... ParalyzedEngineSpriteRenderer.s"
 	@echo "... ParalyzedEngineWindow.o"
 	@echo "... ParalyzedEngineWindow.i"
 	@echo "... ParalyzedEngineWindow.s"

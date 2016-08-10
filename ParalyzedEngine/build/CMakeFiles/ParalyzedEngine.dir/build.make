@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/twittumz/Desktop/git/ParalyzedEngine/ParalyzedEngnine
+CMAKE_SOURCE_DIR = /home/twittumz/Desktop/git/ParalyzedEngine/ParalyzedEngine
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/twittumz/Desktop/git/ParalyzedEngine/ParalyzedEngnine/build
+CMAKE_BINARY_DIR = /home/twittumz/Desktop/git/ParalyzedEngine/ParalyzedEngine/build
 
 # Include any dependencies generated for this target.
 include CMakeFiles/ParalyzedEngine.dir/depend.make
@@ -59,16 +59,16 @@ include CMakeFiles/ParalyzedEngine.dir/flags.make
 
 CMakeFiles/ParalyzedEngine.dir/ParalyzedEngine.c.o: CMakeFiles/ParalyzedEngine.dir/flags.make
 CMakeFiles/ParalyzedEngine.dir/ParalyzedEngine.c.o: ../ParalyzedEngine.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/twittumz/Desktop/git/ParalyzedEngine/ParalyzedEngnine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/ParalyzedEngine.dir/ParalyzedEngine.c.o"
-	/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ParalyzedEngine.dir/ParalyzedEngine.c.o   -c /home/twittumz/Desktop/git/ParalyzedEngine/ParalyzedEngnine/ParalyzedEngine.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/twittumz/Desktop/git/ParalyzedEngine/ParalyzedEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/ParalyzedEngine.dir/ParalyzedEngine.c.o"
+	/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ParalyzedEngine.dir/ParalyzedEngine.c.o   -c /home/twittumz/Desktop/git/ParalyzedEngine/ParalyzedEngine/ParalyzedEngine.c
 
 CMakeFiles/ParalyzedEngine.dir/ParalyzedEngine.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/ParalyzedEngine.dir/ParalyzedEngine.c.i"
-	/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/twittumz/Desktop/git/ParalyzedEngine/ParalyzedEngnine/ParalyzedEngine.c > CMakeFiles/ParalyzedEngine.dir/ParalyzedEngine.c.i
+	/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/twittumz/Desktop/git/ParalyzedEngine/ParalyzedEngine/ParalyzedEngine.c > CMakeFiles/ParalyzedEngine.dir/ParalyzedEngine.c.i
 
 CMakeFiles/ParalyzedEngine.dir/ParalyzedEngine.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/ParalyzedEngine.dir/ParalyzedEngine.c.s"
-	/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/twittumz/Desktop/git/ParalyzedEngine/ParalyzedEngnine/ParalyzedEngine.c -o CMakeFiles/ParalyzedEngine.dir/ParalyzedEngine.c.s
+	/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/twittumz/Desktop/git/ParalyzedEngine/ParalyzedEngine/ParalyzedEngine.c -o CMakeFiles/ParalyzedEngine.dir/ParalyzedEngine.c.s
 
 CMakeFiles/ParalyzedEngine.dir/ParalyzedEngine.c.o.requires:
 
@@ -83,16 +83,16 @@ CMakeFiles/ParalyzedEngine.dir/ParalyzedEngine.c.o.provides.build: CMakeFiles/Pa
 
 CMakeFiles/ParalyzedEngine.dir/ParalyzedEngineWindow.c.o: CMakeFiles/ParalyzedEngine.dir/flags.make
 CMakeFiles/ParalyzedEngine.dir/ParalyzedEngineWindow.c.o: ../ParalyzedEngineWindow.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/twittumz/Desktop/git/ParalyzedEngine/ParalyzedEngnine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/ParalyzedEngine.dir/ParalyzedEngineWindow.c.o"
-	/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ParalyzedEngine.dir/ParalyzedEngineWindow.c.o   -c /home/twittumz/Desktop/git/ParalyzedEngine/ParalyzedEngnine/ParalyzedEngineWindow.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/twittumz/Desktop/git/ParalyzedEngine/ParalyzedEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/ParalyzedEngine.dir/ParalyzedEngineWindow.c.o"
+	/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ParalyzedEngine.dir/ParalyzedEngineWindow.c.o   -c /home/twittumz/Desktop/git/ParalyzedEngine/ParalyzedEngine/ParalyzedEngineWindow.c
 
 CMakeFiles/ParalyzedEngine.dir/ParalyzedEngineWindow.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/ParalyzedEngine.dir/ParalyzedEngineWindow.c.i"
-	/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/twittumz/Desktop/git/ParalyzedEngine/ParalyzedEngnine/ParalyzedEngineWindow.c > CMakeFiles/ParalyzedEngine.dir/ParalyzedEngineWindow.c.i
+	/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/twittumz/Desktop/git/ParalyzedEngine/ParalyzedEngine/ParalyzedEngineWindow.c > CMakeFiles/ParalyzedEngine.dir/ParalyzedEngineWindow.c.i
 
 CMakeFiles/ParalyzedEngine.dir/ParalyzedEngineWindow.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/ParalyzedEngine.dir/ParalyzedEngineWindow.c.s"
-	/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/twittumz/Desktop/git/ParalyzedEngine/ParalyzedEngnine/ParalyzedEngineWindow.c -o CMakeFiles/ParalyzedEngine.dir/ParalyzedEngineWindow.c.s
+	/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/twittumz/Desktop/git/ParalyzedEngine/ParalyzedEngine/ParalyzedEngineWindow.c -o CMakeFiles/ParalyzedEngine.dir/ParalyzedEngineWindow.c.s
 
 CMakeFiles/ParalyzedEngine.dir/ParalyzedEngineWindow.c.o.requires:
 
@@ -105,19 +105,123 @@ CMakeFiles/ParalyzedEngine.dir/ParalyzedEngineWindow.c.o.provides: CMakeFiles/Pa
 CMakeFiles/ParalyzedEngine.dir/ParalyzedEngineWindow.c.o.provides.build: CMakeFiles/ParalyzedEngine.dir/ParalyzedEngineWindow.c.o
 
 
+CMakeFiles/ParalyzedEngine.dir/ParalyzedEngineSpriteRenderer.c.o: CMakeFiles/ParalyzedEngine.dir/flags.make
+CMakeFiles/ParalyzedEngine.dir/ParalyzedEngineSpriteRenderer.c.o: ../ParalyzedEngineSpriteRenderer.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/twittumz/Desktop/git/ParalyzedEngine/ParalyzedEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/ParalyzedEngine.dir/ParalyzedEngineSpriteRenderer.c.o"
+	/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ParalyzedEngine.dir/ParalyzedEngineSpriteRenderer.c.o   -c /home/twittumz/Desktop/git/ParalyzedEngine/ParalyzedEngine/ParalyzedEngineSpriteRenderer.c
+
+CMakeFiles/ParalyzedEngine.dir/ParalyzedEngineSpriteRenderer.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/ParalyzedEngine.dir/ParalyzedEngineSpriteRenderer.c.i"
+	/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/twittumz/Desktop/git/ParalyzedEngine/ParalyzedEngine/ParalyzedEngineSpriteRenderer.c > CMakeFiles/ParalyzedEngine.dir/ParalyzedEngineSpriteRenderer.c.i
+
+CMakeFiles/ParalyzedEngine.dir/ParalyzedEngineSpriteRenderer.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/ParalyzedEngine.dir/ParalyzedEngineSpriteRenderer.c.s"
+	/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/twittumz/Desktop/git/ParalyzedEngine/ParalyzedEngine/ParalyzedEngineSpriteRenderer.c -o CMakeFiles/ParalyzedEngine.dir/ParalyzedEngineSpriteRenderer.c.s
+
+CMakeFiles/ParalyzedEngine.dir/ParalyzedEngineSpriteRenderer.c.o.requires:
+
+.PHONY : CMakeFiles/ParalyzedEngine.dir/ParalyzedEngineSpriteRenderer.c.o.requires
+
+CMakeFiles/ParalyzedEngine.dir/ParalyzedEngineSpriteRenderer.c.o.provides: CMakeFiles/ParalyzedEngine.dir/ParalyzedEngineSpriteRenderer.c.o.requires
+	$(MAKE) -f CMakeFiles/ParalyzedEngine.dir/build.make CMakeFiles/ParalyzedEngine.dir/ParalyzedEngineSpriteRenderer.c.o.provides.build
+.PHONY : CMakeFiles/ParalyzedEngine.dir/ParalyzedEngineSpriteRenderer.c.o.provides
+
+CMakeFiles/ParalyzedEngine.dir/ParalyzedEngineSpriteRenderer.c.o.provides.build: CMakeFiles/ParalyzedEngine.dir/ParalyzedEngineSpriteRenderer.c.o
+
+
+CMakeFiles/ParalyzedEngine.dir/JSON/JSONParser.cpp.o: CMakeFiles/ParalyzedEngine.dir/flags.make
+CMakeFiles/ParalyzedEngine.dir/JSON/JSONParser.cpp.o: ../JSON/JSONParser.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/twittumz/Desktop/git/ParalyzedEngine/ParalyzedEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/ParalyzedEngine.dir/JSON/JSONParser.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ParalyzedEngine.dir/JSON/JSONParser.cpp.o -c /home/twittumz/Desktop/git/ParalyzedEngine/ParalyzedEngine/JSON/JSONParser.cpp
+
+CMakeFiles/ParalyzedEngine.dir/JSON/JSONParser.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ParalyzedEngine.dir/JSON/JSONParser.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/twittumz/Desktop/git/ParalyzedEngine/ParalyzedEngine/JSON/JSONParser.cpp > CMakeFiles/ParalyzedEngine.dir/JSON/JSONParser.cpp.i
+
+CMakeFiles/ParalyzedEngine.dir/JSON/JSONParser.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ParalyzedEngine.dir/JSON/JSONParser.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/twittumz/Desktop/git/ParalyzedEngine/ParalyzedEngine/JSON/JSONParser.cpp -o CMakeFiles/ParalyzedEngine.dir/JSON/JSONParser.cpp.s
+
+CMakeFiles/ParalyzedEngine.dir/JSON/JSONParser.cpp.o.requires:
+
+.PHONY : CMakeFiles/ParalyzedEngine.dir/JSON/JSONParser.cpp.o.requires
+
+CMakeFiles/ParalyzedEngine.dir/JSON/JSONParser.cpp.o.provides: CMakeFiles/ParalyzedEngine.dir/JSON/JSONParser.cpp.o.requires
+	$(MAKE) -f CMakeFiles/ParalyzedEngine.dir/build.make CMakeFiles/ParalyzedEngine.dir/JSON/JSONParser.cpp.o.provides.build
+.PHONY : CMakeFiles/ParalyzedEngine.dir/JSON/JSONParser.cpp.o.provides
+
+CMakeFiles/ParalyzedEngine.dir/JSON/JSONParser.cpp.o.provides.build: CMakeFiles/ParalyzedEngine.dir/JSON/JSONParser.cpp.o
+
+
+CMakeFiles/ParalyzedEngine.dir/PEDictionary.cpp.o: CMakeFiles/ParalyzedEngine.dir/flags.make
+CMakeFiles/ParalyzedEngine.dir/PEDictionary.cpp.o: ../PEDictionary.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/twittumz/Desktop/git/ParalyzedEngine/ParalyzedEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/ParalyzedEngine.dir/PEDictionary.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ParalyzedEngine.dir/PEDictionary.cpp.o -c /home/twittumz/Desktop/git/ParalyzedEngine/ParalyzedEngine/PEDictionary.cpp
+
+CMakeFiles/ParalyzedEngine.dir/PEDictionary.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ParalyzedEngine.dir/PEDictionary.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/twittumz/Desktop/git/ParalyzedEngine/ParalyzedEngine/PEDictionary.cpp > CMakeFiles/ParalyzedEngine.dir/PEDictionary.cpp.i
+
+CMakeFiles/ParalyzedEngine.dir/PEDictionary.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ParalyzedEngine.dir/PEDictionary.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/twittumz/Desktop/git/ParalyzedEngine/ParalyzedEngine/PEDictionary.cpp -o CMakeFiles/ParalyzedEngine.dir/PEDictionary.cpp.s
+
+CMakeFiles/ParalyzedEngine.dir/PEDictionary.cpp.o.requires:
+
+.PHONY : CMakeFiles/ParalyzedEngine.dir/PEDictionary.cpp.o.requires
+
+CMakeFiles/ParalyzedEngine.dir/PEDictionary.cpp.o.provides: CMakeFiles/ParalyzedEngine.dir/PEDictionary.cpp.o.requires
+	$(MAKE) -f CMakeFiles/ParalyzedEngine.dir/build.make CMakeFiles/ParalyzedEngine.dir/PEDictionary.cpp.o.provides.build
+.PHONY : CMakeFiles/ParalyzedEngine.dir/PEDictionary.cpp.o.provides
+
+CMakeFiles/ParalyzedEngine.dir/PEDictionary.cpp.o.provides.build: CMakeFiles/ParalyzedEngine.dir/PEDictionary.cpp.o
+
+
+CMakeFiles/ParalyzedEngine.dir/Network/WebClient.c.o: CMakeFiles/ParalyzedEngine.dir/flags.make
+CMakeFiles/ParalyzedEngine.dir/Network/WebClient.c.o: ../Network/WebClient.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/twittumz/Desktop/git/ParalyzedEngine/ParalyzedEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building C object CMakeFiles/ParalyzedEngine.dir/Network/WebClient.c.o"
+	/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ParalyzedEngine.dir/Network/WebClient.c.o   -c /home/twittumz/Desktop/git/ParalyzedEngine/ParalyzedEngine/Network/WebClient.c
+
+CMakeFiles/ParalyzedEngine.dir/Network/WebClient.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/ParalyzedEngine.dir/Network/WebClient.c.i"
+	/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/twittumz/Desktop/git/ParalyzedEngine/ParalyzedEngine/Network/WebClient.c > CMakeFiles/ParalyzedEngine.dir/Network/WebClient.c.i
+
+CMakeFiles/ParalyzedEngine.dir/Network/WebClient.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/ParalyzedEngine.dir/Network/WebClient.c.s"
+	/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/twittumz/Desktop/git/ParalyzedEngine/ParalyzedEngine/Network/WebClient.c -o CMakeFiles/ParalyzedEngine.dir/Network/WebClient.c.s
+
+CMakeFiles/ParalyzedEngine.dir/Network/WebClient.c.o.requires:
+
+.PHONY : CMakeFiles/ParalyzedEngine.dir/Network/WebClient.c.o.requires
+
+CMakeFiles/ParalyzedEngine.dir/Network/WebClient.c.o.provides: CMakeFiles/ParalyzedEngine.dir/Network/WebClient.c.o.requires
+	$(MAKE) -f CMakeFiles/ParalyzedEngine.dir/build.make CMakeFiles/ParalyzedEngine.dir/Network/WebClient.c.o.provides.build
+.PHONY : CMakeFiles/ParalyzedEngine.dir/Network/WebClient.c.o.provides
+
+CMakeFiles/ParalyzedEngine.dir/Network/WebClient.c.o.provides.build: CMakeFiles/ParalyzedEngine.dir/Network/WebClient.c.o
+
+
 # Object files for target ParalyzedEngine
 ParalyzedEngine_OBJECTS = \
 "CMakeFiles/ParalyzedEngine.dir/ParalyzedEngine.c.o" \
-"CMakeFiles/ParalyzedEngine.dir/ParalyzedEngineWindow.c.o"
+"CMakeFiles/ParalyzedEngine.dir/ParalyzedEngineWindow.c.o" \
+"CMakeFiles/ParalyzedEngine.dir/ParalyzedEngineSpriteRenderer.c.o" \
+"CMakeFiles/ParalyzedEngine.dir/JSON/JSONParser.cpp.o" \
+"CMakeFiles/ParalyzedEngine.dir/PEDictionary.cpp.o" \
+"CMakeFiles/ParalyzedEngine.dir/Network/WebClient.c.o"
 
 # External object files for target ParalyzedEngine
 ParalyzedEngine_EXTERNAL_OBJECTS =
 
 libParalyzedEngine.a: CMakeFiles/ParalyzedEngine.dir/ParalyzedEngine.c.o
 libParalyzedEngine.a: CMakeFiles/ParalyzedEngine.dir/ParalyzedEngineWindow.c.o
+libParalyzedEngine.a: CMakeFiles/ParalyzedEngine.dir/ParalyzedEngineSpriteRenderer.c.o
+libParalyzedEngine.a: CMakeFiles/ParalyzedEngine.dir/JSON/JSONParser.cpp.o
+libParalyzedEngine.a: CMakeFiles/ParalyzedEngine.dir/PEDictionary.cpp.o
+libParalyzedEngine.a: CMakeFiles/ParalyzedEngine.dir/Network/WebClient.c.o
 libParalyzedEngine.a: CMakeFiles/ParalyzedEngine.dir/build.make
 libParalyzedEngine.a: CMakeFiles/ParalyzedEngine.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/twittumz/Desktop/git/ParalyzedEngine/ParalyzedEngnine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking C static library libParalyzedEngine.a"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/twittumz/Desktop/git/ParalyzedEngine/ParalyzedEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Linking CXX static library libParalyzedEngine.a"
 	$(CMAKE_COMMAND) -P CMakeFiles/ParalyzedEngine.dir/cmake_clean_target.cmake
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/ParalyzedEngine.dir/link.txt --verbose=$(VERBOSE)
 
@@ -128,6 +232,10 @@ CMakeFiles/ParalyzedEngine.dir/build: libParalyzedEngine.a
 
 CMakeFiles/ParalyzedEngine.dir/requires: CMakeFiles/ParalyzedEngine.dir/ParalyzedEngine.c.o.requires
 CMakeFiles/ParalyzedEngine.dir/requires: CMakeFiles/ParalyzedEngine.dir/ParalyzedEngineWindow.c.o.requires
+CMakeFiles/ParalyzedEngine.dir/requires: CMakeFiles/ParalyzedEngine.dir/ParalyzedEngineSpriteRenderer.c.o.requires
+CMakeFiles/ParalyzedEngine.dir/requires: CMakeFiles/ParalyzedEngine.dir/JSON/JSONParser.cpp.o.requires
+CMakeFiles/ParalyzedEngine.dir/requires: CMakeFiles/ParalyzedEngine.dir/PEDictionary.cpp.o.requires
+CMakeFiles/ParalyzedEngine.dir/requires: CMakeFiles/ParalyzedEngine.dir/Network/WebClient.c.o.requires
 
 .PHONY : CMakeFiles/ParalyzedEngine.dir/requires
 
@@ -136,6 +244,6 @@ CMakeFiles/ParalyzedEngine.dir/clean:
 .PHONY : CMakeFiles/ParalyzedEngine.dir/clean
 
 CMakeFiles/ParalyzedEngine.dir/depend:
-	cd /home/twittumz/Desktop/git/ParalyzedEngine/ParalyzedEngnine/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/twittumz/Desktop/git/ParalyzedEngine/ParalyzedEngnine /home/twittumz/Desktop/git/ParalyzedEngine/ParalyzedEngnine /home/twittumz/Desktop/git/ParalyzedEngine/ParalyzedEngnine/build /home/twittumz/Desktop/git/ParalyzedEngine/ParalyzedEngnine/build /home/twittumz/Desktop/git/ParalyzedEngine/ParalyzedEngnine/build/CMakeFiles/ParalyzedEngine.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/twittumz/Desktop/git/ParalyzedEngine/ParalyzedEngine/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/twittumz/Desktop/git/ParalyzedEngine/ParalyzedEngine /home/twittumz/Desktop/git/ParalyzedEngine/ParalyzedEngine /home/twittumz/Desktop/git/ParalyzedEngine/ParalyzedEngine/build /home/twittumz/Desktop/git/ParalyzedEngine/ParalyzedEngine/build /home/twittumz/Desktop/git/ParalyzedEngine/ParalyzedEngine/build/CMakeFiles/ParalyzedEngine.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/ParalyzedEngine.dir/depend
 

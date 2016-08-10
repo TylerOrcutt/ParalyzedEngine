@@ -1,0 +1,32 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/twittumz/Desktop/git/ParalyzedEngine/ParalyzedEngine/JSON/JSONParser.cpp
+JSONParser.hpp
+/home/twittumz/Desktop/git/ParalyzedEngine/ParalyzedEngine/JSON/JSONParser.hpp
+
+/home/twittumz/Desktop/git/ParalyzedEngine/ParalyzedEngine/JSON/JSONParser.hpp
+string
+-
+iostream
+-
+../PEDictionary.hpp
+/home/twittumz/Desktop/git/ParalyzedEngine/ParalyzedEngine/PEDictionary.hpp
+
+/home/twittumz/Desktop/git/ParalyzedEngine/ParalyzedEngine/PEDictionary.cpp
+PEDictionary.hpp
+/home/twittumz/Desktop/git/ParalyzedEngine/ParalyzedEngine/PEDictionary.hpp
+
+/home/twittumz/Desktop/git/ParalyzedEngine/ParalyzedEngine/PEDictionary.hpp
+string
+-
+vector
+-
+iostream
+-
+

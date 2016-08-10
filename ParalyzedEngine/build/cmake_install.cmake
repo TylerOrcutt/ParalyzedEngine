@@ -1,4 +1,4 @@
-# Install script for directory: /home/twittumz/Desktop/git/ParalyzedEngine/ParalyzedEngnine
+# Install script for directory: /home/twittumz/Desktop/git/ParalyzedEngine/ParalyzedEngine
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -40,5 +40,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/twittumz/Desktop/git/ParalyzedEngine/ParalyzedEngnine/build/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/twittumz/Desktop/git/ParalyzedEngine/ParalyzedEngine/build/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

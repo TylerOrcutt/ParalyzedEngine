@@ -9,7 +9,7 @@
 int x11_fd;
 fd_set in_fds;
 struct timeval tv;
-PEWindow* createPEWindow(int height,int width,char *title){
+PEWindow* createPEWindow(int height,int width,const char *title){
     printf("creating window\n");
     Display                 *dpy;
 Window                  root;

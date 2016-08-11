@@ -14,12 +14,9 @@ void PE_init_shaderProgram(PEShaderProgram * program){
 int PE_load_shaderProgram(PEShaderProgram * program, const char * vertexShaderSource, const char * fragmentShaderSource){
       printf("Loading Shader programs\n");
 
-     GLuint programID = glCreateProgram();
- GLenum err;
-err = glGetError();
-printf(" err return: %d \n", err); 
+ 
             program->programID = glCreateProgram();
-            printf("programID: %i\n",programID);
+            printf("programID: %i\n",program->programID);
       if(program->programID<=0){
             printf("Failed to create shader program\n");
 
@@ -30,23 +27,33 @@ printf(" err return: %d \n", err);
       vertexShader = glCreateShader(GL_VERTEX_SHADER);
       fragmentShader=  glCreateShader(GL_FRAGMENT_SHADER);
 
-      glShaderSource(vertexShader,1,vertexShaderSource,strlen(vertexShaderSource));
-      glShaderSource(fragmentShader,1,fragmentShaderSource,strlen(fragmentShaderSource));
+     GLuint vlength = strlen(vertexShaderSource);
+      glShaderSource(vertexShader,1,&vertexShaderSource,&vlength);
+      vlength = strlen(fragmentShaderSource);
+      glShaderSource(fragmentShader,1,&fragmentShaderSource,&vlength);
 
-      glCompileShader(vertexShader);
+     glCompileShader(vertexShader);
       glCompileShader(fragmentShader);
     
     GLuint compiled;
        compiled=GL_FALSE;
     glGetShaderiv(vertexShader,GL_COMPILE_STATUS,&compiled);
     if(compiled==GL_FALSE){
-        printf("Failed to compile vertex shader\n");
-        return -1;
+        int len=1024;
+        char * err = malloc(sizeof(char)*len);
+        glGetShaderInfoLog(vertexShader,1024,&len,err);
+
+        printf("Failed to compile vertex shader\n %s \n",err);
+      return -1;
     }
        compiled=GL_FALSE;
      glGetShaderiv(fragmentShader,GL_COMPILE_STATUS,&compiled);
     if(compiled==GL_FALSE){
-        printf("Failed to compile fragmentShader shader\n");
+          int len=1024;
+        char * err = malloc(sizeof(char)*len);
+        glGetShaderInfoLog(fragmentShader,1024,&len,err);
+
+        printf("Failed to compile fragmentShader shader\n %s \n",err);
         return -1;
     }
 
@@ -62,7 +69,8 @@ printf(" err return: %d \n", err);
         printf("failed to link shader program\n");
      return -1;
     }
-    printf("ShaderProgram linked\n");
+    printf("ShaderProgram linked\n"); 
+    return 1;
 }
  char * load_shaderSource(const char * shaderFile){
      return "";
@@ -72,7 +80,8 @@ printf(" err return: %d \n", err);
  const char * PE_default_vertexShader(){
     char * source = malloc(sizeof(char)*1024);
 
-     strcat(source,"attribute  vec4  vPosition;\n");
+           sprintf( source, "%s", "attribute  vec4  vPosition;\n" );
+
     strcat(source,"uniform float vposx;\n");
     strcat(source,"uniform float vposy;\n");
     strcat(source,"uniform float vScaleX;\n");
@@ -87,30 +96,33 @@ printf(" err return: %d \n", err);
     strcat(source,"vec4 position = vPosition;\n");
     strcat(source,"position.x=position.x*vScaleX + vposx;\n");
     strcat(source,"position.y=position.y*vScaleY+ vposy;\n");
-    strcat(source,"gl_Position =  gl_ModelViewProjectionMatrix*position;\n");
+     strcat(source,"gl_Position =  gl_ModelViewProjectionMatrix*position;\n");
+   
     strcat(source,"vec2 txtpos = a_texCoord;\n");
     strcat(source,"txtpos.x=txtpos.x*tScaleX+tposx;\n");
     strcat(source,"txtpos.y=txtpos.y*tScaleY+tposy;\n");
     strcat(source,"v_texCoord = txtpos;\n");
      strcat(source,"gl_FrontColor = gl_Color;\n");
       strcat(source,"}");
+
       return source;
  }
 
  const char * PE_default_fragmentShader(){
     char * source = malloc(sizeof(char)*512);
+           sprintf( source, "%s", "varying vec2 v_texCoord;" );
 
-     strcat(source,"varying vec2 v_texCoord;\n");
-    strcat(source,"uniform sampler2D s_texture;\n");
-    strcat(source,"uniform int useTexture;\n");
+    strcat(source,"uniform sampler2D s_texture;");
+    strcat(source,"uniform int useTexture;");
  
-    strcat(source,"void main() {\n");
-    strcat(source,"if(useTexture==1){\n");
-    strcat(source,"gl_FragColor = texture2D( s_texture, v_texCoord);\n");
+    strcat(source,"void main() {");
+    strcat(source,"if(useTexture==1){");
+    strcat(source,"gl_FragColor = texture2D( s_texture, v_texCoord);");
 
-    strcat(source,"}else{\n");
-    strcat(source,"gl_FragColor=gl_Color;\n");
-    strcat(source,"}\n");
+    strcat(source,"}else{");
+    strcat(source,"gl_FragColor=gl_Color;");
+    strcat(source,"}");
+        strcat(source,"}");
  
       return source;
  }

@@ -71,7 +71,7 @@ char  packet[128];
 char * responce = malloc(sizeof(char)*2048);
 while(SSL_read(ssl,&packet,128)>0){
  //   printf("%s\n",&packet);
- packet[strnlen(packet)] = "\0";
+ //packet[strnlen(packet)] = "\0";
     strcat(responce,packet);
 }
 printf("%s",responce);

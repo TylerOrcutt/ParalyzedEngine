@@ -5,6 +5,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/ParalyzedEngine.dir/JSON/JSONParser.cpp.o"
   "CMakeFiles/ParalyzedEngine.dir/PEDictionary.cpp.o"
   "CMakeFiles/ParalyzedEngine.dir/Network/WebClient.c.o"
+  "CMakeFiles/ParalyzedEngine.dir/Shaders/ShaderProgram.c.o"
   "libParalyzedEngine.pdb"
   "libParalyzedEngine.a"
 )

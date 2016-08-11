@@ -285,6 +285,33 @@ ParalyzedEngineWindow.c.s:
 	$(MAKE) -f CMakeFiles/ParalyzedEngine.dir/build.make CMakeFiles/ParalyzedEngine.dir/ParalyzedEngineWindow.c.s
 .PHONY : ParalyzedEngineWindow.c.s
 
+Shaders/ShaderProgram.o: Shaders/ShaderProgram.c.o
+
+.PHONY : Shaders/ShaderProgram.o
+
+# target to build an object file
+Shaders/ShaderProgram.c.o:
+	$(MAKE) -f CMakeFiles/ParalyzedEngine.dir/build.make CMakeFiles/ParalyzedEngine.dir/Shaders/ShaderProgram.c.o
+.PHONY : Shaders/ShaderProgram.c.o
+
+Shaders/ShaderProgram.i: Shaders/ShaderProgram.c.i
+
+.PHONY : Shaders/ShaderProgram.i
+
+# target to preprocess a source file
+Shaders/ShaderProgram.c.i:
+	$(MAKE) -f CMakeFiles/ParalyzedEngine.dir/build.make CMakeFiles/ParalyzedEngine.dir/Shaders/ShaderProgram.c.i
+.PHONY : Shaders/ShaderProgram.c.i
+
+Shaders/ShaderProgram.s: Shaders/ShaderProgram.c.s
+
+.PHONY : Shaders/ShaderProgram.s
+
+# target to generate assembly for a file
+Shaders/ShaderProgram.c.s:
+	$(MAKE) -f CMakeFiles/ParalyzedEngine.dir/build.make CMakeFiles/ParalyzedEngine.dir/Shaders/ShaderProgram.c.s
+.PHONY : Shaders/ShaderProgram.c.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -312,6 +339,9 @@ help:
 	@echo "... ParalyzedEngineWindow.o"
 	@echo "... ParalyzedEngineWindow.i"
 	@echo "... ParalyzedEngineWindow.s"
+	@echo "... Shaders/ShaderProgram.o"
+	@echo "... Shaders/ShaderProgram.i"
+	@echo "... Shaders/ShaderProgram.s"
 .PHONY : help
 
 

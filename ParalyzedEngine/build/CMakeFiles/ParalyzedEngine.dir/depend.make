@@ -8,14 +8,15 @@ CMakeFiles/ParalyzedEngine.dir/ParalyzedEngine.c.o: ../ParalyzedEngine.c
 CMakeFiles/ParalyzedEngine.dir/ParalyzedEngine.c.o: ../ParalyzedEngine.h
 CMakeFiles/ParalyzedEngine.dir/ParalyzedEngine.c.o: ../ParalyzedEngineWindow.h
 
-CMakeFiles/ParalyzedEngine.dir/ParalyzedEngineSpriteRenderer.c.o: ../ParalyzedEngineSpriteRenderer.c
-CMakeFiles/ParalyzedEngine.dir/ParalyzedEngineSpriteRenderer.c.o: ../ParalyzedEngineSpriteRenderer.h
-
 CMakeFiles/ParalyzedEngine.dir/ParalyzedEngineWindow.c.o: ../ParalyzedEngineWindow.c
 CMakeFiles/ParalyzedEngine.dir/ParalyzedEngineWindow.c.o: ../ParalyzedEngineWindow.h
 
 CMakeFiles/ParalyzedEngine.dir/Shaders/ShaderProgram.c.o: ../Shaders/ShaderProgram.c
 CMakeFiles/ParalyzedEngine.dir/Shaders/ShaderProgram.c.o: ../Shaders/ShaderProgram.h
+
+CMakeFiles/ParalyzedEngine.dir/SpriteRenderer.c.o: ../Shaders/ShaderProgram.h
+CMakeFiles/ParalyzedEngine.dir/SpriteRenderer.c.o: ../SpriteRenderer.c
+CMakeFiles/ParalyzedEngine.dir/SpriteRenderer.c.o: ../SpriteRenderer.h
 
 CMakeFiles/ParalyzedEngine.dir/JSON/JSONParser.cpp.o: ../JSON/JSONParser.cpp
 CMakeFiles/ParalyzedEngine.dir/JSON/JSONParser.cpp.o: ../JSON/JSONParser.hpp

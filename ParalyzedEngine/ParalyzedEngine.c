@@ -2,11 +2,11 @@
 
 #include "ParalyzedEngine.h"
 #include <stdio.h>
+#include<GL/gl.h>
+#include<GL/glx.h>
+#include<GL/glu.h>
+ 
 
- void ParalyzedEngineTest(){
-
-     printf("hello world \n");
-  }  
 void DrawQuad(float x,float y, float width,float height){
    
 

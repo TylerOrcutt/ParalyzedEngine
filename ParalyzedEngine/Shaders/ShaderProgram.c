@@ -32,6 +32,8 @@ int PE_load_shaderProgram(PEShaderProgram * program, const char * vertexShaderSo
       vlength = strlen(fragmentShaderSource);
       glShaderSource(fragmentShader,1,&fragmentShaderSource,&vlength);
 
+
+  printf("Building shader program\n");
      glCompileShader(vertexShader);
       glCompileShader(fragmentShader);
     
@@ -56,6 +58,7 @@ int PE_load_shaderProgram(PEShaderProgram * program, const char * vertexShaderSo
         printf("Failed to compile fragmentShader shader\n %s \n",err);
         return -1;
     }
+   printf("Linking shader program\n"); 
 
     glAttachShader(program->programID,vertexShader);
     glAttachShader(program->programID,fragmentShader);
@@ -69,7 +72,7 @@ int PE_load_shaderProgram(PEShaderProgram * program, const char * vertexShaderSo
         printf("failed to link shader program\n");
      return -1;
     }
-    printf("ShaderProgram linked\n"); 
+    printf("ShaderProgram build successful\n"); 
     return 1;
 }
  char * load_shaderSource(const char * shaderFile){
@@ -84,24 +87,26 @@ int PE_load_shaderProgram(PEShaderProgram * program, const char * vertexShaderSo
 
     strcat(source,"uniform float vposx;\n");
     strcat(source,"uniform float vposy;\n");
-    strcat(source,"uniform float vScaleX;\n");
-    strcat(source,"uniform float vScaleY;\n");
-    strcat(source,"uniform float tposx;\n");
+   strcat(source,"uniform float vScaleX;\n");
+   strcat(source,"uniform float vScaleY;\n");
+    /*strcat(source,"uniform float tposx;\n");
     strcat(source,"uniform float tposy;\n");
     strcat(source,"uniform float tScaleX;\n");
     strcat(source,"uniform float tScaleY;\n");
     strcat(source,"attribute vec2 a_texCoord;\n");
     strcat(source,"varying vec2 v_texCoord;\n");
-    strcat(source,"void main() {\n");
-    strcat(source,"vec4 position = vPosition;\n");
+  
+  */  strcat(source,"void main() {\n");
+    strcat(source,"vec4 position = vPosition;\n vScaleX=32; vScaleY=64;");
     strcat(source,"position.x=position.x*vScaleX + vposx;\n");
-    strcat(source,"position.y=position.y*vScaleY+ vposy;\n");
+    strcat(source,"position.y=position.y*vScaleY+ 20;\n");
      strcat(source,"gl_Position =  gl_ModelViewProjectionMatrix*position;\n");
-   
+   /*
     strcat(source,"vec2 txtpos = a_texCoord;\n");
     strcat(source,"txtpos.x=txtpos.x*tScaleX+tposx;\n");
     strcat(source,"txtpos.y=txtpos.y*tScaleY+tposy;\n");
     strcat(source,"v_texCoord = txtpos;\n");
+  */
      strcat(source,"gl_FrontColor = gl_Color;\n");
       strcat(source,"}");
 
@@ -116,12 +121,12 @@ int PE_load_shaderProgram(PEShaderProgram * program, const char * vertexShaderSo
     strcat(source,"uniform int useTexture;");
  
     strcat(source,"void main() {");
-    strcat(source,"if(useTexture==1){");
-    strcat(source,"gl_FragColor = texture2D( s_texture, v_texCoord);");
+   // strcat(source,"if(useTexture==1){");
+   // strcat(source,"gl_FragColor = texture2D( s_texture, v_texCoord);");
 
-    strcat(source,"}else{");
+   // strcat(source,"}else{");
     strcat(source,"gl_FragColor=gl_Color;");
-    strcat(source,"}");
+  //  strcat(source,"}");
         strcat(source,"}");
  
       return source;

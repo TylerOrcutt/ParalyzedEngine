@@ -9,9 +9,9 @@ endif(NOT OPENGL_FOUND)
 set(CMAKE_BUILD_TYPE Release)
 
 include_directories(${GLIB_INCLUDE_DIR} ${GLIBCONFIG_INCLUDE_DIR} ${CMAKE_CURRENT_SOURCE_DIR}/include)
-target_link_libraries(  ${OPENSSL_LIBRARIES} ${GL_LIBRARY} ${GLIB_LIBRARIES}  GLU   )
 
-add_library(ParalyzedEngine STATIC ParalyzedEngine.c ParalyzedEngineWindow.c ParalyzedEngineSpriteRenderer.c JSON/JSONParser.cpp PEDictionary.cpp Network/WebClient.c Shaders/ShaderProgram.c)
+add_library(ParalyzedEngine STATIC ParalyzedEngine.c ParalyzedEngineWindow.c SpriteRenderer.c JSON/JSONParser.cpp PEDictionary.cpp Network/WebClient.c Shaders/ShaderProgram.c )
 
+target_link_libraries(ParalyzedEngine  ${OPENSSL_LIBRARIES} ${GL_LIBRARY} ${GLIB_LIBRARIES}    X11 GL GLU )
 
 

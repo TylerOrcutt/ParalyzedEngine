@@ -231,33 +231,6 @@ ParalyzedEngine.c.s:
 	$(MAKE) -f CMakeFiles/ParalyzedEngine.dir/build.make CMakeFiles/ParalyzedEngine.dir/ParalyzedEngine.c.s
 .PHONY : ParalyzedEngine.c.s
 
-ParalyzedEngineSpriteRenderer.o: ParalyzedEngineSpriteRenderer.c.o
-
-.PHONY : ParalyzedEngineSpriteRenderer.o
-
-# target to build an object file
-ParalyzedEngineSpriteRenderer.c.o:
-	$(MAKE) -f CMakeFiles/ParalyzedEngine.dir/build.make CMakeFiles/ParalyzedEngine.dir/ParalyzedEngineSpriteRenderer.c.o
-.PHONY : ParalyzedEngineSpriteRenderer.c.o
-
-ParalyzedEngineSpriteRenderer.i: ParalyzedEngineSpriteRenderer.c.i
-
-.PHONY : ParalyzedEngineSpriteRenderer.i
-
-# target to preprocess a source file
-ParalyzedEngineSpriteRenderer.c.i:
-	$(MAKE) -f CMakeFiles/ParalyzedEngine.dir/build.make CMakeFiles/ParalyzedEngine.dir/ParalyzedEngineSpriteRenderer.c.i
-.PHONY : ParalyzedEngineSpriteRenderer.c.i
-
-ParalyzedEngineSpriteRenderer.s: ParalyzedEngineSpriteRenderer.c.s
-
-.PHONY : ParalyzedEngineSpriteRenderer.s
-
-# target to generate assembly for a file
-ParalyzedEngineSpriteRenderer.c.s:
-	$(MAKE) -f CMakeFiles/ParalyzedEngine.dir/build.make CMakeFiles/ParalyzedEngine.dir/ParalyzedEngineSpriteRenderer.c.s
-.PHONY : ParalyzedEngineSpriteRenderer.c.s
-
 ParalyzedEngineWindow.o: ParalyzedEngineWindow.c.o
 
 .PHONY : ParalyzedEngineWindow.o
@@ -312,6 +285,33 @@ Shaders/ShaderProgram.c.s:
 	$(MAKE) -f CMakeFiles/ParalyzedEngine.dir/build.make CMakeFiles/ParalyzedEngine.dir/Shaders/ShaderProgram.c.s
 .PHONY : Shaders/ShaderProgram.c.s
 
+SpriteRenderer.o: SpriteRenderer.c.o
+
+.PHONY : SpriteRenderer.o
+
+# target to build an object file
+SpriteRenderer.c.o:
+	$(MAKE) -f CMakeFiles/ParalyzedEngine.dir/build.make CMakeFiles/ParalyzedEngine.dir/SpriteRenderer.c.o
+.PHONY : SpriteRenderer.c.o
+
+SpriteRenderer.i: SpriteRenderer.c.i
+
+.PHONY : SpriteRenderer.i
+
+# target to preprocess a source file
+SpriteRenderer.c.i:
+	$(MAKE) -f CMakeFiles/ParalyzedEngine.dir/build.make CMakeFiles/ParalyzedEngine.dir/SpriteRenderer.c.i
+.PHONY : SpriteRenderer.c.i
+
+SpriteRenderer.s: SpriteRenderer.c.s
+
+.PHONY : SpriteRenderer.s
+
+# target to generate assembly for a file
+SpriteRenderer.c.s:
+	$(MAKE) -f CMakeFiles/ParalyzedEngine.dir/build.make CMakeFiles/ParalyzedEngine.dir/SpriteRenderer.c.s
+.PHONY : SpriteRenderer.c.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -333,15 +333,15 @@ help:
 	@echo "... ParalyzedEngine.o"
 	@echo "... ParalyzedEngine.i"
 	@echo "... ParalyzedEngine.s"
-	@echo "... ParalyzedEngineSpriteRenderer.o"
-	@echo "... ParalyzedEngineSpriteRenderer.i"
-	@echo "... ParalyzedEngineSpriteRenderer.s"
 	@echo "... ParalyzedEngineWindow.o"
 	@echo "... ParalyzedEngineWindow.i"
 	@echo "... ParalyzedEngineWindow.s"
 	@echo "... Shaders/ShaderProgram.o"
 	@echo "... Shaders/ShaderProgram.i"
 	@echo "... Shaders/ShaderProgram.s"
+	@echo "... SpriteRenderer.o"
+	@echo "... SpriteRenderer.i"
+	@echo "... SpriteRenderer.s"
 .PHONY : help
 
 

@@ -183,8 +183,8 @@ PKG_CONFIG_EXECUTABLE:FILEPATH=/usr/bin/pkg-config
 //Value Computed by CMake
 ParalyzedEngine_BINARY_DIR:STATIC=/home/twittumz/Desktop/git/ParalyzedEngine/ParalyzedEngine/build
 
-//Dependencies for target
-ParalyzedEngine_LIB_DEPENDS:STATIC=
+//Dependencies for the target
+ParalyzedEngine_LIB_DEPENDS:STATIC=general;X11;general;GL;general;GLU;
 
 //Value Computed by CMake
 ParalyzedEngine_SOURCE_DIR:STATIC=/home/twittumz/Desktop/git/ParalyzedEngine/ParalyzedEngine

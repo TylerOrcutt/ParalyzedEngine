@@ -105,28 +105,28 @@ CMakeFiles/ParalyzedEngine.dir/ParalyzedEngineWindow.c.o.provides: CMakeFiles/Pa
 CMakeFiles/ParalyzedEngine.dir/ParalyzedEngineWindow.c.o.provides.build: CMakeFiles/ParalyzedEngine.dir/ParalyzedEngineWindow.c.o
 
 
-CMakeFiles/ParalyzedEngine.dir/ParalyzedEngineSpriteRenderer.c.o: CMakeFiles/ParalyzedEngine.dir/flags.make
-CMakeFiles/ParalyzedEngine.dir/ParalyzedEngineSpriteRenderer.c.o: ../ParalyzedEngineSpriteRenderer.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/twittumz/Desktop/git/ParalyzedEngine/ParalyzedEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/ParalyzedEngine.dir/ParalyzedEngineSpriteRenderer.c.o"
-	/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ParalyzedEngine.dir/ParalyzedEngineSpriteRenderer.c.o   -c /home/twittumz/Desktop/git/ParalyzedEngine/ParalyzedEngine/ParalyzedEngineSpriteRenderer.c
+CMakeFiles/ParalyzedEngine.dir/SpriteRenderer.c.o: CMakeFiles/ParalyzedEngine.dir/flags.make
+CMakeFiles/ParalyzedEngine.dir/SpriteRenderer.c.o: ../SpriteRenderer.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/twittumz/Desktop/git/ParalyzedEngine/ParalyzedEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/ParalyzedEngine.dir/SpriteRenderer.c.o"
+	/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ParalyzedEngine.dir/SpriteRenderer.c.o   -c /home/twittumz/Desktop/git/ParalyzedEngine/ParalyzedEngine/SpriteRenderer.c
 
-CMakeFiles/ParalyzedEngine.dir/ParalyzedEngineSpriteRenderer.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/ParalyzedEngine.dir/ParalyzedEngineSpriteRenderer.c.i"
-	/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/twittumz/Desktop/git/ParalyzedEngine/ParalyzedEngine/ParalyzedEngineSpriteRenderer.c > CMakeFiles/ParalyzedEngine.dir/ParalyzedEngineSpriteRenderer.c.i
+CMakeFiles/ParalyzedEngine.dir/SpriteRenderer.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/ParalyzedEngine.dir/SpriteRenderer.c.i"
+	/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/twittumz/Desktop/git/ParalyzedEngine/ParalyzedEngine/SpriteRenderer.c > CMakeFiles/ParalyzedEngine.dir/SpriteRenderer.c.i
 
-CMakeFiles/ParalyzedEngine.dir/ParalyzedEngineSpriteRenderer.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/ParalyzedEngine.dir/ParalyzedEngineSpriteRenderer.c.s"
-	/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/twittumz/Desktop/git/ParalyzedEngine/ParalyzedEngine/ParalyzedEngineSpriteRenderer.c -o CMakeFiles/ParalyzedEngine.dir/ParalyzedEngineSpriteRenderer.c.s
+CMakeFiles/ParalyzedEngine.dir/SpriteRenderer.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/ParalyzedEngine.dir/SpriteRenderer.c.s"
+	/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/twittumz/Desktop/git/ParalyzedEngine/ParalyzedEngine/SpriteRenderer.c -o CMakeFiles/ParalyzedEngine.dir/SpriteRenderer.c.s
 
-CMakeFiles/ParalyzedEngine.dir/ParalyzedEngineSpriteRenderer.c.o.requires:
+CMakeFiles/ParalyzedEngine.dir/SpriteRenderer.c.o.requires:
 
-.PHONY : CMakeFiles/ParalyzedEngine.dir/ParalyzedEngineSpriteRenderer.c.o.requires
+.PHONY : CMakeFiles/ParalyzedEngine.dir/SpriteRenderer.c.o.requires
 
-CMakeFiles/ParalyzedEngine.dir/ParalyzedEngineSpriteRenderer.c.o.provides: CMakeFiles/ParalyzedEngine.dir/ParalyzedEngineSpriteRenderer.c.o.requires
-	$(MAKE) -f CMakeFiles/ParalyzedEngine.dir/build.make CMakeFiles/ParalyzedEngine.dir/ParalyzedEngineSpriteRenderer.c.o.provides.build
-.PHONY : CMakeFiles/ParalyzedEngine.dir/ParalyzedEngineSpriteRenderer.c.o.provides
+CMakeFiles/ParalyzedEngine.dir/SpriteRenderer.c.o.provides: CMakeFiles/ParalyzedEngine.dir/SpriteRenderer.c.o.requires
+	$(MAKE) -f CMakeFiles/ParalyzedEngine.dir/build.make CMakeFiles/ParalyzedEngine.dir/SpriteRenderer.c.o.provides.build
+.PHONY : CMakeFiles/ParalyzedEngine.dir/SpriteRenderer.c.o.provides
 
-CMakeFiles/ParalyzedEngine.dir/ParalyzedEngineSpriteRenderer.c.o.provides.build: CMakeFiles/ParalyzedEngine.dir/ParalyzedEngineSpriteRenderer.c.o
+CMakeFiles/ParalyzedEngine.dir/SpriteRenderer.c.o.provides.build: CMakeFiles/ParalyzedEngine.dir/SpriteRenderer.c.o
 
 
 CMakeFiles/ParalyzedEngine.dir/JSON/JSONParser.cpp.o: CMakeFiles/ParalyzedEngine.dir/flags.make
@@ -229,7 +229,7 @@ CMakeFiles/ParalyzedEngine.dir/Shaders/ShaderProgram.c.o.provides.build: CMakeFi
 ParalyzedEngine_OBJECTS = \
 "CMakeFiles/ParalyzedEngine.dir/ParalyzedEngine.c.o" \
 "CMakeFiles/ParalyzedEngine.dir/ParalyzedEngineWindow.c.o" \
-"CMakeFiles/ParalyzedEngine.dir/ParalyzedEngineSpriteRenderer.c.o" \
+"CMakeFiles/ParalyzedEngine.dir/SpriteRenderer.c.o" \
 "CMakeFiles/ParalyzedEngine.dir/JSON/JSONParser.cpp.o" \
 "CMakeFiles/ParalyzedEngine.dir/PEDictionary.cpp.o" \
 "CMakeFiles/ParalyzedEngine.dir/Network/WebClient.c.o" \
@@ -240,7 +240,7 @@ ParalyzedEngine_EXTERNAL_OBJECTS =
 
 libParalyzedEngine.a: CMakeFiles/ParalyzedEngine.dir/ParalyzedEngine.c.o
 libParalyzedEngine.a: CMakeFiles/ParalyzedEngine.dir/ParalyzedEngineWindow.c.o
-libParalyzedEngine.a: CMakeFiles/ParalyzedEngine.dir/ParalyzedEngineSpriteRenderer.c.o
+libParalyzedEngine.a: CMakeFiles/ParalyzedEngine.dir/SpriteRenderer.c.o
 libParalyzedEngine.a: CMakeFiles/ParalyzedEngine.dir/JSON/JSONParser.cpp.o
 libParalyzedEngine.a: CMakeFiles/ParalyzedEngine.dir/PEDictionary.cpp.o
 libParalyzedEngine.a: CMakeFiles/ParalyzedEngine.dir/Network/WebClient.c.o
@@ -258,7 +258,7 @@ CMakeFiles/ParalyzedEngine.dir/build: libParalyzedEngine.a
 
 CMakeFiles/ParalyzedEngine.dir/requires: CMakeFiles/ParalyzedEngine.dir/ParalyzedEngine.c.o.requires
 CMakeFiles/ParalyzedEngine.dir/requires: CMakeFiles/ParalyzedEngine.dir/ParalyzedEngineWindow.c.o.requires
-CMakeFiles/ParalyzedEngine.dir/requires: CMakeFiles/ParalyzedEngine.dir/ParalyzedEngineSpriteRenderer.c.o.requires
+CMakeFiles/ParalyzedEngine.dir/requires: CMakeFiles/ParalyzedEngine.dir/SpriteRenderer.c.o.requires
 CMakeFiles/ParalyzedEngine.dir/requires: CMakeFiles/ParalyzedEngine.dir/JSON/JSONParser.cpp.o.requires
 CMakeFiles/ParalyzedEngine.dir/requires: CMakeFiles/ParalyzedEngine.dir/PEDictionary.cpp.o.requires
 CMakeFiles/ParalyzedEngine.dir/requires: CMakeFiles/ParalyzedEngine.dir/Network/WebClient.c.o.requires

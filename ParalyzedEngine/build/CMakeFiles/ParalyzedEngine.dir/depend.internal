@@ -8,15 +8,16 @@ CMakeFiles/ParalyzedEngine.dir/ParalyzedEngine.c.o
  /home/twittumz/Desktop/git/ParalyzedEngine/ParalyzedEngine/ParalyzedEngine.c
  /home/twittumz/Desktop/git/ParalyzedEngine/ParalyzedEngine/ParalyzedEngine.h
  /home/twittumz/Desktop/git/ParalyzedEngine/ParalyzedEngine/ParalyzedEngineWindow.h
-CMakeFiles/ParalyzedEngine.dir/ParalyzedEngineSpriteRenderer.c.o
- /home/twittumz/Desktop/git/ParalyzedEngine/ParalyzedEngine/ParalyzedEngineSpriteRenderer.c
- /home/twittumz/Desktop/git/ParalyzedEngine/ParalyzedEngine/ParalyzedEngineSpriteRenderer.h
 CMakeFiles/ParalyzedEngine.dir/ParalyzedEngineWindow.c.o
  /home/twittumz/Desktop/git/ParalyzedEngine/ParalyzedEngine/ParalyzedEngineWindow.c
  /home/twittumz/Desktop/git/ParalyzedEngine/ParalyzedEngine/ParalyzedEngineWindow.h
 CMakeFiles/ParalyzedEngine.dir/Shaders/ShaderProgram.c.o
  /home/twittumz/Desktop/git/ParalyzedEngine/ParalyzedEngine/Shaders/ShaderProgram.c
  /home/twittumz/Desktop/git/ParalyzedEngine/ParalyzedEngine/Shaders/ShaderProgram.h
+CMakeFiles/ParalyzedEngine.dir/SpriteRenderer.c.o
+ /home/twittumz/Desktop/git/ParalyzedEngine/ParalyzedEngine/Shaders/ShaderProgram.h
+ /home/twittumz/Desktop/git/ParalyzedEngine/ParalyzedEngine/SpriteRenderer.c
+ /home/twittumz/Desktop/git/ParalyzedEngine/ParalyzedEngine/SpriteRenderer.h
 CMakeFiles/ParalyzedEngine.dir/JSON/JSONParser.cpp.o
  /home/twittumz/Desktop/git/ParalyzedEngine/ParalyzedEngine/JSON/JSONParser.cpp
  /home/twittumz/Desktop/git/ParalyzedEngine/ParalyzedEngine/JSON/JSONParser.hpp

@@ -27,18 +27,16 @@ ParalyzedEngine.h
 /home/twittumz/Desktop/git/ParalyzedEngine/ParalyzedEngine/ParalyzedEngine.h
 stdio.h
 -
+GL/gl.h
+-
+GL/glx.h
+-
+GL/glu.h
+-
 
 /home/twittumz/Desktop/git/ParalyzedEngine/ParalyzedEngine/ParalyzedEngine.h
 ParalyzedEngineWindow.h
 /home/twittumz/Desktop/git/ParalyzedEngine/ParalyzedEngine/ParalyzedEngineWindow.h
-
-/home/twittumz/Desktop/git/ParalyzedEngine/ParalyzedEngine/ParalyzedEngineSpriteRenderer.c
-ParalyzedEngineSpriteRenderer.h
-/home/twittumz/Desktop/git/ParalyzedEngine/ParalyzedEngine/ParalyzedEngineSpriteRenderer.h
-stdio.h
--
-
-/home/twittumz/Desktop/git/ParalyzedEngine/ParalyzedEngine/ParalyzedEngineSpriteRenderer.h
 
 /home/twittumz/Desktop/git/ParalyzedEngine/ParalyzedEngine/ParalyzedEngineWindow.c
 ParalyzedEngineWindow.h
@@ -88,5 +86,31 @@ GL/glu.h
 
 /home/twittumz/Desktop/git/ParalyzedEngine/ParalyzedEngine/Shaders/ShaderProgram.h
 GL/gl.h
+-
+
+/home/twittumz/Desktop/git/ParalyzedEngine/ParalyzedEngine/SpriteRenderer.c
+SpriteRenderer.h
+/home/twittumz/Desktop/git/ParalyzedEngine/ParalyzedEngine/SpriteRenderer.h
+stdio.h
+-
+stdlib.h
+-
+string.h
+-
+GL/gl.h
+-
+GL/glx.h
+-
+GL/glu.h
+-
+
+/home/twittumz/Desktop/git/ParalyzedEngine/ParalyzedEngine/SpriteRenderer.h
+Shaders/ShaderProgram.h
+/home/twittumz/Desktop/git/ParalyzedEngine/ParalyzedEngine/Shaders/ShaderProgram.h
+GL/gl.h
+-
+GL/glx.h
+-
+GL/glu.h
 -
 

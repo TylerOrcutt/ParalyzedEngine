@@ -1,5 +1,6 @@
 #ifndef __PE_SHADER_PROGRAM_H__
 #define __PE_SHADER_PROGRAM_H__
+#include <GL/glew.h>
 #include<GL/gl.h>
 #ifdef __cplusplus
 extern "C"{

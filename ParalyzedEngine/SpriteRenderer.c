@@ -2,6 +2,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <GL/glew.h>
 #include<GL/gl.h>
 #include<GL/glx.h>
 #include<GL/glu.h>
@@ -30,14 +31,15 @@ sprogram=program;
  
  //free (verts);
 }
-void PE_Sprite_Draw(float _x,float y,float width,float height){
+void PE_Sprite_Draw(float x,float y,float width,float height){
 
      glUseProgram(1);
 glColor4f(0.f,1.f,0.f,1.f);
-        glUniform1f(vposx,200);
-        printf("%i",glGetError());
+    glUniform1f(vposx,x);
+      glUniform1f(vposy,y);
       
-           
+              glUniform1f(vScaleX,width);
+      glUniform1f(vScaleY,height); 
 glEnableVertexAttribArray(vPosition); 
 
      //glUniform1f(vScaleX,32.f);

@@ -1,6 +1,7 @@
 #ifndef __PARALYZED_ENGINE_H_
 #define __PARALYZED_ENGINE_H_
 #define PE_ENGINE_VERSION "0.0.1"
+#define GLEW_STATIC
 #include "ParalyzedEngineWindow.h"
 
 #ifdef __cplusplus

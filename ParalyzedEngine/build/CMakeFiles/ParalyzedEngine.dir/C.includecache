@@ -27,6 +27,8 @@ ParalyzedEngine.h
 /home/twittumz/Desktop/git/ParalyzedEngine/ParalyzedEngine/ParalyzedEngine.h
 stdio.h
 -
+GL/glew.h
+-
 GL/gl.h
 -
 GL/glx.h
@@ -49,6 +51,8 @@ X11/X.h
 -
 X11/Xlib.h
 -
+GL/glew.h
+-
 GL/gl.h
 -
 GL/glx.h
@@ -60,6 +64,8 @@ GL/glu.h
 X11/X.h
 -
 X11/Xlib.h
+-
+GL/glew.h
 -
 GL/gl.h
 -
@@ -77,6 +83,8 @@ stdio.h
 -
 string.h
 -
+GL/glew.h
+-
 GL/gl.h
 -
 GL/glx.h
@@ -85,6 +93,8 @@ GL/glu.h
 -
 
 /home/twittumz/Desktop/git/ParalyzedEngine/ParalyzedEngine/Shaders/ShaderProgram.h
+GL/glew.h
+-
 GL/gl.h
 -
 
@@ -97,6 +107,8 @@ stdlib.h
 -
 string.h
 -
+GL/glew.h
+-
 GL/gl.h
 -
 GL/glx.h
@@ -107,6 +119,8 @@ GL/glu.h
 /home/twittumz/Desktop/git/ParalyzedEngine/ParalyzedEngine/SpriteRenderer.h
 Shaders/ShaderProgram.h
 /home/twittumz/Desktop/git/ParalyzedEngine/ParalyzedEngine/Shaders/ShaderProgram.h
+GL/glew.h
+-
 GL/gl.h
 -
 GL/glx.h

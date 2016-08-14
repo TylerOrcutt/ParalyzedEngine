@@ -3,6 +3,7 @@
 #include<stdlib.h>
 #include<X11/X.h>
 #include<X11/Xlib.h>
+#include <GL/glew.h>
 #include<GL/gl.h>
 #include<GL/glx.h>
 #include<GL/glu.h>
@@ -63,7 +64,10 @@ x11_fd = ConnectionNumber(dpy);
  (*pe).dpy=dpy;
  (*pe).gwa =gwa;
   (*pe).glc =glc;
-
+     if(glewInit()){
+  printf("failed to init glew\n");
+ 
+}
   return pe;
  /*
  while(1) {

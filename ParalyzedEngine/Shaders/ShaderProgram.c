@@ -2,6 +2,7 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include <string.h>
+#include <GL/glew.h>
 #include<GL/gl.h>
 #include<GL/glx.h>
 #include<GL/glu.h>
@@ -97,9 +98,9 @@ int PE_load_shaderProgram(PEShaderProgram * program, const char * vertexShaderSo
     strcat(source,"varying vec2 v_texCoord;\n");
   
   */  strcat(source,"void main() {\n");
-    strcat(source,"vec4 position = vPosition;\n vScaleX=32; vScaleY=64;");
+    strcat(source,"vec4 position = vPosition;\n");
     strcat(source,"position.x=position.x*vScaleX + vposx;\n");
-    strcat(source,"position.y=position.y*vScaleY+ 20;\n");
+    strcat(source,"position.y=position.y*vScaleY+ vposy;\n");
      strcat(source,"gl_Position =  gl_ModelViewProjectionMatrix*position;\n");
    /*
     strcat(source,"vec2 txtpos = a_texCoord;\n");

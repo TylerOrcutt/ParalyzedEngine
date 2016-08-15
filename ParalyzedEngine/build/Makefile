@@ -312,6 +312,33 @@ SpriteRenderer.c.s:
 	$(MAKE) -f CMakeFiles/ParalyzedEngine.dir/build.make CMakeFiles/ParalyzedEngine.dir/SpriteRenderer.c.s
 .PHONY : SpriteRenderer.c.s
 
+Texture.o: Texture.c.o
+
+.PHONY : Texture.o
+
+# target to build an object file
+Texture.c.o:
+	$(MAKE) -f CMakeFiles/ParalyzedEngine.dir/build.make CMakeFiles/ParalyzedEngine.dir/Texture.c.o
+.PHONY : Texture.c.o
+
+Texture.i: Texture.c.i
+
+.PHONY : Texture.i
+
+# target to preprocess a source file
+Texture.c.i:
+	$(MAKE) -f CMakeFiles/ParalyzedEngine.dir/build.make CMakeFiles/ParalyzedEngine.dir/Texture.c.i
+.PHONY : Texture.c.i
+
+Texture.s: Texture.c.s
+
+.PHONY : Texture.s
+
+# target to generate assembly for a file
+Texture.c.s:
+	$(MAKE) -f CMakeFiles/ParalyzedEngine.dir/build.make CMakeFiles/ParalyzedEngine.dir/Texture.c.s
+.PHONY : Texture.c.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -342,6 +369,9 @@ help:
 	@echo "... SpriteRenderer.o"
 	@echo "... SpriteRenderer.i"
 	@echo "... SpriteRenderer.s"
+	@echo "... Texture.o"
+	@echo "... Texture.i"
+	@echo "... Texture.s"
 .PHONY : help
 
 

@@ -18,6 +18,9 @@ CMakeFiles/ParalyzedEngine.dir/SpriteRenderer.c.o
  /home/twittumz/Desktop/git/ParalyzedEngine/ParalyzedEngine/Shaders/ShaderProgram.h
  /home/twittumz/Desktop/git/ParalyzedEngine/ParalyzedEngine/SpriteRenderer.c
  /home/twittumz/Desktop/git/ParalyzedEngine/ParalyzedEngine/SpriteRenderer.h
+CMakeFiles/ParalyzedEngine.dir/Texture.c.o
+ /home/twittumz/Desktop/git/ParalyzedEngine/ParalyzedEngine/Texture.c
+ /home/twittumz/Desktop/git/ParalyzedEngine/ParalyzedEngine/Texture.h
 CMakeFiles/ParalyzedEngine.dir/JSON/JSONParser.cpp.o
  /home/twittumz/Desktop/git/ParalyzedEngine/ParalyzedEngine/JSON/JSONParser.cpp
  /home/twittumz/Desktop/git/ParalyzedEngine/ParalyzedEngine/JSON/JSONParser.hpp

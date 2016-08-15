@@ -128,3 +128,21 @@ GL/glx.h
 GL/glu.h
 -
 
+/home/twittumz/Desktop/git/ParalyzedEngine/ParalyzedEngine/Texture.c
+Texture.h
+/home/twittumz/Desktop/git/ParalyzedEngine/ParalyzedEngine/Texture.h
+
+/home/twittumz/Desktop/git/ParalyzedEngine/ParalyzedEngine/Texture.h
+GL/glew.h
+-
+GL/gl.h
+-
+GL/glu.h
+-
+stdio.h
+-
+stdlib.h
+-
+SOIL/SOIL.h
+-
+

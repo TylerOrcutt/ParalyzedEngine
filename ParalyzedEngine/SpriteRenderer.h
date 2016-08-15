@@ -21,11 +21,21 @@ extern void PE_Sprite_Draw(float x,float y,float width,float height);
 
  PEShaderProgram * sprogram;
       float *Square_verts;
+        float *tex_verts;
  GLint vPosition;
  GLint vposx;
  GLint vposy;
  GLint vScaleX;
  GLint vScaleY;
+
+ GLint tposx;
+ GLint tposy;
+ GLint tScaleX;
+ GLint tScaleY;
+ GLint mSamplerLoc;
+ GLint useTexture;
+GLint mTexLoc; 
+
 #ifdef __cplusplus
  }
 #endif

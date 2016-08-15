@@ -225,6 +225,30 @@ CMakeFiles/ParalyzedEngine.dir/Shaders/ShaderProgram.c.o.provides: CMakeFiles/Pa
 CMakeFiles/ParalyzedEngine.dir/Shaders/ShaderProgram.c.o.provides.build: CMakeFiles/ParalyzedEngine.dir/Shaders/ShaderProgram.c.o
 
 
+CMakeFiles/ParalyzedEngine.dir/Texture.c.o: CMakeFiles/ParalyzedEngine.dir/flags.make
+CMakeFiles/ParalyzedEngine.dir/Texture.c.o: ../Texture.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/twittumz/Desktop/git/ParalyzedEngine/ParalyzedEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building C object CMakeFiles/ParalyzedEngine.dir/Texture.c.o"
+	/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ParalyzedEngine.dir/Texture.c.o   -c /home/twittumz/Desktop/git/ParalyzedEngine/ParalyzedEngine/Texture.c
+
+CMakeFiles/ParalyzedEngine.dir/Texture.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/ParalyzedEngine.dir/Texture.c.i"
+	/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/twittumz/Desktop/git/ParalyzedEngine/ParalyzedEngine/Texture.c > CMakeFiles/ParalyzedEngine.dir/Texture.c.i
+
+CMakeFiles/ParalyzedEngine.dir/Texture.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/ParalyzedEngine.dir/Texture.c.s"
+	/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/twittumz/Desktop/git/ParalyzedEngine/ParalyzedEngine/Texture.c -o CMakeFiles/ParalyzedEngine.dir/Texture.c.s
+
+CMakeFiles/ParalyzedEngine.dir/Texture.c.o.requires:
+
+.PHONY : CMakeFiles/ParalyzedEngine.dir/Texture.c.o.requires
+
+CMakeFiles/ParalyzedEngine.dir/Texture.c.o.provides: CMakeFiles/ParalyzedEngine.dir/Texture.c.o.requires
+	$(MAKE) -f CMakeFiles/ParalyzedEngine.dir/build.make CMakeFiles/ParalyzedEngine.dir/Texture.c.o.provides.build
+.PHONY : CMakeFiles/ParalyzedEngine.dir/Texture.c.o.provides
+
+CMakeFiles/ParalyzedEngine.dir/Texture.c.o.provides.build: CMakeFiles/ParalyzedEngine.dir/Texture.c.o
+
+
 # Object files for target ParalyzedEngine
 ParalyzedEngine_OBJECTS = \
 "CMakeFiles/ParalyzedEngine.dir/ParalyzedEngine.c.o" \
@@ -233,7 +257,8 @@ ParalyzedEngine_OBJECTS = \
 "CMakeFiles/ParalyzedEngine.dir/JSON/JSONParser.cpp.o" \
 "CMakeFiles/ParalyzedEngine.dir/PEDictionary.cpp.o" \
 "CMakeFiles/ParalyzedEngine.dir/Network/WebClient.c.o" \
-"CMakeFiles/ParalyzedEngine.dir/Shaders/ShaderProgram.c.o"
+"CMakeFiles/ParalyzedEngine.dir/Shaders/ShaderProgram.c.o" \
+"CMakeFiles/ParalyzedEngine.dir/Texture.c.o"
 
 # External object files for target ParalyzedEngine
 ParalyzedEngine_EXTERNAL_OBJECTS =
@@ -245,9 +270,10 @@ libParalyzedEngine.a: CMakeFiles/ParalyzedEngine.dir/JSON/JSONParser.cpp.o
 libParalyzedEngine.a: CMakeFiles/ParalyzedEngine.dir/PEDictionary.cpp.o
 libParalyzedEngine.a: CMakeFiles/ParalyzedEngine.dir/Network/WebClient.c.o
 libParalyzedEngine.a: CMakeFiles/ParalyzedEngine.dir/Shaders/ShaderProgram.c.o
+libParalyzedEngine.a: CMakeFiles/ParalyzedEngine.dir/Texture.c.o
 libParalyzedEngine.a: CMakeFiles/ParalyzedEngine.dir/build.make
 libParalyzedEngine.a: CMakeFiles/ParalyzedEngine.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/twittumz/Desktop/git/ParalyzedEngine/ParalyzedEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Linking CXX static library libParalyzedEngine.a"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/twittumz/Desktop/git/ParalyzedEngine/ParalyzedEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Linking CXX static library libParalyzedEngine.a"
 	$(CMAKE_COMMAND) -P CMakeFiles/ParalyzedEngine.dir/cmake_clean_target.cmake
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/ParalyzedEngine.dir/link.txt --verbose=$(VERBOSE)
 
@@ -263,6 +289,7 @@ CMakeFiles/ParalyzedEngine.dir/requires: CMakeFiles/ParalyzedEngine.dir/JSON/JSO
 CMakeFiles/ParalyzedEngine.dir/requires: CMakeFiles/ParalyzedEngine.dir/PEDictionary.cpp.o.requires
 CMakeFiles/ParalyzedEngine.dir/requires: CMakeFiles/ParalyzedEngine.dir/Network/WebClient.c.o.requires
 CMakeFiles/ParalyzedEngine.dir/requires: CMakeFiles/ParalyzedEngine.dir/Shaders/ShaderProgram.c.o.requires
+CMakeFiles/ParalyzedEngine.dir/requires: CMakeFiles/ParalyzedEngine.dir/Texture.c.o.requires
 
 .PHONY : CMakeFiles/ParalyzedEngine.dir/requires
 

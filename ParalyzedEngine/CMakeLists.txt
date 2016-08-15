@@ -9,10 +9,18 @@ if(NOT OPENGL_FOUND)
 endif(NOT OPENGL_FOUND)
 set(CMAKE_BUILD_TYPE Release)
 
+SET(SOIL_NAMES SOIL Soil soil)
+FIND_LIBRARY(SOIL_LIBRARY NAMES ${SOIL_NAMES}  REQUIRED)
+MARK_AS_ADVANCED( SOIL_LIBRARY SOIL_INCLUDE_DIR )
+SET(SOIL_INCLUDE_DIRS "${SOIL_INCLUDE_DIR}")
+SET(SOIL_LIBRARIES "${SOIL_LIBRARY}")
+
+
+
 include_directories(${GLIB_INCLUDE_DIR} ${GLIBCONFIG_INCLUDE_DIR} ${CMAKE_CURRENT_SOURCE_DIR}/include)
 
-add_library(ParalyzedEngine STATIC ParalyzedEngine.c ParalyzedEngineWindow.c SpriteRenderer.c JSON/JSONParser.cpp PEDictionary.cpp Network/WebClient.c Shaders/ShaderProgram.c )
+add_library(ParalyzedEngine STATIC ParalyzedEngine.c ParalyzedEngineWindow.c SpriteRenderer.c JSON/JSONParser.cpp PEDictionary.cpp Network/WebClient.c Shaders/ShaderProgram.c  Texture.c )
 
-target_link_libraries(ParalyzedEngine  ${OPENSSL_LIBRARIES} ${GL_LIBRARY} ${GLIB_LIBRARIES}    X11 GL GLU  )
+target_link_libraries(ParalyzedEngine  ${SOIL_LIBRARY} ${OPENSSL_LIBRARIES} ${GL_LIBRARY} ${GLIB_LIBRARIES}    X11 GL GLU  )
 
 

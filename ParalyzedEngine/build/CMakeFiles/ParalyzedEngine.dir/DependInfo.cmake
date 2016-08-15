@@ -10,6 +10,7 @@ set(CMAKE_DEPENDS_CHECK_C
   "/home/twittumz/Desktop/git/ParalyzedEngine/ParalyzedEngine/ParalyzedEngineWindow.c" "/home/twittumz/Desktop/git/ParalyzedEngine/ParalyzedEngine/build/CMakeFiles/ParalyzedEngine.dir/ParalyzedEngineWindow.c.o"
   "/home/twittumz/Desktop/git/ParalyzedEngine/ParalyzedEngine/Shaders/ShaderProgram.c" "/home/twittumz/Desktop/git/ParalyzedEngine/ParalyzedEngine/build/CMakeFiles/ParalyzedEngine.dir/Shaders/ShaderProgram.c.o"
   "/home/twittumz/Desktop/git/ParalyzedEngine/ParalyzedEngine/SpriteRenderer.c" "/home/twittumz/Desktop/git/ParalyzedEngine/ParalyzedEngine/build/CMakeFiles/ParalyzedEngine.dir/SpriteRenderer.c.o"
+  "/home/twittumz/Desktop/git/ParalyzedEngine/ParalyzedEngine/Texture.c" "/home/twittumz/Desktop/git/ParalyzedEngine/ParalyzedEngine/build/CMakeFiles/ParalyzedEngine.dir/Texture.c.o"
   )
 set(CMAKE_C_COMPILER_ID "GNU")
 

@@ -184,10 +184,13 @@ PKG_CONFIG_EXECUTABLE:FILEPATH=/usr/bin/pkg-config
 ParalyzedEngine_BINARY_DIR:STATIC=/home/twittumz/Desktop/git/ParalyzedEngine/ParalyzedEngine/build
 
 //Dependencies for the target
-ParalyzedEngine_LIB_DEPENDS:STATIC=general;X11;general;GL;general;GLU;
+ParalyzedEngine_LIB_DEPENDS:STATIC=general;/usr/lib64/libSOIL.so;general;X11;general;GL;general;GLU;
 
 //Value Computed by CMake
 ParalyzedEngine_SOURCE_DIR:STATIC=/home/twittumz/Desktop/git/ParalyzedEngine/ParalyzedEngine
+
+//Path to a library.
+SOIL_LIBRARY:FILEPATH=/usr/lib64/libSOIL.so
 
 
 ########################
@@ -335,4 +338,6 @@ OPENGL_glu_LIBRARY-ADVANCED:INTERNAL=1
 OPENGL_xmesa_INCLUDE_DIR-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: PKG_CONFIG_EXECUTABLE
 PKG_CONFIG_EXECUTABLE-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: SOIL_LIBRARY
+SOIL_LIBRARY-ADVANCED:INTERNAL=1
 

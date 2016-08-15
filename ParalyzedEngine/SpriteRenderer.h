@@ -1,6 +1,7 @@
 #ifndef __PE_SPRITERENDERER_H_
 #define __PE_SPRITERENDERER_H_
  #include "Shaders/ShaderProgram.h"
+ #include "Texture.h"
  #include <GL/glew.h>
 #include<GL/gl.h>
 #include<GL/glx.h>
@@ -15,7 +16,7 @@ typedef struct PE_ShaderVars{
  int vposy;
 } PE_ShaderVars;
 extern void PE_Sprite_Renderer_init(PEShaderProgram * program);
-extern void PE_Sprite_Draw(float x,float y,float width,float height);
+extern void PE_Sprite_Draw(PETexture *,float x,float y,float width,float height);
 
  
 

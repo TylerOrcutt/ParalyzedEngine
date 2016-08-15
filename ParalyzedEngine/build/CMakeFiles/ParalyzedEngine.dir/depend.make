@@ -17,6 +17,7 @@ CMakeFiles/ParalyzedEngine.dir/Shaders/ShaderProgram.c.o: ../Shaders/ShaderProgr
 CMakeFiles/ParalyzedEngine.dir/SpriteRenderer.c.o: ../Shaders/ShaderProgram.h
 CMakeFiles/ParalyzedEngine.dir/SpriteRenderer.c.o: ../SpriteRenderer.c
 CMakeFiles/ParalyzedEngine.dir/SpriteRenderer.c.o: ../SpriteRenderer.h
+CMakeFiles/ParalyzedEngine.dir/SpriteRenderer.c.o: ../Texture.h
 
 CMakeFiles/ParalyzedEngine.dir/Texture.c.o: ../Texture.c
 CMakeFiles/ParalyzedEngine.dir/Texture.c.o: ../Texture.h

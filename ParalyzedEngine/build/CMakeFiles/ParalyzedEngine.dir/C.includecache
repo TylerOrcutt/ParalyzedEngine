@@ -119,6 +119,8 @@ GL/glu.h
 /home/twittumz/Desktop/git/ParalyzedEngine/ParalyzedEngine/SpriteRenderer.h
 Shaders/ShaderProgram.h
 /home/twittumz/Desktop/git/ParalyzedEngine/ParalyzedEngine/Shaders/ShaderProgram.h
+Texture.h
+/home/twittumz/Desktop/git/ParalyzedEngine/ParalyzedEngine/Texture.h
 GL/glew.h
 -
 GL/gl.h

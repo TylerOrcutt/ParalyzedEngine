@@ -18,14 +18,14 @@ sprogram=program;
       vScaleY = glGetUniformLocation(program->programID,"vScaleY");
       tposx = glGetUniformLocation(program->programID,"tposx");
       tposy = glGetUniformLocation(program->programID,"tposy");
-      tScaleX = glGetUniformLocation(program->programID,"tScalex");
+      tScaleX = glGetUniformLocation(program->programID,"tScaleX");
       tScaleY = glGetUniformLocation(program->programID,"tScaleY");
       useTexture = glGetUniformLocation(program->programID,"useTexture");
       mSamplerLoc =glGetUniformLocation(program->programID,"s_texture");
 
      vPosition = glGetAttribLocation(program->programID,"vPosition");
      mTexLoc = glGetAttribLocation(program->programID,"a_texCoord");
-     printf("vposx: %i\nvposy: %i\nvPostion:%i\n vScalex: %i\nvScaley: %i\ntScaley: %i\nmTexLoc: %i\n",vposx,vposy,vPosition,vScaleX,vScaleY,tScaleY,mTexLoc);
+     printf("vposx: %i\nvposy: %i\nvPostion:%i\n vScalex: %i\nvScaley: %i\ntScaleX: %i\ntScaley: %i\nmTexLoc: %i\n",vposx,vposy,vPosition,vScaleX,vScaleY,tScaleX,tScaleY,mTexLoc);
 
 
 
@@ -48,14 +48,20 @@ sprogram=program;
 
     glUniform1i(mSamplerLoc,0);
     glUniform1i(useTexture,1);
- 
+ glDepthFunc(GL_LEQUAL);   
+			     glHint(GL_PERSPECTIVE_CORRECTION_HINT, GL_NICEST);  
+			     glShadeModel(GL_SMOOTH); 
+			     glClearDepth(1.0f);  
  //free (verts);
 }
-void PE_Sprite_Draw(float x,float y,float width,float height){
+void PE_Sprite_Draw(PETexture * texture, float x,float y,float width,float height){
 glEnable(GL_TEXTURE_2D);
-            glBindTexture(GL_TEXTURE_2D,1);
+            glBindTexture(GL_TEXTURE_2D,texture->textureID);
      glUseProgram(1);
 glColor4f(0.f,1.f,0.f,1.f);
+
+glEnableVertexAttribArray(vPosition); 
+glEnableVertexAttribArray(mTexLoc); 
     glUniform1f(vposx,x);
       glUniform1f(vposy,y);
       
@@ -63,14 +69,20 @@ glColor4f(0.f,1.f,0.f,1.f);
       glUniform1f(vScaleY,height); 
 
 
-    glUniform1i(mSamplerLoc,0);
-glUniform1f(tposx,1.f/320*320/10*3);
-glUniform1f(tposy,1.f/320*320/10*0);
- glUniform1f(tScaleX,1.f/320*320/10);
-      glUniform1f(tScaleY,1.f/320*320/10); 
+ //   glUniform1i(mSamplerLoc,0);
 
-glEnableVertexAttribArray(vPosition); 
-glEnableVertexAttribArray(mTexLoc); 
+    GLfloat sx = (1.f/texture->width)*0;
+    GLfloat sy=(1.f/texture->height)*0;
+   // printf("sx: %f\n",sx);
+  //  printf("sy: %f\n",sy);
+glUniform1f(tposx,sx);
+glUniform1f(tposy,sy);
+double sw = texture->spriteWidth-0.001;
+//printf("sp width: %f\n",sw);
+ double sh = texture->spriteHeight-0.001;
+//printf("sp Height: %f\n",sh);
+ glUniform1f(tScaleX,sw);
+      glUniform1f(tScaleY,sh); 
 
 
  glDrawArrays(GL_TRIANGLE_STRIP, 0, 4);

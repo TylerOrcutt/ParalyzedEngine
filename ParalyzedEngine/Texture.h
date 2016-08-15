@@ -12,12 +12,15 @@
 #endif
 typedef struct PETexture{
     int width;
-    int height;
+    int  height;
+   double spriteWidth;
+    double  spriteHeight;
+     
     GLuint textureID;
 }PETexture;
  
- extern PETexture *PE_load_texture(const char * );
  
+ extern PETexture *PE_load_texture(const char *, int ,  int );
 
 #ifdef __cplusplus
  }

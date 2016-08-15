@@ -103,9 +103,9 @@ int PE_load_shaderProgram(PEShaderProgram * program, const char * vertexShaderSo
     strcat(source,"position.y=position.y*vScaleY+ vposy;\n");
      strcat(source,"gl_Position =  gl_ModelViewProjectionMatrix*position;\n");
    
-    strcat(source,"vec2 txtpos = a_texCoord;\n");
-    strcat(source,"txtpos.x=txtpos.x*tScaleX+tposx;\n");
-    strcat(source,"txtpos.y=txtpos.y*tScaleY+tposy;\n");
+    strcat(source,"vec2 txtpos;\n");
+     strcat(source,"txtpos.x=( a_texCoord.x*tScaleX)+tposx;\n");
+    strcat(source,"txtpos.y=( a_texCoord.y*tScaleY)+tposy;\n");
     strcat(source,"v_texCoord = txtpos;\n");
   
      strcat(source,"gl_FrontColor = gl_Color;\n");

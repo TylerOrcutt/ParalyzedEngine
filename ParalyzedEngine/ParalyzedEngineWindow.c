@@ -102,9 +102,9 @@ void getNextEvent(PEWindow *pe,XEvent* e){
                  XNextEvent(pe->dpy, e);
 
   if(e->type==ClientMessage){
-    if(e->xclient.data.l[0]==WM_DELETE_WINDOW){
+  /*  if(e->xclient.data.l[0]==WM_DELETE_WINDOW){
       printf("closeing");
-    }
+    }*/
   }
 
  if(e->type==KeyRelease  && XEventsQueued(pe->dpy, QueuedAfterReading)){

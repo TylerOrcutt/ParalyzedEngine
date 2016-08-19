@@ -56,9 +56,14 @@ sprogram=program;
 }
 void PE_Sprite_Draw(PETexture * texture, float x,float y,float width,float height){
 glEnable(GL_TEXTURE_2D);
+    glUseProgram(1);
+if(texture!=NULL){
             glBindTexture(GL_TEXTURE_2D,texture->textureID);
-     glUseProgram(1);
-glColor4f(0.f,1.f,0.f,1.f);
+}else{
+      glUniform1f(useTexture,0);
+}
+ 
+ 
 
 glEnableVertexAttribArray(vPosition); 
 glEnableVertexAttribArray(mTexLoc); 
@@ -88,6 +93,8 @@ double sw = texture->spriteWidth-0.001;
  glDrawArrays(GL_TRIANGLE_STRIP, 0, 4);
   glDisableVertexAttribArray(mTexLoc);
  glDisableVertexAttribArray(vPosition);
- 
+ if(texture==NULL){
+         glUniform1f(useTexture,1);
+ }
  
 }

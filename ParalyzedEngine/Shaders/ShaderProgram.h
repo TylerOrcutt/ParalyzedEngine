@@ -13,8 +13,8 @@ extern  void PE_init_shaderProgram(PEShaderProgram *);
 extern int PE_load_shaderProgram(PEShaderProgram * program,const char * vertexShaderSource, const char * fragmentShaderSource);
 extern char * load_shaderSource(const char * shaderFile);
 
-extern const char * PE_default_vertexShader();
-extern const char * PE_default_fragmentShader();
+extern const char * PE_default_vertexShader2D();
+extern const char * PE_default_fragmentShader2D();
 
 
  #ifdef __cplusplus

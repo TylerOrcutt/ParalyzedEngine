@@ -66,8 +66,10 @@ x11_fd = ConnectionNumber(dpy);
   (*pe).glc =glc;
      if(glewInit()){
   printf("failed to init glew\n");
+
  
 }
+pe->WINDOW_CLOSING=0;
   return pe;
  /*
  while(1) {
@@ -92,12 +94,47 @@ x11_fd = ConnectionNumber(dpy);
 
 void getNextEvent(PEWindow *pe,XEvent* e){
    int events;
-   if((events=XPending(pe->dpy))>0){
- //  if(XEventsQueued(pe->dpy, QueuedAfterFlush)){
+
+ // if(XEventsQueued(pe->dpy, QueuedAfterFlush)){
     //   printf("events %i \n",events);
-                       XNextEvent(pe->dpy, e);
-                  //     XFlush(pe->dpy);
-                    //   break;
-  // }
+         
+          if(XCheckMaskEvent(pe->dpy,-1,e) ){
+                 XNextEvent(pe->dpy, e);
+
+  if(e->type==ClientMessage){
+    if(e->xclient.data.l[0]==WM_DELETE_WINDOW){
+      printf("closeing");
     }
+  }
+
+ if(e->type==KeyRelease  && XEventsQueued(pe->dpy, QueuedAfterReading)){
+      //    XNextEvent(pe->dpy, e);
+          XEvent  *peak = malloc(sizeof(XEvent)); 
+          XPeekEvent(pe->dpy,peak);
+          if(peak==NULL){
+       //  return;
+          }
+    if (peak->type == KeyPress && peak->xkey.time == e->xkey.time &&
+      peak->xkey.keycode == e->xkey.keycode){
+    printf("KeyRelease: %c     %i\n",XLookupKeysym(&e->xkey,0),e->xkey.keycode);
+  XFlush(pe->dpy);
+  /* if(pe->onKeyRelease!=NULL){
+   (*pe->onKeyRelease)();
+   }*/
+      }
+ }
+
+         //  }
+                  //   XFlush(pe->dpy);
+                    //   break;
 }
+ 
+}
+ void PE_window_set_onKeyPress(PEWindow *pe, void (*func)()){
+ pe->onKeyPress=func;
+
+}
+
+ void PE_window_cleaUp(PEWindow * pe){
+
+ }

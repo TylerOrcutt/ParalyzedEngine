@@ -58,7 +58,7 @@ sprintf( &plen, "%i", strlen(params) );
       strcat(a,&plen);
       strcat(a,"\r\n\r\n");
       strcat(a,params);   
-printf("%s\n%i \n",a,strlen(a));
+//printf("%s\n%i \n",a,strlen(a));
 
 SSL * ssl = SSL_new(ctx);
 SSL_set_fd(ssl,sock);
@@ -67,12 +67,24 @@ if(SSL_write(ssl,a,strlen(a))<0){
     printf("error making request");
     return NULL;
 }
-char  packet[128];
+char  packet[1];
 char * responce = malloc(sizeof(char)*2048);
-while(SSL_read(ssl,&packet,128)>0){
+//sprintf(responce,"",0);
+char * html= NULL;
+for(int i=0;SSL_read(ssl,&packet,1)>0;i++){
  //   printf("%s\n",&packet);
  //packet[strnlen(packet)] = "\0";
     strcat(responce,packet);
+    char clen[17];
+    if(i>=17){
+    memcpy(clen,&responce[i-16],17);
+    clen[16]='\0';
+        printf("%s\n",clen);
+    
+    if(clen == "Content-Length: "){
+        printf("FOUND CONTENT LENGH\n");
+    }
+    }
 }
 printf("%s",responce);
 

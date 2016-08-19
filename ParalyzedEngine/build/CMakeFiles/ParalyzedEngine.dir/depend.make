@@ -22,10 +22,3 @@ CMakeFiles/ParalyzedEngine.dir/SpriteRenderer.c.o: ../Texture.h
 CMakeFiles/ParalyzedEngine.dir/Texture.c.o: ../Texture.c
 CMakeFiles/ParalyzedEngine.dir/Texture.c.o: ../Texture.h
 
-CMakeFiles/ParalyzedEngine.dir/JSON/JSONParser.cpp.o: ../JSON/JSONParser.cpp
-CMakeFiles/ParalyzedEngine.dir/JSON/JSONParser.cpp.o: ../JSON/JSONParser.hpp
-CMakeFiles/ParalyzedEngine.dir/JSON/JSONParser.cpp.o: ../PEDictionary.hpp
-
-CMakeFiles/ParalyzedEngine.dir/PEDictionary.cpp.o: ../PEDictionary.cpp
-CMakeFiles/ParalyzedEngine.dir/PEDictionary.cpp.o: ../PEDictionary.hpp
-

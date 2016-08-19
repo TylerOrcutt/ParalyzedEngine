@@ -71,7 +71,7 @@ glEnableVertexAttribArray(mTexLoc);
 
  //   glUniform1i(mSamplerLoc,0);
 
-    GLfloat sx = (1.f/texture->width)*0;
+    GLfloat sx = (1.f/texture->width)*32*2;
     GLfloat sy=(1.f/texture->height)*0;
    // printf("sx: %f\n",sx);
   //  printf("sy: %f\n",sy);

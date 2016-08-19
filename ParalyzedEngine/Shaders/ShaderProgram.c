@@ -81,7 +81,7 @@ int PE_load_shaderProgram(PEShaderProgram * program, const char * vertexShaderSo
 
  }
 
- const char * PE_default_vertexShader(){
+ const char * PE_default_vertexShader2D(){
     char * source = malloc(sizeof(char)*1024);
 
            sprintf( source, "%s", "attribute  vec4  vPosition;\n" );
@@ -114,7 +114,7 @@ int PE_load_shaderProgram(PEShaderProgram * program, const char * vertexShaderSo
       return source;
  }
 
- const char * PE_default_fragmentShader(){
+ const char * PE_default_fragmentShader2D(){
     char * source = malloc(sizeof(char)*512);
            sprintf( source, "%s", "varying vec2 v_texCoord;" );
 

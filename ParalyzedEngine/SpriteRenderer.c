@@ -60,7 +60,7 @@ glEnable(GL_TEXTURE_2D);
 if(texture!=NULL){
             glBindTexture(GL_TEXTURE_2D,texture->textureID);
 }else{
-      glUniform1f(useTexture,0);
+      glUniform1i(useTexture,0);
 }
  
  
@@ -75,7 +75,7 @@ glEnableVertexAttribArray(mTexLoc);
 
 
  //   glUniform1i(mSamplerLoc,0);
-
+if(texture!=NULL){
     GLfloat sx = (1.f/texture->width)*32*2;
     GLfloat sy=(1.f/texture->height)*0;
    // printf("sx: %f\n",sx);
@@ -89,7 +89,7 @@ double sw = texture->spriteWidth-0.001;
  glUniform1f(tScaleX,sw);
       glUniform1f(tScaleY,sh); 
 
-
+}
  glDrawArrays(GL_TRIANGLE_STRIP, 0, 4);
   glDisableVertexAttribArray(mTexLoc);
  glDisableVertexAttribArray(vPosition);

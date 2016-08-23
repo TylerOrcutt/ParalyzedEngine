@@ -123,6 +123,60 @@ ParalyzedEngine/fast:
 	$(MAKE) -f CMakeFiles/ParalyzedEngine.dir/build.make CMakeFiles/ParalyzedEngine.dir/build
 .PHONY : ParalyzedEngine/fast
 
+JSON/JSONParser.o: JSON/JSONParser.cpp.o
+
+.PHONY : JSON/JSONParser.o
+
+# target to build an object file
+JSON/JSONParser.cpp.o:
+	$(MAKE) -f CMakeFiles/ParalyzedEngine.dir/build.make CMakeFiles/ParalyzedEngine.dir/JSON/JSONParser.cpp.o
+.PHONY : JSON/JSONParser.cpp.o
+
+JSON/JSONParser.i: JSON/JSONParser.cpp.i
+
+.PHONY : JSON/JSONParser.i
+
+# target to preprocess a source file
+JSON/JSONParser.cpp.i:
+	$(MAKE) -f CMakeFiles/ParalyzedEngine.dir/build.make CMakeFiles/ParalyzedEngine.dir/JSON/JSONParser.cpp.i
+.PHONY : JSON/JSONParser.cpp.i
+
+JSON/JSONParser.s: JSON/JSONParser.cpp.s
+
+.PHONY : JSON/JSONParser.s
+
+# target to generate assembly for a file
+JSON/JSONParser.cpp.s:
+	$(MAKE) -f CMakeFiles/ParalyzedEngine.dir/build.make CMakeFiles/ParalyzedEngine.dir/JSON/JSONParser.cpp.s
+.PHONY : JSON/JSONParser.cpp.s
+
+Map/Map.o: Map/Map.cpp.o
+
+.PHONY : Map/Map.o
+
+# target to build an object file
+Map/Map.cpp.o:
+	$(MAKE) -f CMakeFiles/ParalyzedEngine.dir/build.make CMakeFiles/ParalyzedEngine.dir/Map/Map.cpp.o
+.PHONY : Map/Map.cpp.o
+
+Map/Map.i: Map/Map.cpp.i
+
+.PHONY : Map/Map.i
+
+# target to preprocess a source file
+Map/Map.cpp.i:
+	$(MAKE) -f CMakeFiles/ParalyzedEngine.dir/build.make CMakeFiles/ParalyzedEngine.dir/Map/Map.cpp.i
+.PHONY : Map/Map.cpp.i
+
+Map/Map.s: Map/Map.cpp.s
+
+.PHONY : Map/Map.s
+
+# target to generate assembly for a file
+Map/Map.cpp.s:
+	$(MAKE) -f CMakeFiles/ParalyzedEngine.dir/build.make CMakeFiles/ParalyzedEngine.dir/Map/Map.cpp.s
+.PHONY : Map/Map.cpp.s
+
 Network/WebClient.o: Network/WebClient.c.o
 
 .PHONY : Network/WebClient.o
@@ -149,6 +203,33 @@ Network/WebClient.s: Network/WebClient.c.s
 Network/WebClient.c.s:
 	$(MAKE) -f CMakeFiles/ParalyzedEngine.dir/build.make CMakeFiles/ParalyzedEngine.dir/Network/WebClient.c.s
 .PHONY : Network/WebClient.c.s
+
+PEDictionary.o: PEDictionary.cpp.o
+
+.PHONY : PEDictionary.o
+
+# target to build an object file
+PEDictionary.cpp.o:
+	$(MAKE) -f CMakeFiles/ParalyzedEngine.dir/build.make CMakeFiles/ParalyzedEngine.dir/PEDictionary.cpp.o
+.PHONY : PEDictionary.cpp.o
+
+PEDictionary.i: PEDictionary.cpp.i
+
+.PHONY : PEDictionary.i
+
+# target to preprocess a source file
+PEDictionary.cpp.i:
+	$(MAKE) -f CMakeFiles/ParalyzedEngine.dir/build.make CMakeFiles/ParalyzedEngine.dir/PEDictionary.cpp.i
+.PHONY : PEDictionary.cpp.i
+
+PEDictionary.s: PEDictionary.cpp.s
+
+.PHONY : PEDictionary.s
+
+# target to generate assembly for a file
+PEDictionary.cpp.s:
+	$(MAKE) -f CMakeFiles/ParalyzedEngine.dir/build.make CMakeFiles/ParalyzedEngine.dir/PEDictionary.cpp.s
+.PHONY : PEDictionary.cpp.s
 
 ParalyzedEngine.o: ParalyzedEngine.c.o
 
@@ -294,9 +375,18 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... ParalyzedEngine"
+	@echo "... JSON/JSONParser.o"
+	@echo "... JSON/JSONParser.i"
+	@echo "... JSON/JSONParser.s"
+	@echo "... Map/Map.o"
+	@echo "... Map/Map.i"
+	@echo "... Map/Map.s"
 	@echo "... Network/WebClient.o"
 	@echo "... Network/WebClient.i"
 	@echo "... Network/WebClient.s"
+	@echo "... PEDictionary.o"
+	@echo "... PEDictionary.i"
+	@echo "... PEDictionary.s"
 	@echo "... ParalyzedEngine.o"
 	@echo "... ParalyzedEngine.i"
 	@echo "... ParalyzedEngine.s"

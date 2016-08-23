@@ -5,11 +5,14 @@ file(REMOVE_RECURSE
   "CMakeFiles/ParalyzedEngine.dir/Network/WebClient.c.o"
   "CMakeFiles/ParalyzedEngine.dir/Shaders/ShaderProgram.c.o"
   "CMakeFiles/ParalyzedEngine.dir/Texture.c.o"
+  "CMakeFiles/ParalyzedEngine.dir/PEDictionary.cpp.o"
+  "CMakeFiles/ParalyzedEngine.dir/JSON/JSONParser.cpp.o"
+  "CMakeFiles/ParalyzedEngine.dir/Map/Map.cpp.o"
   "libParalyzedEngine.pdb"
   "libParalyzedEngine.a"
 )
 
 # Per-language clean rules from dependency scanning.
-foreach(lang C)
+foreach(lang C CXX)
   include(CMakeFiles/ParalyzedEngine.dir/cmake_clean_${lang}.cmake OPTIONAL)
 endforeach()

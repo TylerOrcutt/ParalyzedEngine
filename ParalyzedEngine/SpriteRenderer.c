@@ -7,7 +7,7 @@
 #include<GL/glx.h>
 #include<GL/glu.h>
  
-void  PE_Sprite_Renderer_init(PEShaderProgram * program){
+void  PE_init_sprite_renderer(PEShaderProgram * program){
 sprogram=program;
        glUseProgram(1);
    // printf("init spriteRenderer\n");
@@ -25,7 +25,7 @@ sprogram=program;
 
      vPosition = glGetAttribLocation(program->programID,"vPosition");
      mTexLoc = glGetAttribLocation(program->programID,"a_texCoord");
-     printf("vposx: %i\nvposy: %i\nvPostion:%i\n vScalex: %i\nvScaley: %i\ntScaleX: %i\ntScaley: %i\nmTexLoc: %i\n",vposx,vposy,vPosition,vScaleX,vScaleY,tScaleX,tScaleY,mTexLoc);
+    // printf("vposx: %i\nvposy: %i\nvPostion:%i\n vScalex: %i\nvScaley: %i\ntScaleX: %i\ntScaley: %i\nmTexLoc: %i\n",vposx,vposy,vPosition,vScaleX,vScaleY,tScaleX,tScaleY,mTexLoc);
 
 
 
@@ -54,15 +54,12 @@ sprogram=program;
 			     glClearDepth(1.0f);  
  //free (verts);
 }
-void PE_Sprite_Draw(PETexture * texture, float x,float y,float width,float height){
+void PE_draw_sprite(PETexture * texture,float x,float y,float width,float height,int tx,int ty,float tw,float th){
 glEnable(GL_TEXTURE_2D);
-    glUseProgram(1);
-if(texture!=NULL){
-            glBindTexture(GL_TEXTURE_2D,texture->textureID);
-}else{
-      glUniform1i(useTexture,0);
-}
  
+
+            glBindTexture(GL_TEXTURE_2D,texture->textureID);
+
  
 
 glEnableVertexAttribArray(vPosition); 
@@ -75,26 +72,40 @@ glEnableVertexAttribArray(mTexLoc);
 
 
  //   glUniform1i(mSamplerLoc,0);
-if(texture!=NULL){
-    GLfloat sx = (1.f/texture->width)*32*2;
-    GLfloat sy=(1.f/texture->height)*0;
+
+    GLfloat sx = (1.f/texture->width)*tw*tx;
+    GLfloat sy=(1.f/texture->height)*th*ty;
    // printf("sx: %f\n",sx);
   //  printf("sy: %f\n",sy);
 glUniform1f(tposx,sx);
 glUniform1f(tposy,sy);
-double sw = texture->spriteWidth-0.001;
+double sw =(1.f/texture->width)*tw ;
 //printf("sp width: %f\n",sw);
- double sh = texture->spriteHeight-0.001;
+ double sh =(1.f/texture->height)*th;
 //printf("sp Height: %f\n",sh);
  glUniform1f(tScaleX,sw);
       glUniform1f(tScaleY,sh); 
 
-}
  glDrawArrays(GL_TRIANGLE_STRIP, 0, 4);
   glDisableVertexAttribArray(mTexLoc);
  glDisableVertexAttribArray(vPosition);
- if(texture==NULL){
-         glUniform1f(useTexture,1);
- }
+
  
 }
+
+void PE_draw_rect(float x,float y,float width, float height){
+      glUniform1i(useTexture,0);
+
+      glEnableVertexAttribArray(vPosition); 
+ 
+      glUniform1f(vposx,x);
+      glUniform1f(vposy,y);
+      
+      glUniform1f(vScaleX,width);
+      glUniform1f(vScaleY,height); 
+      
+      glDrawArrays(GL_TRIANGLE_STRIP, 0, 4);
+      glDisableVertexAttribArray(vPosition);
+    
+      glUniform1i(useTexture,1);
+ }

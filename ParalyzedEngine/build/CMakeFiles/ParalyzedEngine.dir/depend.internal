@@ -22,3 +22,15 @@ CMakeFiles/ParalyzedEngine.dir/SpriteRenderer.c.o
 CMakeFiles/ParalyzedEngine.dir/Texture.c.o
  /home/twittumz/Desktop/git/ParalyzedEngine/ParalyzedEngine/Texture.c
  /home/twittumz/Desktop/git/ParalyzedEngine/ParalyzedEngine/Texture.h
+CMakeFiles/ParalyzedEngine.dir/JSON/JSONParser.cpp.o
+ /home/twittumz/Desktop/git/ParalyzedEngine/ParalyzedEngine/JSON/JSONParser.cpp
+ /home/twittumz/Desktop/git/ParalyzedEngine/ParalyzedEngine/JSON/JSONParser.hpp
+ /home/twittumz/Desktop/git/ParalyzedEngine/ParalyzedEngine/PEDictionary.hpp
+CMakeFiles/ParalyzedEngine.dir/Map/Map.cpp.o
+ /home/twittumz/Desktop/git/ParalyzedEngine/ParalyzedEngine/JSON/JSONParser.hpp
+ /home/twittumz/Desktop/git/ParalyzedEngine/ParalyzedEngine/Map/Map.cpp
+ /home/twittumz/Desktop/git/ParalyzedEngine/ParalyzedEngine/Map/Map.hpp
+ /home/twittumz/Desktop/git/ParalyzedEngine/ParalyzedEngine/PEDictionary.hpp
+CMakeFiles/ParalyzedEngine.dir/PEDictionary.cpp.o
+ /home/twittumz/Desktop/git/ParalyzedEngine/ParalyzedEngine/PEDictionary.cpp
+ /home/twittumz/Desktop/git/ParalyzedEngine/ParalyzedEngine/PEDictionary.hpp

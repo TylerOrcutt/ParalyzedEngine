@@ -13,15 +13,14 @@
 typedef struct PETexture{
     int width;
     int  height;
-   double spriteWidth;
-    double  spriteHeight;
+ 
      
     GLuint textureID;
 }PETexture;
  
  
- extern PETexture *PE_load_texture(const char *, int ,  int );
-
+ extern PETexture *PE_load_texture(const char *);
+ extern void PE_delete_texture(PETexture *);
 #ifdef __cplusplus
  }
 #endif

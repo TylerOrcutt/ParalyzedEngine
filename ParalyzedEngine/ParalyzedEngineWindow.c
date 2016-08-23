@@ -33,7 +33,7 @@ XEvent                  xev;
  root = DefaultRootWindow(dpy);
 x11_fd = ConnectionNumber(dpy);
  vi = glXChooseVisual(dpy, 0, att);
-
+int s =  DefaultScreen(dpy);
  if(vi == NULL) {
 	printf("\n\tno appropriate visual found\n\n");
         exit(0);
@@ -46,14 +46,15 @@ x11_fd = ConnectionNumber(dpy);
  cmap = XCreateColormap(dpy, root, vi->visual, AllocNone);
 
  swa.colormap = cmap;
- swa.event_mask = ExposureMask | KeyPressMask;
+ swa.event_mask = ExposureMask | KeyPressMask|KeyReleaseMask;
  
- win = XCreateWindow(dpy, root, 0, 0, height,width, 0, vi->depth, InputOutput, vi->visual, CWColormap | CWEventMask, &swa);
-
+win = XCreateWindow(dpy, root, 0, 0, height,width, 0, vi->depth, InputOutput, vi->visual, CWColormap | CWEventMask, &swa);
+//  win = XCreateSimpleWindow(dpy,root,0,0,height,width,1, BlackPixel(dpy, s), WhitePixel(dpy, s));
  XMapWindow(dpy, win);
  XStoreName(dpy, win, title);
- XSelectInput(dpy,win,InputOutput|KeyPressMask | KeyReleaseMask);
+ XSelectInput(dpy,win,KeyPressMask | KeyReleaseMask );
  
+    
  glc = glXCreateContext(dpy, vi, NULL, GL_TRUE);
  glXMakeCurrent(dpy, win, glc);
  
@@ -70,6 +71,7 @@ x11_fd = ConnectionNumber(dpy);
  
 }
 pe->WINDOW_CLOSING=0;
+XFlush(dpy);
   return pe;
  /*
  while(1) {
@@ -93,41 +95,46 @@ pe->WINDOW_CLOSING=0;
 }
 
 void getNextEvent(PEWindow *pe,XEvent* e){
-   int events;
-
- // if(XEventsQueued(pe->dpy, QueuedAfterFlush)){
-    //   printf("events %i \n",events);
+ 
+ 
          
-          if(XCheckMaskEvent(pe->dpy,-1,e) ){
-                 XNextEvent(pe->dpy, e);
+       //  if(XCheckMaskEvent(pe->dpy, -1,e) ){
 
-  if(e->type==ClientMessage){
-  /*  if(e->xclient.data.l[0]==WM_DELETE_WINDOW){
-      printf("closeing");
-    }*/
-  }
+    while(XPending(pe->dpy) > 0) {
+        XNextEvent(pe->dpy, e);
+ 
+  // XFlush(pe->dpy);
 
- if(e->type==KeyRelease  && XEventsQueued(pe->dpy, QueuedAfterReading)){
-      //    XNextEvent(pe->dpy, e);
-          XEvent  *peak = malloc(sizeof(XEvent)); 
-          XPeekEvent(pe->dpy,peak);
-          if(peak==NULL){
-       //  return;
-          }
-    if (peak->type == KeyPress && peak->xkey.time == e->xkey.time &&
-      peak->xkey.keycode == e->xkey.keycode){
-    printf("KeyRelease: %c     %i\n",XLookupKeysym(&e->xkey,0),e->xkey.keycode);
-  XFlush(pe->dpy);
-  /* if(pe->onKeyRelease!=NULL){
-   (*pe->onKeyRelease)();
-   }*/
-      }
+if (e->type == KeyRelease )
+{
+  XEvent nev;
+  XPeekEvent(pe->dpy, &nev); 
+
+   
+   //printf("cheaking keyRelease\n");
+  if (nev.type == KeyPress && nev.xkey.time == e->xkey.time &&
+      nev.xkey.keycode == e->xkey.keycode   )
+  {
+    
+             XNextEvent(pe->dpy, e);
+    /* Key wasn’t actually released */
+        // printf("KeyRelease: %c     %i\n",XLookupKeysym(&e->xkey,0),e->xkey.keycode);
+  }else{
+      // XFlush(pe->dpy);
+     printf("KeyRelease: %c     %i\n",XLookupKeysym(&e->xkey,0),e->xkey.keycode);
  }
-
-         //  }
-                  //   XFlush(pe->dpy);
-                    //   break;
 }
+      
+
+
+
+ if(e->type==KeyPress){
+      //    XNextEvent(pe->dpy, e);
+   // XFlush(pe->dpy);
+    printf("KeyPress: %c     %i\n",XLookupKeysym(&e->xkey,0),e->xkey.keycode);
+        
+ }
+       }
  
 }
  void PE_window_set_onKeyPress(PEWindow *pe, void (*func)()){

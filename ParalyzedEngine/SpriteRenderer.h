@@ -15,8 +15,9 @@ typedef struct PE_ShaderVars{
  int vposx;
  int vposy;
 } PE_ShaderVars;
-extern void PE_Sprite_Renderer_init(PEShaderProgram * program);
-extern void PE_Sprite_Draw(PETexture *,float x,float y,float width,float height);
+extern void PE_init_sprite_renderer(PEShaderProgram * program);
+extern void PE_draw_sprite(PETexture *,float x,float y,float width,float height,int tx,int ty,float tw,float th);
+extern void PE_draw_rect(float x,float y,float width, float height);
 
  
 

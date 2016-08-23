@@ -69,16 +69,16 @@ if(SSL_write(ssl,a,strlen(a))<0){
 }
 char  packet[1];
 char * responce = malloc(sizeof(char)*2048);
-//sprintf(responce,"",0);
+sprintf(responce,"",0);
 char * html= NULL;
 for(int i=0;SSL_read(ssl,&packet,1)>0;i++){
  //   printf("%s\n",&packet);
  //packet[strnlen(packet)] = "\0";
     strcat(responce,packet);
-    char clen[17];
-    if(i>=17){
-    memcpy(clen,&responce[i-16],17);
-    clen[16]='\0';
+    char clen[16];
+    if(i>=16){
+    memcpy(clen,&responce[i-15],16);
+   // clen[16]='\0';
         printf("%s\n",clen);
     
     if(clen == "Content-Length: "){

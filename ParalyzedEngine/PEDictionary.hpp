@@ -38,14 +38,6 @@ std::vector<PEDictionaryItem> nodes;
 public:
 PEDictionary(){ }
 
-PEDictionaryItem & operator [](std::string pram){
-for(int i=0;i<nodes.size();i++ ){
-  if(pram==nodes[i].key){
-  return nodes[i];
-}
-}
-
-}
 
 PEDictionaryItem * getItem(std::string pram){
 for(int i=0;i<nodes.size();i++ ){
@@ -55,7 +47,13 @@ for(int i=0;i<nodes.size();i++ ){
 }
 return nullptr;
 }
- PEDictionaryItem&  operator[](int index){
+
+
+PEDictionaryItem * get(int i){
+return &nodes[i];
+}
+
+ PEDictionaryItem &  operator[](int index){
 
   return nodes[index];
 }

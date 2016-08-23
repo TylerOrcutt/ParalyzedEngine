@@ -201,6 +201,78 @@ CMakeFiles/ParalyzedEngine.dir/Texture.c.o.provides: CMakeFiles/ParalyzedEngine.
 CMakeFiles/ParalyzedEngine.dir/Texture.c.o.provides.build: CMakeFiles/ParalyzedEngine.dir/Texture.c.o
 
 
+CMakeFiles/ParalyzedEngine.dir/PEDictionary.cpp.o: CMakeFiles/ParalyzedEngine.dir/flags.make
+CMakeFiles/ParalyzedEngine.dir/PEDictionary.cpp.o: ../PEDictionary.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/twittumz/Desktop/git/ParalyzedEngine/ParalyzedEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/ParalyzedEngine.dir/PEDictionary.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ParalyzedEngine.dir/PEDictionary.cpp.o -c /home/twittumz/Desktop/git/ParalyzedEngine/ParalyzedEngine/PEDictionary.cpp
+
+CMakeFiles/ParalyzedEngine.dir/PEDictionary.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ParalyzedEngine.dir/PEDictionary.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/twittumz/Desktop/git/ParalyzedEngine/ParalyzedEngine/PEDictionary.cpp > CMakeFiles/ParalyzedEngine.dir/PEDictionary.cpp.i
+
+CMakeFiles/ParalyzedEngine.dir/PEDictionary.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ParalyzedEngine.dir/PEDictionary.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/twittumz/Desktop/git/ParalyzedEngine/ParalyzedEngine/PEDictionary.cpp -o CMakeFiles/ParalyzedEngine.dir/PEDictionary.cpp.s
+
+CMakeFiles/ParalyzedEngine.dir/PEDictionary.cpp.o.requires:
+
+.PHONY : CMakeFiles/ParalyzedEngine.dir/PEDictionary.cpp.o.requires
+
+CMakeFiles/ParalyzedEngine.dir/PEDictionary.cpp.o.provides: CMakeFiles/ParalyzedEngine.dir/PEDictionary.cpp.o.requires
+	$(MAKE) -f CMakeFiles/ParalyzedEngine.dir/build.make CMakeFiles/ParalyzedEngine.dir/PEDictionary.cpp.o.provides.build
+.PHONY : CMakeFiles/ParalyzedEngine.dir/PEDictionary.cpp.o.provides
+
+CMakeFiles/ParalyzedEngine.dir/PEDictionary.cpp.o.provides.build: CMakeFiles/ParalyzedEngine.dir/PEDictionary.cpp.o
+
+
+CMakeFiles/ParalyzedEngine.dir/JSON/JSONParser.cpp.o: CMakeFiles/ParalyzedEngine.dir/flags.make
+CMakeFiles/ParalyzedEngine.dir/JSON/JSONParser.cpp.o: ../JSON/JSONParser.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/twittumz/Desktop/git/ParalyzedEngine/ParalyzedEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/ParalyzedEngine.dir/JSON/JSONParser.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ParalyzedEngine.dir/JSON/JSONParser.cpp.o -c /home/twittumz/Desktop/git/ParalyzedEngine/ParalyzedEngine/JSON/JSONParser.cpp
+
+CMakeFiles/ParalyzedEngine.dir/JSON/JSONParser.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ParalyzedEngine.dir/JSON/JSONParser.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/twittumz/Desktop/git/ParalyzedEngine/ParalyzedEngine/JSON/JSONParser.cpp > CMakeFiles/ParalyzedEngine.dir/JSON/JSONParser.cpp.i
+
+CMakeFiles/ParalyzedEngine.dir/JSON/JSONParser.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ParalyzedEngine.dir/JSON/JSONParser.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/twittumz/Desktop/git/ParalyzedEngine/ParalyzedEngine/JSON/JSONParser.cpp -o CMakeFiles/ParalyzedEngine.dir/JSON/JSONParser.cpp.s
+
+CMakeFiles/ParalyzedEngine.dir/JSON/JSONParser.cpp.o.requires:
+
+.PHONY : CMakeFiles/ParalyzedEngine.dir/JSON/JSONParser.cpp.o.requires
+
+CMakeFiles/ParalyzedEngine.dir/JSON/JSONParser.cpp.o.provides: CMakeFiles/ParalyzedEngine.dir/JSON/JSONParser.cpp.o.requires
+	$(MAKE) -f CMakeFiles/ParalyzedEngine.dir/build.make CMakeFiles/ParalyzedEngine.dir/JSON/JSONParser.cpp.o.provides.build
+.PHONY : CMakeFiles/ParalyzedEngine.dir/JSON/JSONParser.cpp.o.provides
+
+CMakeFiles/ParalyzedEngine.dir/JSON/JSONParser.cpp.o.provides.build: CMakeFiles/ParalyzedEngine.dir/JSON/JSONParser.cpp.o
+
+
+CMakeFiles/ParalyzedEngine.dir/Map/Map.cpp.o: CMakeFiles/ParalyzedEngine.dir/flags.make
+CMakeFiles/ParalyzedEngine.dir/Map/Map.cpp.o: ../Map/Map.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/twittumz/Desktop/git/ParalyzedEngine/ParalyzedEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/ParalyzedEngine.dir/Map/Map.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ParalyzedEngine.dir/Map/Map.cpp.o -c /home/twittumz/Desktop/git/ParalyzedEngine/ParalyzedEngine/Map/Map.cpp
+
+CMakeFiles/ParalyzedEngine.dir/Map/Map.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ParalyzedEngine.dir/Map/Map.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/twittumz/Desktop/git/ParalyzedEngine/ParalyzedEngine/Map/Map.cpp > CMakeFiles/ParalyzedEngine.dir/Map/Map.cpp.i
+
+CMakeFiles/ParalyzedEngine.dir/Map/Map.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ParalyzedEngine.dir/Map/Map.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/twittumz/Desktop/git/ParalyzedEngine/ParalyzedEngine/Map/Map.cpp -o CMakeFiles/ParalyzedEngine.dir/Map/Map.cpp.s
+
+CMakeFiles/ParalyzedEngine.dir/Map/Map.cpp.o.requires:
+
+.PHONY : CMakeFiles/ParalyzedEngine.dir/Map/Map.cpp.o.requires
+
+CMakeFiles/ParalyzedEngine.dir/Map/Map.cpp.o.provides: CMakeFiles/ParalyzedEngine.dir/Map/Map.cpp.o.requires
+	$(MAKE) -f CMakeFiles/ParalyzedEngine.dir/build.make CMakeFiles/ParalyzedEngine.dir/Map/Map.cpp.o.provides.build
+.PHONY : CMakeFiles/ParalyzedEngine.dir/Map/Map.cpp.o.provides
+
+CMakeFiles/ParalyzedEngine.dir/Map/Map.cpp.o.provides.build: CMakeFiles/ParalyzedEngine.dir/Map/Map.cpp.o
+
+
 # Object files for target ParalyzedEngine
 ParalyzedEngine_OBJECTS = \
 "CMakeFiles/ParalyzedEngine.dir/ParalyzedEngine.c.o" \
@@ -208,7 +280,10 @@ ParalyzedEngine_OBJECTS = \
 "CMakeFiles/ParalyzedEngine.dir/SpriteRenderer.c.o" \
 "CMakeFiles/ParalyzedEngine.dir/Network/WebClient.c.o" \
 "CMakeFiles/ParalyzedEngine.dir/Shaders/ShaderProgram.c.o" \
-"CMakeFiles/ParalyzedEngine.dir/Texture.c.o"
+"CMakeFiles/ParalyzedEngine.dir/Texture.c.o" \
+"CMakeFiles/ParalyzedEngine.dir/PEDictionary.cpp.o" \
+"CMakeFiles/ParalyzedEngine.dir/JSON/JSONParser.cpp.o" \
+"CMakeFiles/ParalyzedEngine.dir/Map/Map.cpp.o"
 
 # External object files for target ParalyzedEngine
 ParalyzedEngine_EXTERNAL_OBJECTS =
@@ -219,9 +294,12 @@ libParalyzedEngine.a: CMakeFiles/ParalyzedEngine.dir/SpriteRenderer.c.o
 libParalyzedEngine.a: CMakeFiles/ParalyzedEngine.dir/Network/WebClient.c.o
 libParalyzedEngine.a: CMakeFiles/ParalyzedEngine.dir/Shaders/ShaderProgram.c.o
 libParalyzedEngine.a: CMakeFiles/ParalyzedEngine.dir/Texture.c.o
+libParalyzedEngine.a: CMakeFiles/ParalyzedEngine.dir/PEDictionary.cpp.o
+libParalyzedEngine.a: CMakeFiles/ParalyzedEngine.dir/JSON/JSONParser.cpp.o
+libParalyzedEngine.a: CMakeFiles/ParalyzedEngine.dir/Map/Map.cpp.o
 libParalyzedEngine.a: CMakeFiles/ParalyzedEngine.dir/build.make
 libParalyzedEngine.a: CMakeFiles/ParalyzedEngine.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/twittumz/Desktop/git/ParalyzedEngine/ParalyzedEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Linking C static library libParalyzedEngine.a"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/twittumz/Desktop/git/ParalyzedEngine/ParalyzedEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Linking CXX static library libParalyzedEngine.a"
 	$(CMAKE_COMMAND) -P CMakeFiles/ParalyzedEngine.dir/cmake_clean_target.cmake
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/ParalyzedEngine.dir/link.txt --verbose=$(VERBOSE)
 
@@ -236,6 +314,9 @@ CMakeFiles/ParalyzedEngine.dir/requires: CMakeFiles/ParalyzedEngine.dir/SpriteRe
 CMakeFiles/ParalyzedEngine.dir/requires: CMakeFiles/ParalyzedEngine.dir/Network/WebClient.c.o.requires
 CMakeFiles/ParalyzedEngine.dir/requires: CMakeFiles/ParalyzedEngine.dir/Shaders/ShaderProgram.c.o.requires
 CMakeFiles/ParalyzedEngine.dir/requires: CMakeFiles/ParalyzedEngine.dir/Texture.c.o.requires
+CMakeFiles/ParalyzedEngine.dir/requires: CMakeFiles/ParalyzedEngine.dir/PEDictionary.cpp.o.requires
+CMakeFiles/ParalyzedEngine.dir/requires: CMakeFiles/ParalyzedEngine.dir/JSON/JSONParser.cpp.o.requires
+CMakeFiles/ParalyzedEngine.dir/requires: CMakeFiles/ParalyzedEngine.dir/Map/Map.cpp.o.requires
 
 .PHONY : CMakeFiles/ParalyzedEngine.dir/requires
 

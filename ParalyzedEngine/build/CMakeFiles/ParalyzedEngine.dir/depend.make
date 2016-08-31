@@ -30,6 +30,7 @@ CMakeFiles/ParalyzedEngine.dir/Map/Map.cpp.o: ../JSON/JSONParser.hpp
 CMakeFiles/ParalyzedEngine.dir/Map/Map.cpp.o: ../Map/Map.cpp
 CMakeFiles/ParalyzedEngine.dir/Map/Map.cpp.o: ../Map/Map.hpp
 CMakeFiles/ParalyzedEngine.dir/Map/Map.cpp.o: ../PEDictionary.hpp
+CMakeFiles/ParalyzedEngine.dir/Map/Map.cpp.o: ../Texture.h
 
 CMakeFiles/ParalyzedEngine.dir/PEDictionary.cpp.o: ../PEDictionary.cpp
 CMakeFiles/ParalyzedEngine.dir/PEDictionary.cpp.o: ../PEDictionary.hpp

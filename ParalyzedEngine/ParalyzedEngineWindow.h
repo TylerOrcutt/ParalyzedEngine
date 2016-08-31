@@ -16,15 +16,15 @@ typedef struct PEWindow {
     XWindowAttributes gwa;
     GLXContext              glc;
     int WINDOW_CLOSING;
-    void (*onKeyPress)();
+    void (*onKeyPress)(int);
       void (*onKeyRelease)();
     GC gc;
 }PEWindow;
  
 extern PEWindow* createPEWindow(int,int, const char*);
 extern  void getNextEvent(PEWindow *,XEvent*);
-extern void PE_window_set_onKeyPress(PEWindow *,void (*func)());
-
+extern void PE_window_set_onKeyPress(PEWindow *,void (*func)(int));
+extern void PE_window_set_onKeyRelease(PEWindow *,void (*func)(int));
 extern void PE_window_cleaUp(PEWindow * pe);
 
 #ifdef __cplusplus

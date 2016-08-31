@@ -119,14 +119,20 @@ if( XPending(pe->dpy) > 0){
     
             // XNextEvent(pe->dpy, e);
     /* Key wasn’t actually released */
-        // printf("KeyRelease: %c     %i\n",XLookupKeysym(&e->xkey,0),e->xkey.keycode);
+
   }else{
       // XFlush(pe->dpy);
-     printf("KeyRelease: %c     %i\n",XLookupKeysym(&e->xkey,0),e->xkey.keycode);
+    // printf("KeyRelease: %c     %i\n",XLookupKeysym(&e->xkey,0),e->xkey.keycode);
+           if(pe->onKeyRelease!=NULL){
+      pe->onKeyRelease(e->xkey.keycode);
+  }
  }
 
 }else{
-     printf("KeyRelease: %c     %i\n",XLookupKeysym(&e->xkey,0),e->xkey.keycode); 
+        if(pe->onKeyRelease!=NULL){
+      pe->onKeyRelease(e->xkey.keycode);
+  }
+  //   printf("KeyRelease: %c     %i\n",XLookupKeysym(&e->xkey,0),e->xkey.keycode); 
 }
 }      
 
@@ -150,11 +156,17 @@ if( XPending(pe->dpy) > 0){
         // printf("KeyRelease: %c     %i\n",XLookupKeysym(&e->xkey,0),e->xkey.keycode);
   }else{
       // XFlush(pe->dpy);
-     printf("KeyPress: %c     %i\n",XLookupKeysym(&e->xkey,0),e->xkey.keycode);
+  // printf("KeyPress: %c     %i\n",XLookupKeysym(&e->xkey,0),e->xkey.keycode);
+  if(pe->onKeyPress!=NULL){
+      pe->onKeyPress(e->xkey.keycode);
+  }
  }
 
 }else{
-     printf("KeyPress: %c     %i\n",XLookupKeysym(&e->xkey,0),e->xkey.keycode); 
+   //  printf("KeyPress: %c     %i\n",XLookupKeysym(&e->xkey,0),e->xkey.keycode); 
+     if(pe->onKeyPress!=NULL){
+      pe->onKeyPress(e->xkey.keycode);
+  }
 }
 }
     }     
@@ -166,11 +178,15 @@ if( XPending(pe->dpy) > 0){
        
  
 }
- void PE_window_set_onKeyPress(PEWindow *pe, void (*func)()){
+ void PE_window_set_onKeyPress(PEWindow *pe, void (*func)(int)){
  pe->onKeyPress=func;
 
-}
 
+}
+ void PE_window_set_onKeyRelease(PEWindow *pe, void (*func)(int)){
+ pe->onKeyRelease=func;
+
+}
  void PE_window_cleaUp(PEWindow * pe){
 
  }

@@ -29,6 +29,8 @@ vector
 -
 fstream
 -
+../Texture.h
+/home/twittumz/Desktop/git/ParalyzedEngine/ParalyzedEngine/Texture.h
 string
 -
 ../JSON/JSONParser.hpp
@@ -46,5 +48,19 @@ string
 vector
 -
 iostream
+-
+
+/home/twittumz/Desktop/git/ParalyzedEngine/ParalyzedEngine/Texture.h
+GL/glew.h
+-
+GL/gl.h
+-
+GL/glu.h
+-
+stdio.h
+-
+stdlib.h
+-
+SOIL/SOIL.h
 -
 

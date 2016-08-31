@@ -108,6 +108,7 @@ void getNextEvent(PEWindow *pe,XEvent* e){
 if (e->type == KeyRelease )
 {
   XEvent nev;
+if( XPending(pe->dpy) > 0){
   XPeekEvent(pe->dpy, &nev); 
 
    
@@ -116,25 +117,53 @@ if (e->type == KeyRelease )
       nev.xkey.keycode == e->xkey.keycode   )
   {
     
-             XNextEvent(pe->dpy, e);
+            // XNextEvent(pe->dpy, e);
     /* Key wasn’t actually released */
         // printf("KeyRelease: %c     %i\n",XLookupKeysym(&e->xkey,0),e->xkey.keycode);
   }else{
       // XFlush(pe->dpy);
      printf("KeyRelease: %c     %i\n",XLookupKeysym(&e->xkey,0),e->xkey.keycode);
  }
+
+}else{
+     printf("KeyRelease: %c     %i\n",XLookupKeysym(&e->xkey,0),e->xkey.keycode); 
 }
-      
+}      
 
 
 
  if(e->type==KeyPress){
       //    XNextEvent(pe->dpy, e);
    // XFlush(pe->dpy);
-    printf("KeyPress: %c     %i\n",XLookupKeysym(&e->xkey,0),e->xkey.keycode);
-        
+ XEvent nev;
+if( XPending(pe->dpy) > 0){
+  XPeekEvent(pe->dpy, &nev); 
+
+   
+   //printf("cheaking keyRelease\n");
+  if (nev.type == KeyPress && nev.xkey.time == e->xkey.time &&
+      nev.xkey.keycode == e->xkey.keycode   )
+  {
+    
+            // XNextEvent(pe->dpy, e);
+    /* Key wasn’t actually released */
+        // printf("KeyRelease: %c     %i\n",XLookupKeysym(&e->xkey,0),e->xkey.keycode);
+  }else{
+      // XFlush(pe->dpy);
+     printf("KeyPress: %c     %i\n",XLookupKeysym(&e->xkey,0),e->xkey.keycode);
  }
-       }
+
+}else{
+     printf("KeyPress: %c     %i\n",XLookupKeysym(&e->xkey,0),e->xkey.keycode); 
+}
+}
+    }     
+        
+
+
+
+ 
+       
  
 }
  void PE_window_set_onKeyPress(PEWindow *pe, void (*func)()){

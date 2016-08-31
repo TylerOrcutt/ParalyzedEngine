@@ -24,8 +24,10 @@ PEDictionary * dic = JSONParser::parseJson(data);
 //dic->printDictionary();
 
 for (int i=0;i<dic->size();i++){
-  if(dic->get(i)->key!="Block"){
-    printf("not block\n");
+  if(dic->get(i)->key=="SpriteSheet"){
+  //spritesheets.push_back(PE_load_texture(dic->get(i)->getItem("loc")->value.c_str()));
+   printf("%c \n ",dic->get(i)->getItem("loc")->value.c_str());
+    //printf("not block\n");
     continue;
   }
  PEBlock block;

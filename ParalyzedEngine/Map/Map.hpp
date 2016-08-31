@@ -3,6 +3,7 @@
 #include <stdio.h>
 #include <vector>
 #include <fstream>
+#include "../Texture.h"
 #include <string>
 #include "../JSON/JSONParser.hpp"
 #include "../PEDictionary.hpp"
@@ -20,6 +21,7 @@ float imgh=32;
 class PEMap{
 private:
 std::vector<PEBlock>blocks;
+std::vector<PETexture*> spritesheets;
 
 public:
 PEMap(){

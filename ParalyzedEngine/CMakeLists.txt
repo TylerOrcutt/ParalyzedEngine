@@ -19,7 +19,7 @@ SET(SOIL_LIBRARIES "${SOIL_LIBRARY}")
 
 include_directories(${GLIB_INCLUDE_DIR} ${GLIBCONFIG_INCLUDE_DIR} ${CMAKE_CURRENT_SOURCE_DIR}/include)
 
-add_library(ParalyzedEngine STATIC ParalyzedEngine.c ParalyzedEngineWindow.c SpriteRenderer.c  Network/WebClient.c Shaders/ShaderProgram.c  Texture.c PEDictionary.cpp JSON/JSONParser.cpp Map/Map.cpp )
+add_library(ParalyzedEngine STATIC ParalyzedEngine.c ParalyzedEngineWindow.c SpriteRenderer.c  Network/WebClient.c Shaders/ShaderProgram.c  Texture.c PEDictionary.cpp JSON/JSONParser.cpp Map/Map.cpp Model.cpp)
 
 target_link_libraries(ParalyzedEngine  ${SOIL_LIBRARY} ${OPENSSL_LIBRARIES} ${GL_LIBRARY} ${GLIB_LIBRARIES}    X11 GL GLU  )
 

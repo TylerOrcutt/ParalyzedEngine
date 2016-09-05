@@ -46,15 +46,16 @@ int s =  DefaultScreen(dpy);
  cmap = XCreateColormap(dpy, root, vi->visual, AllocNone);
 
  swa.colormap = cmap;
- swa.event_mask = ExposureMask | KeyPressMask|KeyReleaseMask;
+ swa.event_mask = ExposureMask | KeyPressMask|KeyReleaseMask| ButtonReleaseMask | ButtonPressMask;
  
 win = XCreateWindow(dpy, root, 0, 0, height,width, 0, vi->depth, InputOutput, vi->visual, CWColormap | CWEventMask, &swa);
 //  win = XCreateSimpleWindow(dpy,root,0,0,height,width,1, BlackPixel(dpy, s), WhitePixel(dpy, s));
  XMapWindow(dpy, win);
  XStoreName(dpy, win, title);
- XSelectInput(dpy,win,KeyPressMask | KeyReleaseMask );
+ XSelectInput(dpy,win,KeyPressMask | KeyReleaseMask | ButtonReleaseMask | ButtonPressMask|  PointerMotionMask);
  
-    
+
+
  glc = glXCreateContext(dpy, vi, NULL, GL_TRUE);
  glXMakeCurrent(dpy, win, glc);
  
@@ -105,6 +106,16 @@ void getNextEvent(PEWindow *pe,XEvent* e){
  
   // XFlush(pe->dpy);
 
+   if(e->type == ButtonPress){
+       printf("Mouse Button Press: %i\n  X:%i Y:%i ", e->xbutton.button,e->xbutton.x,e->xbutton.y);
+   }
+
+   if(e->type == ButtonRelease){
+       printf("Mouse Button Release: %i\n ", e->xbutton.button);
+   }
+   if(e->type== MotionNotify){
+          //   printf("Mouse Motion Notify\n");
+   }
 if (e->type == KeyRelease )
 {
   XEvent nev;

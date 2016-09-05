@@ -19,14 +19,19 @@ std::string PEMap::load_map(const char * file){
 f.close();
 
 
-PEDictionary * dic = JSONParser::parseJson(data);
+return data;
+}
+
+void PEMap::parseMap(std::string map){
+
+PEDictionary * dic = JSONParser::parseJson(map);
 
 //dic->printDictionary();
-
+int totalblocks=0;
 for (int i=0;i<dic->size();i++){
   if(dic->get(i)->key=="SpriteSheet"){
   //spritesheets.push_back(PE_load_texture(dic->get(i)->getItem("loc")->value.c_str()));
-   printf("%c \n ",dic->get(i)->getItem("loc")->value.c_str());
+ //  printf("%c \n ",dic->get(i)->getItem("loc")->value.c_str());
     //printf("not block\n");
     continue;
   }
@@ -39,9 +44,10 @@ for (int i=0;i<dic->size();i++){
           block.imgx=atof(dic->get(i)->getItem("imgx")->value.c_str());
     block.imgy=atof(dic->get(i)->getItem("imgy")->value.c_str());
         blocks.push_back(block);
+        totalblocks++;
  // printf("posX: %f\n",blocks[i].x);
  // break;
 }
 delete dic;
-return data;
+printf("found %i blocks total\n",totalblocks);
 }

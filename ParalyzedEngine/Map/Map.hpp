@@ -31,7 +31,7 @@ PEMap(const char * file){
     load_map(file);
 }
 std::string load_map(const char *);
- 
+void parseMap(std::string map);
 
 std::vector <PEBlock>* getBlocks(){
     return &blocks;

@@ -17,7 +17,10 @@ typedef struct PEWindow {
     GLXContext              glc;
     int WINDOW_CLOSING;
     void (*onKeyPress)(int);
-      void (*onKeyRelease)();
+    void (*onKeyRelease)(int);
+     void (*onMouseButtonPress)(int,int,int);
+       void (*onMouseButtonRelease)(int,int,int);
+       void (*onMouseMotionEvent)(int,int);
     GC gc;
 }PEWindow;
  

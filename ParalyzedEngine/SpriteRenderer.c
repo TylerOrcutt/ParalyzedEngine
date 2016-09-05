@@ -21,13 +21,15 @@ sprogram=program;
       tScaleX = glGetUniformLocation(program->programID,"tScaleX");
       tScaleY = glGetUniformLocation(program->programID,"tScaleY");
       useTexture = glGetUniformLocation(program->programID,"useTexture");
-      mSamplerLoc =glGetUniformLocation(program->programID,"s_texture");
-
+       mSamplerLoc =glGetUniformLocation(program->programID,"s_texture");
+ //     lightColor = glGetUniformLocation(program->programID,"light_color");
+         lightPosition = glGetUniformLocation(program->programID,"light_Position");
+   
      vPosition = glGetAttribLocation(program->programID,"vPosition");
      mTexLoc = glGetAttribLocation(program->programID,"a_texCoord");
     // printf("vposx: %i\nvposy: %i\nvPostion:%i\n vScalex: %i\nvScaley: %i\ntScaleX: %i\ntScaley: %i\nmTexLoc: %i\n",vposx,vposy,vPosition,vScaleX,vScaleY,tScaleX,tScaleY,mTexLoc);
 
-
+   
 
      Square_verts=malloc(sizeof(float)*12);
      float verts[12] ={0,0,0,1,0,0,0,1,0,1,1,0};
@@ -48,6 +50,8 @@ sprogram=program;
 
     glUniform1i(mSamplerLoc,0);
     glUniform1i(useTexture,1);
+    glUniform2f(lightPosition,400,300);
+ 
  glDepthFunc(GL_LEQUAL);   
 			     glHint(GL_PERSPECTIVE_CORRECTION_HINT, GL_NICEST);  
 			     glShadeModel(GL_SMOOTH); 
@@ -60,8 +64,8 @@ glEnable(GL_TEXTURE_2D);
 
             glBindTexture(GL_TEXTURE_2D,texture->textureID);
 
- 
-
+ tw+=1;
+th+=1;
 glEnableVertexAttribArray(vPosition); 
 glEnableVertexAttribArray(mTexLoc); 
     glUniform1f(vposx,x);
@@ -79,9 +83,11 @@ glEnableVertexAttribArray(mTexLoc);
   //  printf("sy: %f\n",sy);
 glUniform1f(tposx,sx);
 glUniform1f(tposy,sy);
-double sw =(1.f/texture->width)*tw ;
+tw-=3;
+th-=2;
+float sw =((1.f/texture->width)*tw) ;
 //printf("sp width: %f\n",sw);
- double sh =(1.f/texture->height)*th;
+ double sh =(1.f/texture->height)*th  ;
 //printf("sp Height: %f\n",sh);
  glUniform1f(tScaleX,sw);
       glUniform1f(tScaleY,sh); 

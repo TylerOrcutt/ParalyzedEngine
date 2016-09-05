@@ -8,6 +8,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/ParalyzedEngine.dir/PEDictionary.cpp.o"
   "CMakeFiles/ParalyzedEngine.dir/JSON/JSONParser.cpp.o"
   "CMakeFiles/ParalyzedEngine.dir/Map/Map.cpp.o"
+  "CMakeFiles/ParalyzedEngine.dir/Model.cpp.o"
   "libParalyzedEngine.pdb"
   "libParalyzedEngine.a"
 )

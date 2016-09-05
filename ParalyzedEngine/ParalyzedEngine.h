@@ -15,8 +15,7 @@ typedef struct PEVector2d{
 }PEVector2d;
  
     
-extern void DrawQuad(float x,float y, float width,float height);
-extern void DrawStrips(float,float);
+
 
 
 #ifdef __cplusplus

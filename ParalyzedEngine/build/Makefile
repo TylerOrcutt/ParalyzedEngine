@@ -177,6 +177,33 @@ Map/Map.cpp.s:
 	$(MAKE) -f CMakeFiles/ParalyzedEngine.dir/build.make CMakeFiles/ParalyzedEngine.dir/Map/Map.cpp.s
 .PHONY : Map/Map.cpp.s
 
+Model.o: Model.cpp.o
+
+.PHONY : Model.o
+
+# target to build an object file
+Model.cpp.o:
+	$(MAKE) -f CMakeFiles/ParalyzedEngine.dir/build.make CMakeFiles/ParalyzedEngine.dir/Model.cpp.o
+.PHONY : Model.cpp.o
+
+Model.i: Model.cpp.i
+
+.PHONY : Model.i
+
+# target to preprocess a source file
+Model.cpp.i:
+	$(MAKE) -f CMakeFiles/ParalyzedEngine.dir/build.make CMakeFiles/ParalyzedEngine.dir/Model.cpp.i
+.PHONY : Model.cpp.i
+
+Model.s: Model.cpp.s
+
+.PHONY : Model.s
+
+# target to generate assembly for a file
+Model.cpp.s:
+	$(MAKE) -f CMakeFiles/ParalyzedEngine.dir/build.make CMakeFiles/ParalyzedEngine.dir/Model.cpp.s
+.PHONY : Model.cpp.s
+
 Network/WebClient.o: Network/WebClient.c.o
 
 .PHONY : Network/WebClient.o
@@ -381,6 +408,9 @@ help:
 	@echo "... Map/Map.o"
 	@echo "... Map/Map.i"
 	@echo "... Map/Map.s"
+	@echo "... Model.o"
+	@echo "... Model.i"
+	@echo "... Model.s"
 	@echo "... Network/WebClient.o"
 	@echo "... Network/WebClient.i"
 	@echo "... Network/WebClient.s"

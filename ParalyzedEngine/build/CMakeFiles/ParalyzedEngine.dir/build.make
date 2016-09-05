@@ -273,6 +273,30 @@ CMakeFiles/ParalyzedEngine.dir/Map/Map.cpp.o.provides: CMakeFiles/ParalyzedEngin
 CMakeFiles/ParalyzedEngine.dir/Map/Map.cpp.o.provides.build: CMakeFiles/ParalyzedEngine.dir/Map/Map.cpp.o
 
 
+CMakeFiles/ParalyzedEngine.dir/Model.cpp.o: CMakeFiles/ParalyzedEngine.dir/flags.make
+CMakeFiles/ParalyzedEngine.dir/Model.cpp.o: ../Model.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/twittumz/Desktop/git/ParalyzedEngine/ParalyzedEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/ParalyzedEngine.dir/Model.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ParalyzedEngine.dir/Model.cpp.o -c /home/twittumz/Desktop/git/ParalyzedEngine/ParalyzedEngine/Model.cpp
+
+CMakeFiles/ParalyzedEngine.dir/Model.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ParalyzedEngine.dir/Model.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/twittumz/Desktop/git/ParalyzedEngine/ParalyzedEngine/Model.cpp > CMakeFiles/ParalyzedEngine.dir/Model.cpp.i
+
+CMakeFiles/ParalyzedEngine.dir/Model.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ParalyzedEngine.dir/Model.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/twittumz/Desktop/git/ParalyzedEngine/ParalyzedEngine/Model.cpp -o CMakeFiles/ParalyzedEngine.dir/Model.cpp.s
+
+CMakeFiles/ParalyzedEngine.dir/Model.cpp.o.requires:
+
+.PHONY : CMakeFiles/ParalyzedEngine.dir/Model.cpp.o.requires
+
+CMakeFiles/ParalyzedEngine.dir/Model.cpp.o.provides: CMakeFiles/ParalyzedEngine.dir/Model.cpp.o.requires
+	$(MAKE) -f CMakeFiles/ParalyzedEngine.dir/build.make CMakeFiles/ParalyzedEngine.dir/Model.cpp.o.provides.build
+.PHONY : CMakeFiles/ParalyzedEngine.dir/Model.cpp.o.provides
+
+CMakeFiles/ParalyzedEngine.dir/Model.cpp.o.provides.build: CMakeFiles/ParalyzedEngine.dir/Model.cpp.o
+
+
 # Object files for target ParalyzedEngine
 ParalyzedEngine_OBJECTS = \
 "CMakeFiles/ParalyzedEngine.dir/ParalyzedEngine.c.o" \
@@ -283,7 +307,8 @@ ParalyzedEngine_OBJECTS = \
 "CMakeFiles/ParalyzedEngine.dir/Texture.c.o" \
 "CMakeFiles/ParalyzedEngine.dir/PEDictionary.cpp.o" \
 "CMakeFiles/ParalyzedEngine.dir/JSON/JSONParser.cpp.o" \
-"CMakeFiles/ParalyzedEngine.dir/Map/Map.cpp.o"
+"CMakeFiles/ParalyzedEngine.dir/Map/Map.cpp.o" \
+"CMakeFiles/ParalyzedEngine.dir/Model.cpp.o"
 
 # External object files for target ParalyzedEngine
 ParalyzedEngine_EXTERNAL_OBJECTS =
@@ -297,9 +322,10 @@ libParalyzedEngine.a: CMakeFiles/ParalyzedEngine.dir/Texture.c.o
 libParalyzedEngine.a: CMakeFiles/ParalyzedEngine.dir/PEDictionary.cpp.o
 libParalyzedEngine.a: CMakeFiles/ParalyzedEngine.dir/JSON/JSONParser.cpp.o
 libParalyzedEngine.a: CMakeFiles/ParalyzedEngine.dir/Map/Map.cpp.o
+libParalyzedEngine.a: CMakeFiles/ParalyzedEngine.dir/Model.cpp.o
 libParalyzedEngine.a: CMakeFiles/ParalyzedEngine.dir/build.make
 libParalyzedEngine.a: CMakeFiles/ParalyzedEngine.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/twittumz/Desktop/git/ParalyzedEngine/ParalyzedEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Linking CXX static library libParalyzedEngine.a"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/twittumz/Desktop/git/ParalyzedEngine/ParalyzedEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Linking CXX static library libParalyzedEngine.a"
 	$(CMAKE_COMMAND) -P CMakeFiles/ParalyzedEngine.dir/cmake_clean_target.cmake
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/ParalyzedEngine.dir/link.txt --verbose=$(VERBOSE)
 
@@ -317,6 +343,7 @@ CMakeFiles/ParalyzedEngine.dir/requires: CMakeFiles/ParalyzedEngine.dir/Texture.
 CMakeFiles/ParalyzedEngine.dir/requires: CMakeFiles/ParalyzedEngine.dir/PEDictionary.cpp.o.requires
 CMakeFiles/ParalyzedEngine.dir/requires: CMakeFiles/ParalyzedEngine.dir/JSON/JSONParser.cpp.o.requires
 CMakeFiles/ParalyzedEngine.dir/requires: CMakeFiles/ParalyzedEngine.dir/Map/Map.cpp.o.requires
+CMakeFiles/ParalyzedEngine.dir/requires: CMakeFiles/ParalyzedEngine.dir/Model.cpp.o.requires
 
 .PHONY : CMakeFiles/ParalyzedEngine.dir/requires
 

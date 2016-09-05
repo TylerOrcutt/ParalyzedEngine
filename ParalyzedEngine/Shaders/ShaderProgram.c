@@ -96,18 +96,30 @@ int PE_load_shaderProgram(PEShaderProgram * program, const char * vertexShaderSo
     strcat(source,"uniform float tScaleY;\n");
     strcat(source,"attribute vec2 a_texCoord;\n");
     strcat(source,"varying vec2 v_texCoord;\n");
-  
-  * strcat(source,"void main() {\n");
-    strcat(source,"vec4 position = vPosition;\n");
+    
+    strcat(source,"varying vec4 light_color;");
+     strcat(source,"varying vec2 light_Position;");
+    
+    strcat(source,"void main() {\n");
+    strcat(source,"vec4 position = vPosition;\n");  
     strcat(source,"position.x=position.x*vScaleX + vposx;\n");
     strcat(source,"position.y=position.y*vScaleY+ vposy;\n");
      strcat(source,"gl_Position =  gl_ModelViewProjectionMatrix*position;\n");
+ 
+          strcat(source,"light_Position = vec2(400,300);");
+       strcat(source,"float dist = distance(position ,light_Position);\n");
+           strcat(source,"if(dist<=100){\n");
+          strcat(source,"light_color= vec4(1,1,1,1);\n");
+  strcat(source,"}else{\n");
+   strcat(source,"light_color= vec4(.15,.15,.15,1);\n");
+  strcat(source,"}\n");
    
+    
+    
     strcat(source,"vec2 txtpos;\n");
      strcat(source,"txtpos.x=( a_texCoord.x*tScaleX)+tposx;\n");
     strcat(source,"txtpos.y=( a_texCoord.y*tScaleY)+tposy;\n");
     strcat(source,"v_texCoord = txtpos;\n");
-  
      strcat(source,"gl_FrontColor = gl_Color;\n");
       strcat(source,"}");
 
@@ -120,10 +132,11 @@ int PE_load_shaderProgram(PEShaderProgram * program, const char * vertexShaderSo
 
     strcat(source,"uniform sampler2D s_texture;");
     strcat(source,"uniform int useTexture;");
+    strcat(source,"varying vec4 light_color;");
  
     strcat(source,"void main() {");
    strcat(source,"if(useTexture==1){");
-   strcat(source,"gl_FragColor = texture2D( s_texture, v_texCoord);");
+   strcat(source,"gl_FragColor = vec4(texture2D( s_texture, v_texCoord)) * light_color;");
 
     strcat(source,"}else{");
     strcat(source,"gl_FragColor=gl_Color;");

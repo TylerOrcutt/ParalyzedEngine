@@ -6,10 +6,7 @@ CMakeFiles/ParalyzedEngine.dir/Network/WebClient.c.o: ../Network/WebClient.h
 
 CMakeFiles/ParalyzedEngine.dir/ParalyzedEngine.c.o: ../ParalyzedEngine.c
 CMakeFiles/ParalyzedEngine.dir/ParalyzedEngine.c.o: ../ParalyzedEngine.h
-CMakeFiles/ParalyzedEngine.dir/ParalyzedEngine.c.o: ../ParalyzedEngineWindow.h
-
-CMakeFiles/ParalyzedEngine.dir/ParalyzedEngineWindow.c.o: ../ParalyzedEngineWindow.c
-CMakeFiles/ParalyzedEngine.dir/ParalyzedEngineWindow.c.o: ../ParalyzedEngineWindow.h
+CMakeFiles/ParalyzedEngine.dir/ParalyzedEngine.c.o: ../Window.h
 
 CMakeFiles/ParalyzedEngine.dir/Shaders/ShaderProgram.c.o: ../Shaders/ShaderProgram.c
 CMakeFiles/ParalyzedEngine.dir/Shaders/ShaderProgram.c.o: ../Shaders/ShaderProgram.h
@@ -21,6 +18,9 @@ CMakeFiles/ParalyzedEngine.dir/SpriteRenderer.c.o: ../Texture.h
 
 CMakeFiles/ParalyzedEngine.dir/Texture.c.o: ../Texture.c
 CMakeFiles/ParalyzedEngine.dir/Texture.c.o: ../Texture.h
+
+CMakeFiles/ParalyzedEngine.dir/Window.c.o: ../Window.c
+CMakeFiles/ParalyzedEngine.dir/Window.c.o: ../Window.h
 
 CMakeFiles/ParalyzedEngine.dir/JSON/JSONParser.cpp.o: ../JSON/JSONParser.cpp
 CMakeFiles/ParalyzedEngine.dir/JSON/JSONParser.cpp.o: ../JSON/JSONParser.hpp

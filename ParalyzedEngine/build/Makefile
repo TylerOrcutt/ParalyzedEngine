@@ -285,33 +285,6 @@ ParalyzedEngine.c.s:
 	$(MAKE) -f CMakeFiles/ParalyzedEngine.dir/build.make CMakeFiles/ParalyzedEngine.dir/ParalyzedEngine.c.s
 .PHONY : ParalyzedEngine.c.s
 
-ParalyzedEngineWindow.o: ParalyzedEngineWindow.c.o
-
-.PHONY : ParalyzedEngineWindow.o
-
-# target to build an object file
-ParalyzedEngineWindow.c.o:
-	$(MAKE) -f CMakeFiles/ParalyzedEngine.dir/build.make CMakeFiles/ParalyzedEngine.dir/ParalyzedEngineWindow.c.o
-.PHONY : ParalyzedEngineWindow.c.o
-
-ParalyzedEngineWindow.i: ParalyzedEngineWindow.c.i
-
-.PHONY : ParalyzedEngineWindow.i
-
-# target to preprocess a source file
-ParalyzedEngineWindow.c.i:
-	$(MAKE) -f CMakeFiles/ParalyzedEngine.dir/build.make CMakeFiles/ParalyzedEngine.dir/ParalyzedEngineWindow.c.i
-.PHONY : ParalyzedEngineWindow.c.i
-
-ParalyzedEngineWindow.s: ParalyzedEngineWindow.c.s
-
-.PHONY : ParalyzedEngineWindow.s
-
-# target to generate assembly for a file
-ParalyzedEngineWindow.c.s:
-	$(MAKE) -f CMakeFiles/ParalyzedEngine.dir/build.make CMakeFiles/ParalyzedEngine.dir/ParalyzedEngineWindow.c.s
-.PHONY : ParalyzedEngineWindow.c.s
-
 Shaders/ShaderProgram.o: Shaders/ShaderProgram.c.o
 
 .PHONY : Shaders/ShaderProgram.o
@@ -393,6 +366,33 @@ Texture.c.s:
 	$(MAKE) -f CMakeFiles/ParalyzedEngine.dir/build.make CMakeFiles/ParalyzedEngine.dir/Texture.c.s
 .PHONY : Texture.c.s
 
+Window.o: Window.c.o
+
+.PHONY : Window.o
+
+# target to build an object file
+Window.c.o:
+	$(MAKE) -f CMakeFiles/ParalyzedEngine.dir/build.make CMakeFiles/ParalyzedEngine.dir/Window.c.o
+.PHONY : Window.c.o
+
+Window.i: Window.c.i
+
+.PHONY : Window.i
+
+# target to preprocess a source file
+Window.c.i:
+	$(MAKE) -f CMakeFiles/ParalyzedEngine.dir/build.make CMakeFiles/ParalyzedEngine.dir/Window.c.i
+.PHONY : Window.c.i
+
+Window.s: Window.c.s
+
+.PHONY : Window.s
+
+# target to generate assembly for a file
+Window.c.s:
+	$(MAKE) -f CMakeFiles/ParalyzedEngine.dir/build.make CMakeFiles/ParalyzedEngine.dir/Window.c.s
+.PHONY : Window.c.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -420,9 +420,6 @@ help:
 	@echo "... ParalyzedEngine.o"
 	@echo "... ParalyzedEngine.i"
 	@echo "... ParalyzedEngine.s"
-	@echo "... ParalyzedEngineWindow.o"
-	@echo "... ParalyzedEngineWindow.i"
-	@echo "... ParalyzedEngineWindow.s"
 	@echo "... Shaders/ShaderProgram.o"
 	@echo "... Shaders/ShaderProgram.i"
 	@echo "... Shaders/ShaderProgram.s"
@@ -432,6 +429,9 @@ help:
 	@echo "... Texture.o"
 	@echo "... Texture.i"
 	@echo "... Texture.s"
+	@echo "... Window.o"
+	@echo "... Window.i"
+	@echo "... Window.s"
 .PHONY : help
 
 

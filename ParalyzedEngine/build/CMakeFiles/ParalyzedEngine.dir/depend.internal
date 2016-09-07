@@ -7,10 +7,7 @@ CMakeFiles/ParalyzedEngine.dir/Network/WebClient.c.o
 CMakeFiles/ParalyzedEngine.dir/ParalyzedEngine.c.o
  /home/twittumz/Desktop/git/ParalyzedEngine/ParalyzedEngine/ParalyzedEngine.c
  /home/twittumz/Desktop/git/ParalyzedEngine/ParalyzedEngine/ParalyzedEngine.h
- /home/twittumz/Desktop/git/ParalyzedEngine/ParalyzedEngine/ParalyzedEngineWindow.h
-CMakeFiles/ParalyzedEngine.dir/ParalyzedEngineWindow.c.o
- /home/twittumz/Desktop/git/ParalyzedEngine/ParalyzedEngine/ParalyzedEngineWindow.c
- /home/twittumz/Desktop/git/ParalyzedEngine/ParalyzedEngine/ParalyzedEngineWindow.h
+ /home/twittumz/Desktop/git/ParalyzedEngine/ParalyzedEngine/Window.h
 CMakeFiles/ParalyzedEngine.dir/Shaders/ShaderProgram.c.o
  /home/twittumz/Desktop/git/ParalyzedEngine/ParalyzedEngine/Shaders/ShaderProgram.c
  /home/twittumz/Desktop/git/ParalyzedEngine/ParalyzedEngine/Shaders/ShaderProgram.h
@@ -22,6 +19,9 @@ CMakeFiles/ParalyzedEngine.dir/SpriteRenderer.c.o
 CMakeFiles/ParalyzedEngine.dir/Texture.c.o
  /home/twittumz/Desktop/git/ParalyzedEngine/ParalyzedEngine/Texture.c
  /home/twittumz/Desktop/git/ParalyzedEngine/ParalyzedEngine/Texture.h
+CMakeFiles/ParalyzedEngine.dir/Window.c.o
+ /home/twittumz/Desktop/git/ParalyzedEngine/ParalyzedEngine/Window.c
+ /home/twittumz/Desktop/git/ParalyzedEngine/ParalyzedEngine/Window.h
 CMakeFiles/ParalyzedEngine.dir/JSON/JSONParser.cpp.o
  /home/twittumz/Desktop/git/ParalyzedEngine/ParalyzedEngine/JSON/JSONParser.cpp
  /home/twittumz/Desktop/git/ParalyzedEngine/ParalyzedEngine/JSON/JSONParser.hpp

@@ -28,6 +28,9 @@ extern PEWindow* createPEWindow(int,int, const char*);
 extern  void getNextEvent(PEWindow *,XEvent*);
 extern void PE_window_set_onKeyPress(PEWindow *,void (*func)(int));
 extern void PE_window_set_onKeyRelease(PEWindow *,void (*func)(int));
+extern void PE_window_set_onMouseButtonPress(PEWindow *,void (*func)(int,int,int));
+extern void PE_window_set_onMouseButtonRelease(PEWindow *,void (*func)(int,int,int));
+extern void PE_window_set_onMouseMotionEvent(PEWindow *,void (*func)(int,int));
 extern void PE_window_cleaUp(PEWindow * pe);
 
 #ifdef __cplusplus

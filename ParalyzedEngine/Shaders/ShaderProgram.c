@@ -106,13 +106,13 @@ int PE_load_shaderProgram(PEShaderProgram * program, const char * vertexShaderSo
     strcat(source,"position.y=position.y*vScaleY+ vposy;\n");
      strcat(source,"gl_Position =  gl_ModelViewProjectionMatrix*position;\n");
  
-          strcat(source,"light_Position = vec2(400,300);");
-       strcat(source,"float dist = distance(position ,light_Position);\n");
-           strcat(source,"if(dist<=100){\n");
-          strcat(source,"light_color= vec4(1,1,1,1);\n");
-  strcat(source,"}else{\n");
-   strcat(source,"light_color= vec4(.15,.15,.15,1);\n");
-  strcat(source,"}\n");
+        //  strcat(source,"light_Position = vec2(400,300);");
+      // strcat(source,"float dist = distance(light_Position,vec2(position.x,position.y));\n");
+   //        strcat(source,"if(abs(dist)<=100.0){\n");
+       strcat(source,"light_color= vec4(1,1,1,1);\n");
+  //strcat(source,"}else{\n");
+ //  strcat(source,"light_color= vec4(.085,.085,.085,1);\n");
+  //strcat(source,"}\n");
    
     
     

@@ -1,4 +1,4 @@
-#include "ParalyzedEngineWindow.h"
+#include "Window.h"
 #include<stdio.h>
 #include<stdlib.h>
 #include<X11/X.h>
@@ -107,14 +107,23 @@ void getNextEvent(PEWindow *pe,XEvent* e){
   // XFlush(pe->dpy);
 
    if(e->type == ButtonPress){
-       printf("Mouse Button Press: %i\n  X:%i Y:%i ", e->xbutton.button,e->xbutton.x,e->xbutton.y);
+       //printf("Mouse Button Press: %i\n  X:%i Y:%i ", e->xbutton.button,e->xbutton.x,e->xbutton.y);
+       if(pe->onMouseButtonPress!=NULL){
+           pe->onMouseButtonPress(e->xbutton.button,e->xbutton.x,e->xbutton.y);
+       }
    }
 
    if(e->type == ButtonRelease){
-       printf("Mouse Button Release: %i\n ", e->xbutton.button);
+       //printf("Mouse Button Release: %i\n ", e->xbutton.button);
+       if(pe->onMouseButtonRelease!=NULL){
+           pe->onMouseButtonRelease(e->xbutton.button,e->xbutton.x,e->xbutton.y);
+       }
    }
    if(e->type== MotionNotify){
           //   printf("Mouse Motion Notify\n");
+            if(pe->onMouseMotionEvent!=NULL){
+           pe->onMouseMotionEvent(e->xbutton.x,e->xbutton.y);
+       }
    }
 if (e->type == KeyRelease )
 {
@@ -189,9 +198,21 @@ if( XPending(pe->dpy) > 0){
        
  
 }
+
+ void PE_window_set_onMouseButtonPress(PEWindow *pe, void (*func)(int,int,int)){
+ pe->onMouseButtonPress=func;
+
+}
+ void PE_window_set_onMouseButtonRelease(PEWindow *pe, void (*func)(int,int,int)){
+ pe->onMouseButtonRelease=func;
+
+}
+ void PE_window_set_onMouseMotionEvent(PEWindow *pe, void (*func)(int,int)){
+ pe->onMouseMotionEvent=func;
+
+}
  void PE_window_set_onKeyPress(PEWindow *pe, void (*func)(int)){
  pe->onKeyPress=func;
-
 
 }
  void PE_window_set_onKeyRelease(PEWindow *pe, void (*func)(int)){

@@ -5,7 +5,7 @@
 #define PE_FALSE 0
 #define PE_TRUE 1
  
-#include "ParalyzedEngineWindow.h"
+#include "Window.h"
 
 #ifdef __cplusplus
  extern "C"{

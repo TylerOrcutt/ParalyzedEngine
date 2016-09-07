@@ -81,28 +81,28 @@ CMakeFiles/ParalyzedEngine.dir/ParalyzedEngine.c.o.provides: CMakeFiles/Paralyze
 CMakeFiles/ParalyzedEngine.dir/ParalyzedEngine.c.o.provides.build: CMakeFiles/ParalyzedEngine.dir/ParalyzedEngine.c.o
 
 
-CMakeFiles/ParalyzedEngine.dir/ParalyzedEngineWindow.c.o: CMakeFiles/ParalyzedEngine.dir/flags.make
-CMakeFiles/ParalyzedEngine.dir/ParalyzedEngineWindow.c.o: ../ParalyzedEngineWindow.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/twittumz/Desktop/git/ParalyzedEngine/ParalyzedEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/ParalyzedEngine.dir/ParalyzedEngineWindow.c.o"
-	/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ParalyzedEngine.dir/ParalyzedEngineWindow.c.o   -c /home/twittumz/Desktop/git/ParalyzedEngine/ParalyzedEngine/ParalyzedEngineWindow.c
+CMakeFiles/ParalyzedEngine.dir/Window.c.o: CMakeFiles/ParalyzedEngine.dir/flags.make
+CMakeFiles/ParalyzedEngine.dir/Window.c.o: ../Window.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/twittumz/Desktop/git/ParalyzedEngine/ParalyzedEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/ParalyzedEngine.dir/Window.c.o"
+	/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ParalyzedEngine.dir/Window.c.o   -c /home/twittumz/Desktop/git/ParalyzedEngine/ParalyzedEngine/Window.c
 
-CMakeFiles/ParalyzedEngine.dir/ParalyzedEngineWindow.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/ParalyzedEngine.dir/ParalyzedEngineWindow.c.i"
-	/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/twittumz/Desktop/git/ParalyzedEngine/ParalyzedEngine/ParalyzedEngineWindow.c > CMakeFiles/ParalyzedEngine.dir/ParalyzedEngineWindow.c.i
+CMakeFiles/ParalyzedEngine.dir/Window.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/ParalyzedEngine.dir/Window.c.i"
+	/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/twittumz/Desktop/git/ParalyzedEngine/ParalyzedEngine/Window.c > CMakeFiles/ParalyzedEngine.dir/Window.c.i
 
-CMakeFiles/ParalyzedEngine.dir/ParalyzedEngineWindow.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/ParalyzedEngine.dir/ParalyzedEngineWindow.c.s"
-	/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/twittumz/Desktop/git/ParalyzedEngine/ParalyzedEngine/ParalyzedEngineWindow.c -o CMakeFiles/ParalyzedEngine.dir/ParalyzedEngineWindow.c.s
+CMakeFiles/ParalyzedEngine.dir/Window.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/ParalyzedEngine.dir/Window.c.s"
+	/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/twittumz/Desktop/git/ParalyzedEngine/ParalyzedEngine/Window.c -o CMakeFiles/ParalyzedEngine.dir/Window.c.s
 
-CMakeFiles/ParalyzedEngine.dir/ParalyzedEngineWindow.c.o.requires:
+CMakeFiles/ParalyzedEngine.dir/Window.c.o.requires:
 
-.PHONY : CMakeFiles/ParalyzedEngine.dir/ParalyzedEngineWindow.c.o.requires
+.PHONY : CMakeFiles/ParalyzedEngine.dir/Window.c.o.requires
 
-CMakeFiles/ParalyzedEngine.dir/ParalyzedEngineWindow.c.o.provides: CMakeFiles/ParalyzedEngine.dir/ParalyzedEngineWindow.c.o.requires
-	$(MAKE) -f CMakeFiles/ParalyzedEngine.dir/build.make CMakeFiles/ParalyzedEngine.dir/ParalyzedEngineWindow.c.o.provides.build
-.PHONY : CMakeFiles/ParalyzedEngine.dir/ParalyzedEngineWindow.c.o.provides
+CMakeFiles/ParalyzedEngine.dir/Window.c.o.provides: CMakeFiles/ParalyzedEngine.dir/Window.c.o.requires
+	$(MAKE) -f CMakeFiles/ParalyzedEngine.dir/build.make CMakeFiles/ParalyzedEngine.dir/Window.c.o.provides.build
+.PHONY : CMakeFiles/ParalyzedEngine.dir/Window.c.o.provides
 
-CMakeFiles/ParalyzedEngine.dir/ParalyzedEngineWindow.c.o.provides.build: CMakeFiles/ParalyzedEngine.dir/ParalyzedEngineWindow.c.o
+CMakeFiles/ParalyzedEngine.dir/Window.c.o.provides.build: CMakeFiles/ParalyzedEngine.dir/Window.c.o
 
 
 CMakeFiles/ParalyzedEngine.dir/SpriteRenderer.c.o: CMakeFiles/ParalyzedEngine.dir/flags.make
@@ -300,7 +300,7 @@ CMakeFiles/ParalyzedEngine.dir/Model.cpp.o.provides.build: CMakeFiles/ParalyzedE
 # Object files for target ParalyzedEngine
 ParalyzedEngine_OBJECTS = \
 "CMakeFiles/ParalyzedEngine.dir/ParalyzedEngine.c.o" \
-"CMakeFiles/ParalyzedEngine.dir/ParalyzedEngineWindow.c.o" \
+"CMakeFiles/ParalyzedEngine.dir/Window.c.o" \
 "CMakeFiles/ParalyzedEngine.dir/SpriteRenderer.c.o" \
 "CMakeFiles/ParalyzedEngine.dir/Network/WebClient.c.o" \
 "CMakeFiles/ParalyzedEngine.dir/Shaders/ShaderProgram.c.o" \
@@ -314,7 +314,7 @@ ParalyzedEngine_OBJECTS = \
 ParalyzedEngine_EXTERNAL_OBJECTS =
 
 libParalyzedEngine.a: CMakeFiles/ParalyzedEngine.dir/ParalyzedEngine.c.o
-libParalyzedEngine.a: CMakeFiles/ParalyzedEngine.dir/ParalyzedEngineWindow.c.o
+libParalyzedEngine.a: CMakeFiles/ParalyzedEngine.dir/Window.c.o
 libParalyzedEngine.a: CMakeFiles/ParalyzedEngine.dir/SpriteRenderer.c.o
 libParalyzedEngine.a: CMakeFiles/ParalyzedEngine.dir/Network/WebClient.c.o
 libParalyzedEngine.a: CMakeFiles/ParalyzedEngine.dir/Shaders/ShaderProgram.c.o
@@ -335,7 +335,7 @@ CMakeFiles/ParalyzedEngine.dir/build: libParalyzedEngine.a
 .PHONY : CMakeFiles/ParalyzedEngine.dir/build
 
 CMakeFiles/ParalyzedEngine.dir/requires: CMakeFiles/ParalyzedEngine.dir/ParalyzedEngine.c.o.requires
-CMakeFiles/ParalyzedEngine.dir/requires: CMakeFiles/ParalyzedEngine.dir/ParalyzedEngineWindow.c.o.requires
+CMakeFiles/ParalyzedEngine.dir/requires: CMakeFiles/ParalyzedEngine.dir/Window.c.o.requires
 CMakeFiles/ParalyzedEngine.dir/requires: CMakeFiles/ParalyzedEngine.dir/SpriteRenderer.c.o.requires
 CMakeFiles/ParalyzedEngine.dir/requires: CMakeFiles/ParalyzedEngine.dir/Network/WebClient.c.o.requires
 CMakeFiles/ParalyzedEngine.dir/requires: CMakeFiles/ParalyzedEngine.dir/Shaders/ShaderProgram.c.o.requires

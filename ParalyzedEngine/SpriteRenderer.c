@@ -21,6 +21,7 @@ sprogram=program;
       tScaleX = glGetUniformLocation(program->programID,"tScaleX");
       tScaleY = glGetUniformLocation(program->programID,"tScaleY");
       useTexture = glGetUniformLocation(program->programID,"useTexture");
+         isText = glGetUniformLocation(program->programID,"isTexxxt");
        mSamplerLoc =glGetUniformLocation(program->programID,"s_texture");
  //     lightColor = glGetUniformLocation(program->programID,"light_color");
          lightPosition = glGetUniformLocation(program->programID,"light_Position");
@@ -50,6 +51,7 @@ sprogram=program;
 
     glUniform1i(mSamplerLoc,0);
     glUniform1i(useTexture,1);
+      glUniform1i(isText,0);
     glUniform2f(lightPosition,400,300);
  
  glDepthFunc(GL_LEQUAL);   

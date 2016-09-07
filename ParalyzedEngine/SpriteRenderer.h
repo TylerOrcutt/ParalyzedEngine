@@ -38,6 +38,7 @@ extern void PE_draw_rect(float x,float y,float width, float height);
  GLint useTexture;
  GLint lightColor;
  GLint lightPosition;
+  GLint isText;
 GLint mTexLoc; 
 
 #ifdef __cplusplus

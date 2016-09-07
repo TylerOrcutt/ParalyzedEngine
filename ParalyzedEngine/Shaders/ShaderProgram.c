@@ -132,13 +132,24 @@ int PE_load_shaderProgram(PEShaderProgram * program, const char * vertexShaderSo
 
     strcat(source,"uniform sampler2D s_texture;");
     strcat(source,"uniform int useTexture;");
+     strcat(source,"uniform int isTexxxt;");
     strcat(source,"varying vec4 light_color;");
  
     strcat(source,"void main() {");
-   strcat(source,"if(useTexture==1){");
-   strcat(source,"gl_FragColor = vec4(texture2D( s_texture, v_texCoord)) * light_color;");
 
-    strcat(source,"}else{");
+
+   strcat(source,"if(useTexture==1 && isTexxxt==1 ){");
+     strcat(source,"if(texture2D( s_texture, v_texCoord).a<0.5){");
+    strcat(source,"gl_FragColor =  vec4(0,0,0,0);");
+     strcat(source,"}else{"); 
+         strcat(source,"gl_FragColor=gl_Color;");
+       strcat(source,"}");
+
+
+    strcat(source,"} else if(useTexture==1){");
+  strcat(source,"gl_FragColor = vec4(texture2D( s_texture, v_texCoord)) * light_color;");
+
+        strcat(source,"}else{"); 
     strcat(source,"gl_FragColor=gl_Color;");
      strcat(source,"}");
         strcat(source,"}");

@@ -77,6 +77,7 @@ GLuint tex;
 
 glEnableVertexAttribArray(vPosition); 
 glEnableVertexAttribArray(mTexLoc); 
+        glUniform1i(isText,1);
   for(p = text; *p; p++) {
     if(FT_Load_Char(font->face, *p, FT_LOAD_RENDER)){
         continue;
@@ -88,17 +89,12 @@ glEnableVertexAttribArray(mTexLoc);
    // printf("texture id %i\n",font->textureID);
  
 
-     glTexImage2D(
-      GL_TEXTURE_2D,
-      0,
-      GL_RED,
-      g->bitmap.width,
-      g->bitmap.rows,
-      0,
-      GL_RED,
-      GL_UNSIGNED_BYTE,
-      g->bitmap.buffer
-    );
+glTexImage2D(GL_TEXTURE_2D, 
+0, 
+GL_ALPHA,
+ g->bitmap.width,
+  g->bitmap.rows, 
+  0, GL_ALPHA, GL_UNSIGNED_BYTE, g->bitmap.buffer);
   float x2=x;
      x = x + g->bitmap_left;
     float y2 = y;
@@ -131,7 +127,7 @@ x += (g->advance.x >> 6)  ;
 }
   glDisableVertexAttribArray(mTexLoc);
  glDisableVertexAttribArray(vPosition);
-
+       glUniform1i(isText,0);
 //glActiveTexture(GL_TEXTURE0);
 }
 

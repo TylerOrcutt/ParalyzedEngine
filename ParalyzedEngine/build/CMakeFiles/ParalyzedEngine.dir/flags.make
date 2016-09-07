@@ -7,11 +7,11 @@ C_FLAGS = -O3 -DNDEBUG
 
 C_DEFINES = 
 
-C_INCLUDES = -I/home/twittumz/Desktop/git/ParalyzedEngine/ParalyzedEngine/include 
+C_INCLUDES = -I/usr/include/freetype2 -I/home/twittumz/Desktop/git/ParalyzedEngine/ParalyzedEngine/include 
 
 CXX_FLAGS = -O3 -DNDEBUG  
 
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/home/twittumz/Desktop/git/ParalyzedEngine/ParalyzedEngine/include 
+CXX_INCLUDES = -I/usr/include/freetype2 -I/home/twittumz/Desktop/git/ParalyzedEngine/ParalyzedEngine/include 
 

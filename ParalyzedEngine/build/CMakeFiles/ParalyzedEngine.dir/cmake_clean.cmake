@@ -5,6 +5,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/ParalyzedEngine.dir/Network/WebClient.c.o"
   "CMakeFiles/ParalyzedEngine.dir/Shaders/ShaderProgram.c.o"
   "CMakeFiles/ParalyzedEngine.dir/Texture.c.o"
+  "CMakeFiles/ParalyzedEngine.dir/TextRenderer.c.o"
   "CMakeFiles/ParalyzedEngine.dir/PEDictionary.cpp.o"
   "CMakeFiles/ParalyzedEngine.dir/JSON/JSONParser.cpp.o"
   "CMakeFiles/ParalyzedEngine.dir/Map/Map.cpp.o"

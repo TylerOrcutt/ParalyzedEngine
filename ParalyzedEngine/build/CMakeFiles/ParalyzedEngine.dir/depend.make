@@ -16,6 +16,14 @@ CMakeFiles/ParalyzedEngine.dir/SpriteRenderer.c.o: ../SpriteRenderer.c
 CMakeFiles/ParalyzedEngine.dir/SpriteRenderer.c.o: ../SpriteRenderer.h
 CMakeFiles/ParalyzedEngine.dir/SpriteRenderer.c.o: ../Texture.h
 
+CMakeFiles/ParalyzedEngine.dir/TextRenderer.c.o: ../Shaders/ShaderProgram.h
+CMakeFiles/ParalyzedEngine.dir/TextRenderer.c.o: ../SpriteRenderer.h
+CMakeFiles/ParalyzedEngine.dir/TextRenderer.c.o: ../TextRenderer.c
+CMakeFiles/ParalyzedEngine.dir/TextRenderer.c.o: ../TextRenderer.h
+CMakeFiles/ParalyzedEngine.dir/TextRenderer.c.o: ../Texture.h
+CMakeFiles/ParalyzedEngine.dir/TextRenderer.c.o: /usr/include/freetype2/freetype/config/ftheader.h
+CMakeFiles/ParalyzedEngine.dir/TextRenderer.c.o: /usr/include/freetype2/ft2build.h
+
 CMakeFiles/ParalyzedEngine.dir/Texture.c.o: ../Texture.c
 CMakeFiles/ParalyzedEngine.dir/Texture.c.o: ../Texture.h
 

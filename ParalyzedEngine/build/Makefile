@@ -339,6 +339,33 @@ SpriteRenderer.c.s:
 	$(MAKE) -f CMakeFiles/ParalyzedEngine.dir/build.make CMakeFiles/ParalyzedEngine.dir/SpriteRenderer.c.s
 .PHONY : SpriteRenderer.c.s
 
+TextRenderer.o: TextRenderer.c.o
+
+.PHONY : TextRenderer.o
+
+# target to build an object file
+TextRenderer.c.o:
+	$(MAKE) -f CMakeFiles/ParalyzedEngine.dir/build.make CMakeFiles/ParalyzedEngine.dir/TextRenderer.c.o
+.PHONY : TextRenderer.c.o
+
+TextRenderer.i: TextRenderer.c.i
+
+.PHONY : TextRenderer.i
+
+# target to preprocess a source file
+TextRenderer.c.i:
+	$(MAKE) -f CMakeFiles/ParalyzedEngine.dir/build.make CMakeFiles/ParalyzedEngine.dir/TextRenderer.c.i
+.PHONY : TextRenderer.c.i
+
+TextRenderer.s: TextRenderer.c.s
+
+.PHONY : TextRenderer.s
+
+# target to generate assembly for a file
+TextRenderer.c.s:
+	$(MAKE) -f CMakeFiles/ParalyzedEngine.dir/build.make CMakeFiles/ParalyzedEngine.dir/TextRenderer.c.s
+.PHONY : TextRenderer.c.s
+
 Texture.o: Texture.c.o
 
 .PHONY : Texture.o
@@ -426,6 +453,9 @@ help:
 	@echo "... SpriteRenderer.o"
 	@echo "... SpriteRenderer.i"
 	@echo "... SpriteRenderer.s"
+	@echo "... TextRenderer.o"
+	@echo "... TextRenderer.i"
+	@echo "... TextRenderer.s"
 	@echo "... Texture.o"
 	@echo "... Texture.i"
 	@echo "... Texture.s"

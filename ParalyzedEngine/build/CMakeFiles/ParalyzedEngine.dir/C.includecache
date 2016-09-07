@@ -96,6 +96,26 @@ GL/glx.h
 GL/glu.h
 -
 
+/home/twittumz/Desktop/git/ParalyzedEngine/ParalyzedEngine/TextRenderer.c
+TextRenderer.h
+/home/twittumz/Desktop/git/ParalyzedEngine/ParalyzedEngine/TextRenderer.h
+
+/home/twittumz/Desktop/git/ParalyzedEngine/ParalyzedEngine/TextRenderer.h
+ft2build.h
+-
+Texture.h
+/home/twittumz/Desktop/git/ParalyzedEngine/ParalyzedEngine/Texture.h
+GL/glew.h
+-
+GL/gl.h
+-
+GL/glx.h
+-
+GL/glu.h
+-
+SpriteRenderer.h
+/home/twittumz/Desktop/git/ParalyzedEngine/ParalyzedEngine/SpriteRenderer.h
+
 /home/twittumz/Desktop/git/ParalyzedEngine/ParalyzedEngine/Texture.c
 Texture.h
 /home/twittumz/Desktop/git/ParalyzedEngine/ParalyzedEngine/Texture.h
@@ -146,5 +166,11 @@ GL/gl.h
 GL/glx.h
 -
 GL/glu.h
+-
+
+/usr/include/freetype2/freetype/config/ftheader.h
+
+/usr/include/freetype2/ft2build.h
+freetype/config/ftheader.h
 -
 

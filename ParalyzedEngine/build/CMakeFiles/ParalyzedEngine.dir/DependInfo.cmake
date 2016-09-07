@@ -9,6 +9,7 @@ set(CMAKE_DEPENDS_CHECK_C
   "/home/twittumz/Desktop/git/ParalyzedEngine/ParalyzedEngine/ParalyzedEngine.c" "/home/twittumz/Desktop/git/ParalyzedEngine/ParalyzedEngine/build/CMakeFiles/ParalyzedEngine.dir/ParalyzedEngine.c.o"
   "/home/twittumz/Desktop/git/ParalyzedEngine/ParalyzedEngine/Shaders/ShaderProgram.c" "/home/twittumz/Desktop/git/ParalyzedEngine/ParalyzedEngine/build/CMakeFiles/ParalyzedEngine.dir/Shaders/ShaderProgram.c.o"
   "/home/twittumz/Desktop/git/ParalyzedEngine/ParalyzedEngine/SpriteRenderer.c" "/home/twittumz/Desktop/git/ParalyzedEngine/ParalyzedEngine/build/CMakeFiles/ParalyzedEngine.dir/SpriteRenderer.c.o"
+  "/home/twittumz/Desktop/git/ParalyzedEngine/ParalyzedEngine/TextRenderer.c" "/home/twittumz/Desktop/git/ParalyzedEngine/ParalyzedEngine/build/CMakeFiles/ParalyzedEngine.dir/TextRenderer.c.o"
   "/home/twittumz/Desktop/git/ParalyzedEngine/ParalyzedEngine/Texture.c" "/home/twittumz/Desktop/git/ParalyzedEngine/ParalyzedEngine/build/CMakeFiles/ParalyzedEngine.dir/Texture.c.o"
   "/home/twittumz/Desktop/git/ParalyzedEngine/ParalyzedEngine/Window.c" "/home/twittumz/Desktop/git/ParalyzedEngine/ParalyzedEngine/build/CMakeFiles/ParalyzedEngine.dir/Window.c.o"
   )
@@ -16,6 +17,7 @@ set(CMAKE_C_COMPILER_ID "GNU")
 
 # The include file search paths:
 set(CMAKE_C_TARGET_INCLUDE_PATH
+  "/usr/include/freetype2"
   "../include"
   )
 set(CMAKE_DEPENDS_CHECK_CXX
@@ -28,6 +30,7 @@ set(CMAKE_CXX_COMPILER_ID "GNU")
 
 # The include file search paths:
 set(CMAKE_CXX_TARGET_INCLUDE_PATH
+  "/usr/include/freetype2"
   "../include"
   )
 

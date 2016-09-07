@@ -16,6 +16,14 @@ CMakeFiles/ParalyzedEngine.dir/SpriteRenderer.c.o
  /home/twittumz/Desktop/git/ParalyzedEngine/ParalyzedEngine/SpriteRenderer.c
  /home/twittumz/Desktop/git/ParalyzedEngine/ParalyzedEngine/SpriteRenderer.h
  /home/twittumz/Desktop/git/ParalyzedEngine/ParalyzedEngine/Texture.h
+CMakeFiles/ParalyzedEngine.dir/TextRenderer.c.o
+ /home/twittumz/Desktop/git/ParalyzedEngine/ParalyzedEngine/Shaders/ShaderProgram.h
+ /home/twittumz/Desktop/git/ParalyzedEngine/ParalyzedEngine/SpriteRenderer.h
+ /home/twittumz/Desktop/git/ParalyzedEngine/ParalyzedEngine/TextRenderer.c
+ /home/twittumz/Desktop/git/ParalyzedEngine/ParalyzedEngine/TextRenderer.h
+ /home/twittumz/Desktop/git/ParalyzedEngine/ParalyzedEngine/Texture.h
+ /usr/include/freetype2/freetype/config/ftheader.h
+ /usr/include/freetype2/ft2build.h
 CMakeFiles/ParalyzedEngine.dir/Texture.c.o
  /home/twittumz/Desktop/git/ParalyzedEngine/ParalyzedEngine/Texture.c
  /home/twittumz/Desktop/git/ParalyzedEngine/ParalyzedEngine/Texture.h

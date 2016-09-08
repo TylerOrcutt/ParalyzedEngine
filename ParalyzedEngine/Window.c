@@ -178,14 +178,15 @@ if( XPending(pe->dpy) > 0){
       // XFlush(pe->dpy);
   // printf("KeyPress: %c     %i\n",XLookupKeysym(&e->xkey,0),e->xkey.keycode);
   if(pe->onKeyPress!=NULL){
-      pe->onKeyPress(e->xkey.keycode);
+   //   pe->onKeyPress(e->xkey.keycode);
+     pe->onKeyPress(XLookupKeysym(&e->xkey,0));
   }
  }
 
 }else{
    //  printf("KeyPress: %c     %i\n",XLookupKeysym(&e->xkey,0),e->xkey.keycode); 
      if(pe->onKeyPress!=NULL){
-      pe->onKeyPress(e->xkey.keycode);
+      pe->onKeyPress(XLookupKeysym(&e->xkey,0));
   }
 }
 }

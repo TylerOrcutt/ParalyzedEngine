@@ -5,6 +5,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
+  "/home/twittumz/Desktop/git/ParalyzedEngine/ParalyzedEngine/Network/TCPClient.c" "/home/twittumz/Desktop/git/ParalyzedEngine/ParalyzedEngine/build/CMakeFiles/ParalyzedEngine.dir/Network/TCPClient.c.o"
   "/home/twittumz/Desktop/git/ParalyzedEngine/ParalyzedEngine/Network/WebClient.c" "/home/twittumz/Desktop/git/ParalyzedEngine/ParalyzedEngine/build/CMakeFiles/ParalyzedEngine.dir/Network/WebClient.c.o"
   "/home/twittumz/Desktop/git/ParalyzedEngine/ParalyzedEngine/ParalyzedEngine.c" "/home/twittumz/Desktop/git/ParalyzedEngine/ParalyzedEngine/build/CMakeFiles/ParalyzedEngine.dir/ParalyzedEngine.c.o"
   "/home/twittumz/Desktop/git/ParalyzedEngine/ParalyzedEngine/Shaders/ShaderProgram.c" "/home/twittumz/Desktop/git/ParalyzedEngine/ParalyzedEngine/build/CMakeFiles/ParalyzedEngine.dir/Shaders/ShaderProgram.c.o"

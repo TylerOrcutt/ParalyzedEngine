@@ -204,6 +204,33 @@ Model.cpp.s:
 	$(MAKE) -f CMakeFiles/ParalyzedEngine.dir/build.make CMakeFiles/ParalyzedEngine.dir/Model.cpp.s
 .PHONY : Model.cpp.s
 
+Network/TCPClient.o: Network/TCPClient.c.o
+
+.PHONY : Network/TCPClient.o
+
+# target to build an object file
+Network/TCPClient.c.o:
+	$(MAKE) -f CMakeFiles/ParalyzedEngine.dir/build.make CMakeFiles/ParalyzedEngine.dir/Network/TCPClient.c.o
+.PHONY : Network/TCPClient.c.o
+
+Network/TCPClient.i: Network/TCPClient.c.i
+
+.PHONY : Network/TCPClient.i
+
+# target to preprocess a source file
+Network/TCPClient.c.i:
+	$(MAKE) -f CMakeFiles/ParalyzedEngine.dir/build.make CMakeFiles/ParalyzedEngine.dir/Network/TCPClient.c.i
+.PHONY : Network/TCPClient.c.i
+
+Network/TCPClient.s: Network/TCPClient.c.s
+
+.PHONY : Network/TCPClient.s
+
+# target to generate assembly for a file
+Network/TCPClient.c.s:
+	$(MAKE) -f CMakeFiles/ParalyzedEngine.dir/build.make CMakeFiles/ParalyzedEngine.dir/Network/TCPClient.c.s
+.PHONY : Network/TCPClient.c.s
+
 Network/WebClient.o: Network/WebClient.c.o
 
 .PHONY : Network/WebClient.o
@@ -438,6 +465,9 @@ help:
 	@echo "... Model.o"
 	@echo "... Model.i"
 	@echo "... Model.s"
+	@echo "... Network/TCPClient.o"
+	@echo "... Network/TCPClient.i"
+	@echo "... Network/TCPClient.s"
 	@echo "... Network/WebClient.o"
 	@echo "... Network/WebClient.i"
 	@echo "... Network/WebClient.s"

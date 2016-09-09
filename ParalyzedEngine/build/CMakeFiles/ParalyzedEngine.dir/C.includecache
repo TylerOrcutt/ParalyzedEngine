@@ -6,6 +6,34 @@
 
 #IncludeRegexTransform: 
 
+/home/twittumz/Desktop/git/ParalyzedEngine/ParalyzedEngine/Network/TCPClient.c
+TCPClient.h
+/home/twittumz/Desktop/git/ParalyzedEngine/ParalyzedEngine/Network/TCPClient.h
+
+/home/twittumz/Desktop/git/ParalyzedEngine/ParalyzedEngine/Network/TCPClient.h
+stdio.h
+-
+stdlib.h
+-
+unistd.h
+-
+string.h
+-
+sys/types.h
+-
+sys/socket.h
+-
+netinet/in.h
+-
+netdb.h
+-
+stdlib.h
+-
+stdio.h
+-
+string.h
+-
+
 /home/twittumz/Desktop/git/ParalyzedEngine/ParalyzedEngine/Network/WebClient.c
 WebClient.h
 /home/twittumz/Desktop/git/ParalyzedEngine/ParalyzedEngine/Network/WebClient.h

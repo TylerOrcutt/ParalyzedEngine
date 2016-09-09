@@ -3,6 +3,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/ParalyzedEngine.dir/Window.c.o"
   "CMakeFiles/ParalyzedEngine.dir/SpriteRenderer.c.o"
   "CMakeFiles/ParalyzedEngine.dir/Network/WebClient.c.o"
+  "CMakeFiles/ParalyzedEngine.dir/Network/TCPClient.c.o"
   "CMakeFiles/ParalyzedEngine.dir/Shaders/ShaderProgram.c.o"
   "CMakeFiles/ParalyzedEngine.dir/Texture.c.o"
   "CMakeFiles/ParalyzedEngine.dir/TextRenderer.c.o"

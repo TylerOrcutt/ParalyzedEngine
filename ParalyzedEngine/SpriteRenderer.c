@@ -9,7 +9,7 @@
  
 void  PE_init_sprite_renderer(PEShaderProgram * program){
 sprogram=program;
-       glUseProgram(1);
+   //    glUseProgram(program->programID);
    // printf("init spriteRenderer\n");
      glUseProgram(program->programID);
     vposx = glGetUniformLocation(program->programID,"vposx");

@@ -43,7 +43,7 @@ memset(&c->hints,0,sizeof c->hints);
 			return -1;
 		}
 		if(connect(c->socket,c->servinfo->ai_addr,c->servinfo->ai_addrlen)==-1){
-		 //	close(c->socket);
+	 	close(c->socket);
 			printf("Unable to connect.\n");
 			return -1;
 		}/*

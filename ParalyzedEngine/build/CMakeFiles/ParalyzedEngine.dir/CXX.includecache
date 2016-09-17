@@ -43,6 +43,14 @@ Model.hpp
 /home/twittumz/Desktop/git/ParalyzedEngine/ParalyzedEngine/Model.hpp
 
 /home/twittumz/Desktop/git/ParalyzedEngine/ParalyzedEngine/Model.hpp
+GL/glew.h
+-
+GL/gl.h
+-
+GL/glx.h
+-
+GL/glu.h
+-
 glm/vec3.hpp
 -
 glm/vec2.hpp

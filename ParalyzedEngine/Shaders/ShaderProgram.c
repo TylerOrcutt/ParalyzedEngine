@@ -98,7 +98,7 @@ int PE_load_shaderProgram(PEShaderProgram * program, const char * vertexShaderSo
     strcat(source,"varying vec2 v_texCoord;\n");    
  //strcat(source,"uniform vec3 attenuation;\n");
  //strcat(source,"uniform float intensity;\n");
-     strcat(source,"varying vec2 light_Position;");
+     strcat(source,"uniform  vec2 light_Position;");
      strcat(source,"uniform vec4 light_color;");
      //   strcat(source,"varying vec4 out_light_color;");
     strcat(source,"void main() {\n");
@@ -148,7 +148,7 @@ int PE_load_shaderProgram(PEShaderProgram * program, const char * vertexShaderSo
     strcat(source,"uniform sampler2D s_texture;");
     strcat(source,"uniform int useTexture;");
      strcat(source,"uniform int isTexxxt;");
-   strcat(source,"varying vec2 light_Position;");
+   strcat(source,"uniform vec2 light_Position;");
      strcat(source,"uniform vec4 light_color;");
        //  strcat(source,"varying vec4 out_light_color;");
 
@@ -176,12 +176,33 @@ int PE_load_shaderProgram(PEShaderProgram * program, const char * vertexShaderSo
   strcat(source,"gl_FragColor = pixel_color * vec4(att,att,att,1.0)*light_color;");//" vec4(att,att,att,1.0)*light_color;");
 */
 //strcat(source,"gl_FragColor = pixel_color;");
- strcat(source,"light_Position=vec2(400,300);");
+ strcat(source,"light_Position=vec2(400,300);");/*
+ strcat(source,"vec2 rez=vec2(800,600);");
+  strcat(source,"  vec3 LightDir = vec3(light_Position.xy - (gl_FragCoord.xy / rez.xy),1.0);");
+ strcat(source,"LightDir.x *= rez.x / rez.y;");
+ strcat(source," float D = length(LightDir);");
+   strcat(source,"vec3 L = normalize(LightDir);");
+      strcat(source,"  vec3 NormalMap =  texture2D( s_texture, v_texCoord).rgb;");
+strcat(source,"vec3 N = normalize(NormalMap * 2.0 - 1.0);");
+
+
+     strcat(source,"vec3 Diffuse = (light_color.rgb * light_color.a) * max(dot(N,L), 0.0);");
+ */
    strcat(source,"float dist =length(light_Position-gl_FragCoord.xy);\n");
   
  // strcat(source,"vec3 falloff = vec3(0.3,0.3,0.3);");
-   strcat(source,"float att = 10000.0 / ( 1.0 + (1.0*dist) + (1.0*dist*dist) );");
-   strcat(source,"gl_FragColor = (pixel_color+light_color)*vec4(att,att,att,1.0);");
+  // strcat(source,"float att = 100.0 / ( 0.01 + (0.01*D) + (0.01*D*D) );");
+   strcat(source,"float att = 1.0 / ( 0.7515 + (0.001*dist) + (0.000070*dist*dist) );");
+          strcat(source,"light_color = vec4(1,1,1,1);");
+  
+  
+/*   
+ 
+  strcat(source," vec3 Intensity = (light_color + Diffuse) * att;");
+   strcat(source," vec3 FinalColor =pixel_color.rgb * Intensity;");
+    strcat(source," gl_FragColor =  vec4(FinalColor, pixel_color.a);");
+ */
+   strcat(source,"gl_FragColor = (pixel_color)*(vec4(att,att,att,1.0)*light_color);");
   //strcat(source,"vec4 amb = (0.5,0.5,0.5,1); ");
   // strcat(source,"gl_FragColor =pixel_color;");
 

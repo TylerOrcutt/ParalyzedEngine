@@ -20,9 +20,9 @@ std::vector<glm::vec3> normals;
 std::vector<glm::vec3> uvs;
 std::vector<glm::vec3> nverticies;
 GLuint vbo;
-GLuint vao;
+GLuint vao;/*
 float * verts;
-GLuint *indicies;
+GLuint *indicies;*/
 public:
 PEModel(std::string mfile){
     bool hastexture=false;
@@ -85,41 +85,41 @@ PEModel(std::string mfile){
            }
     }
    
- indicies =  (GLuint*)malloc(sizeof(GLuint) * vertexIndices.size());
+// indicies =  (GLuint*)malloc(sizeof(GLuint) * vertexIndices.size());
   for(int i=0;i<vertexIndices.size();i++){
   unsigned int vi = vertexIndices[i];
   //nverticies.push_back(verticies[vi-1]);
   //   indicies[]
-  indicies[i] = vertexIndices[i];
+//  indicies[i] = vertexIndices[i];
   }
 
-   verts =(float*) malloc(sizeof(float) *( verticies.size()*3));
+ /*  verts =(float*) malloc(sizeof(float) *( verticies.size()*3));
 
   for(int i = 0;i<verticies.size();i++){
       int p = i*3;
       verts[p] = verticies[i].x;
       verts[(i*3) + 1] = verticies[i].y;
       verts[(i*3) + 2] = verticies[i].z;
-  }
-  /*
+  }*/
+  
 float verts []= { -0.5f, 0.5f, 0.f, 
 -0.5f, -0.5f, 0.f,
  0.5f, -0.5f, 0.f,
   0.5f,  0.5f, 0.f};
     GLuint indicies [] = {0,1,3,3,1,2};
-    */
+    
 glGenVertexArrays(1,&vao);
 glBindVertexArray(vao);
 GLuint vboi;
  glGenBuffers(1,&vboi);
 glBindBuffer(GL_ELEMENT_ARRAY_BUFFER,vboi);
- glBufferData(GL_ELEMENT_ARRAY_BUFFER,vertexIndices.size()* sizeof(GLuint),indicies,GL_STATIC_DRAW);
+ glBufferData(GL_ELEMENT_ARRAY_BUFFER,6* sizeof(GLuint),indicies,GL_STATIC_DRAW);
 //glBindBuffer(GL_ELEMENT_ARRAY_BUFFER,0);
 
 
 glGenBuffers(1,&vbo);
 glBindBuffer(GL_ARRAY_BUFFER, vbo);
-glBufferData(GL_ARRAY_BUFFER,verticies.size()* sizeof(float),verts,GL_STATIC_DRAW);
+glBufferData(GL_ARRAY_BUFFER,12* sizeof(float),verts,GL_STATIC_DRAW);
     glEnableVertexAttribArray(0); 
 
 
@@ -138,12 +138,13 @@ glBindVertexArray(0);
 }
 
 void Draw(){
+  //  int puni =   glGetUniformLocation(program->programID,"light_Position");
     glColor4f(1,1,1,1);
    glEnableClientState(GL_VERTEX_ARRAY);
     glBindVertexArray(vao);
    // glBindBuffer(GL_ARRAY_BUFFER,vbo);
    glEnableVertexAttribArray(0); 
-    glDrawElements(GL_TRIANGLES, verticies.size()*3,GL_UNSIGNED_INT,0);
+    glDrawElements(GL_TRIANGLES, 8,GL_UNSIGNED_INT,0);
   glDisableVertexAttribArray(0);
    // glBindBuffer(GL_ARRAY_BUFFER,0);
 glBindVertexArray(0);

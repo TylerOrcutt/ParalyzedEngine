@@ -15,7 +15,8 @@ extern char * load_shaderSource(const char * shaderFile);
 
 extern const char * PE_default_vertexShader2D();
 extern const char * PE_default_fragmentShader2D();
-
+extern const char * PE_default_vertexShader3D();
+extern const char * PE_default_fragmentShader3D();
 
  #ifdef __cplusplus
 }

@@ -95,21 +95,36 @@ int PE_load_shaderProgram(PEShaderProgram * program, const char * vertexShaderSo
     strcat(source,"uniform float tScaleX;\n");
     strcat(source,"uniform float tScaleY;\n");
     strcat(source,"attribute vec2 a_texCoord;\n");
-    strcat(source,"varying vec2 v_texCoord;\n");
-    
-    strcat(source,"varying vec4 light_color;");
+    strcat(source,"varying vec2 v_texCoord;\n");    
+ //strcat(source,"uniform vec3 attenuation;\n");
+ //strcat(source,"uniform float intensity;\n");
      strcat(source,"varying vec2 light_Position;");
-    
+     strcat(source,"uniform vec4 light_color;");
+     //   strcat(source,"varying vec4 out_light_color;");
     strcat(source,"void main() {\n");
     strcat(source,"vec4 position = vPosition;\n");  
     strcat(source,"position.x=position.x*vScaleX + vposx;\n");
     strcat(source,"position.y=position.y*vScaleY+ vposy;\n");
      strcat(source,"gl_Position =  gl_ModelViewProjectionMatrix*position;\n");
- 
-        //  strcat(source,"light_Position = vec2(400,300);");
-      // strcat(source,"float dist = distance(light_Position,vec2(position.x,position.y));\n");
+      strcat(source,"light_Position = vec2(400,300);");
+          strcat(source,"light_color = vec4(0,1,0,1);");
+     // strcat(source,"light_Position=gl_ModelViewProjectionMatrix.*light_Position;");
+   //       strcat(source,"light_Position = vec2(400,300);");
+
+     
+/*
+    strcat(source,"float dist =distance(light_Position,position.xy);\n");
+    strcat(source,"intensity=1.0;");
+     strcat(source,"attenuation= vec3(0.10,0.10,0.010);");
+          strcat(source,"float att = 10.0/(attenuation.x+(attenuation.y*dist)+(attenuation.z*pow(dist,2)));");
+ // strcat(source,"float att = 1.0/dist;");
+ strcat(source,"light_color=vec4(1,1,1,1);");
+  //strcat(source,"out_light_color= vec4(light_color.xyz,1.0)* vec4(att,att,att,1.0);");
+ //   strcat(source,"out_light_color= vec4(light_color.xyz,1.0)* vec4(att,att,pow(att,3),1.0);");
+  //  strcat(source,"out_light_color= vec4(1,1,1,1)* vec4(att,att,att,pow(att,3));");
+  strcat(source,"out_light_color= vec4(light_color.xyz,1.0) * vec4(att,att,att,1.0);");*/
    //        strcat(source,"if(abs(dist)<=100.0){\n");
-       strcat(source,"light_color= vec4(1,1,1,1);\n");
+  //     strcat(source,"light_color= vec4(1,1,1,1);\n");
   //strcat(source,"}else{\n");
  //  strcat(source,"light_color= vec4(.085,.085,.085,1);\n");
   //strcat(source,"}\n");
@@ -127,19 +142,22 @@ int PE_load_shaderProgram(PEShaderProgram * program, const char * vertexShaderSo
  }
 
  const char * PE_default_fragmentShader2D(){
-    char * source = malloc(sizeof(char)*512);
+    char * source = malloc(sizeof(char)*1024);
            sprintf( source, "%s", "varying vec2 v_texCoord;" );
 
     strcat(source,"uniform sampler2D s_texture;");
     strcat(source,"uniform int useTexture;");
      strcat(source,"uniform int isTexxxt;");
-    strcat(source,"varying vec4 light_color;");
- 
+   strcat(source,"varying vec2 light_Position;");
+     strcat(source,"uniform vec4 light_color;");
+       //  strcat(source,"varying vec4 out_light_color;");
+
     strcat(source,"void main() {");
 
 
    strcat(source,"if(useTexture==1 && isTexxxt==1 ){");
      strcat(source,"if(texture2D( s_texture, v_texCoord).a<0.5){");
+     
     strcat(source,"gl_FragColor =  vec4(0,0,0,0);");
      strcat(source,"}else{"); 
          strcat(source,"gl_FragColor=gl_Color;");
@@ -147,8 +165,28 @@ int PE_load_shaderProgram(PEShaderProgram * program, const char * vertexShaderSo
 
 
     strcat(source,"} else if(useTexture==1){");
-  strcat(source,"gl_FragColor = vec4(texture2D( s_texture, v_texCoord)) * light_color;");
+    //     strcat(source,"light_Position = vec2(0,0);");
+              strcat(source,"vec4 pixel_color = texture2D( s_texture, v_texCoord);");
+           //   strcat(source,"vec2 pixel_position = gl_Position.xy;");
+             // strcat(source,"light_color= vec4(1,1,1,1);");  
+         
+             // strcat(source,"float distanc =distance(light_Position,pixel_position;");
+      /*        strcat(source,"float att = 1.0/0.5+0.5*distanc+0.5*distanc*distanc;");
 
+  strcat(source,"gl_FragColor = pixel_color * vec4(att,att,att,1.0)*light_color;");//" vec4(att,att,att,1.0)*light_color;");
+*/
+//strcat(source,"gl_FragColor = pixel_color;");
+ strcat(source,"light_Position=vec2(400,300);");
+   strcat(source,"float dist =length(light_Position-gl_FragCoord.xy);\n");
+  
+ // strcat(source,"vec3 falloff = vec3(0.3,0.3,0.3);");
+   strcat(source,"float att = 10000.0 / ( 1.0 + (1.0*dist) + (1.0*dist*dist) );");
+   strcat(source,"gl_FragColor = (pixel_color+light_color)*vec4(att,att,att,1.0);");
+  //strcat(source,"vec4 amb = (0.5,0.5,0.5,1); ");
+  // strcat(source,"gl_FragColor =pixel_color;");
+
+
+ //  strcat(source,"gl_FragColor = pixel_color;");
         strcat(source,"}else{"); 
     strcat(source,"gl_FragColor=gl_Color;");
      strcat(source,"}");
@@ -160,3 +198,33 @@ int PE_load_shaderProgram(PEShaderProgram * program, const char * vertexShaderSo
  
  
  
+  const char * PE_default_vertexShader3D(){
+    char * source = malloc(sizeof(char)*1024);
+
+              sprintf( source, "%s", "#version 400 core\n" );
+           strcat(source,"in vec3 position;");
+          strcat(source,"uniform mat4 tmatrix;");
+
+ 
+    strcat(source,"void main() {");
+   // strcat(source,"gl_Position = tmatrix * vec4(position,1.0);");
+
+        strcat(source,"}");
+
+      return source;
+ }
+
+ const char * PE_default_fragmentShader3D(){
+    char * source = malloc(sizeof(char)*512);
+           sprintf( source, "%s", "#version 400 core\n" );
+       //    strcat(source,"in vec3 position;");
+           strcat(source,"");
+
+ 
+    strcat(source,"void main() {");
+   
+
+        strcat(source,"}");
+ 
+      return source;
+ }

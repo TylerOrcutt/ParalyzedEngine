@@ -1,3 +1,0 @@
-/home/twittumz/Desktop/git/ParalyzedEngine/Demos/SpaceInvaders/build/CMakeFiles/rebuild_cache.dir
-/home/twittumz/Desktop/git/ParalyzedEngine/Demos/SpaceInvaders/build/CMakeFiles/edit_cache.dir
-/home/twittumz/Desktop/git/ParalyzedEngine/Demos/SpaceInvaders/build/CMakeFiles/SpaceInvaders.dir

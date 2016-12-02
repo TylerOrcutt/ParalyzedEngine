@@ -1,3 +1,0 @@
-/home/twittumz/Desktop/git/ParalyzedEngine/ParalyzedEngine/build/CMakeFiles/edit_cache.dir
-/home/twittumz/Desktop/git/ParalyzedEngine/ParalyzedEngine/build/CMakeFiles/rebuild_cache.dir
-/home/twittumz/Desktop/git/ParalyzedEngine/ParalyzedEngine/build/CMakeFiles/ParalyzedEngine.dir

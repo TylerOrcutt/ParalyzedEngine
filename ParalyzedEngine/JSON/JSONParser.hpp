@@ -7,8 +7,8 @@
 class JSONParser {
 public:
 static PEDictionary * parseJson(std::string data);
-static std::vector<PEDictionaryItem> getSubItems(std::string data, int *index);
- static std::string getValue(std::string data, int index);
+static std::vector<PEDictionaryItem> getSubItems(std::string data, int *index, std::string type);
+ static std::string getValue(std::string data, int* index);
 };
 
  

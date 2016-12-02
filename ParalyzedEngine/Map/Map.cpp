@@ -26,9 +26,9 @@ void PEMap::parseMap(std::string map){
 
 PEDictionary * dic = JSONParser::parseJson(map);
 
-//dic->printDictionary();
+dic->printDictionary();
 int totalblocks=0;
-for (int i=0;i<dic->size();i++){
+/*for (int i=0;i<dic->size();i++){
   if(dic->get(i)->key=="SpriteSheet"){
   //spritesheets.push_back(PE_load_texture(dic->get(i)->getItem("loc")->value.c_str()));
  //  printf("%c \n ",dic->get(i)->getItem("loc")->value.c_str());
@@ -47,7 +47,7 @@ for (int i=0;i<dic->size();i++){
         totalblocks++;
  // printf("posX: %f\n",blocks[i].x);
  // break;
-}
+}*/
 delete dic;
 printf("found %i blocks total\n",totalblocks);
 }

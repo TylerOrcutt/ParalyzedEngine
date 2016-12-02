@@ -6,7 +6,7 @@
 #define PE_TRUE 1
  
 #include "Window.h"
-
+#include "Memory/PEalloc/PEalloc.h"
 #ifdef __cplusplus
  extern "C"{
 #endif

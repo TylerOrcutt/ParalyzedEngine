@@ -1,10 +1,12 @@
 #include "Texture.h"
+#include "Memory/PEalloc/PEalloc.h"
 
 
 
 
 PETexture * PE_load_texture(const char * _file){
 glEnable(GL_TEXTURE_2D);
+printf("Allocating texture\n");
     PETexture *texture = malloc(sizeof (PETexture));
 
 

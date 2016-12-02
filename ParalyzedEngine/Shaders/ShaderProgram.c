@@ -84,7 +84,7 @@ int PE_load_shaderProgram(PEShaderProgram * program, const char * vertexShaderSo
  const char * PE_default_vertexShader2D(){
     char * source = malloc(sizeof(char)*1024);
 
-           sprintf( source, "%s", "attribute  vec4  vPosition;\n" );
+           sprintf( source, "%s", "#version 120\nattribute  vec4  vPosition;\n" );
 
     strcat(source,"uniform float vposx;\n");
     strcat(source,"uniform float vposy;\n");
@@ -105,30 +105,9 @@ int PE_load_shaderProgram(PEShaderProgram * program, const char * vertexShaderSo
     strcat(source,"vec4 position = vPosition;\n");  
     strcat(source,"position.x=position.x*vScaleX + vposx;\n");
     strcat(source,"position.y=position.y*vScaleY+ vposy;\n");
+        //strcat(source,"position.z=0.000001;\n");
      strcat(source,"gl_Position =  gl_ModelViewProjectionMatrix*position;\n");
-      strcat(source,"light_Position = vec2(400,300);");
-          strcat(source,"light_color = vec4(0,1,0,1);");
-     // strcat(source,"light_Position=gl_ModelViewProjectionMatrix.*light_Position;");
-   //       strcat(source,"light_Position = vec2(400,300);");
 
-     
-/*
-    strcat(source,"float dist =distance(light_Position,position.xy);\n");
-    strcat(source,"intensity=1.0;");
-     strcat(source,"attenuation= vec3(0.10,0.10,0.010);");
-          strcat(source,"float att = 10.0/(attenuation.x+(attenuation.y*dist)+(attenuation.z*pow(dist,2)));");
- // strcat(source,"float att = 1.0/dist;");
- strcat(source,"light_color=vec4(1,1,1,1);");
-  //strcat(source,"out_light_color= vec4(light_color.xyz,1.0)* vec4(att,att,att,1.0);");
- //   strcat(source,"out_light_color= vec4(light_color.xyz,1.0)* vec4(att,att,pow(att,3),1.0);");
-  //  strcat(source,"out_light_color= vec4(1,1,1,1)* vec4(att,att,att,pow(att,3));");
-  strcat(source,"out_light_color= vec4(light_color.xyz,1.0) * vec4(att,att,att,1.0);");*/
-   //        strcat(source,"if(abs(dist)<=100.0){\n");
-  //     strcat(source,"light_color= vec4(1,1,1,1);\n");
-  //strcat(source,"}else{\n");
- //  strcat(source,"light_color= vec4(.085,.085,.085,1);\n");
-  //strcat(source,"}\n");
-   
     
     
     strcat(source,"vec2 txtpos;\n");
@@ -142,15 +121,15 @@ int PE_load_shaderProgram(PEShaderProgram * program, const char * vertexShaderSo
  }
 
  const char * PE_default_fragmentShader2D(){
-    char * source = malloc(sizeof(char)*1024);
-           sprintf( source, "%s", "varying vec2 v_texCoord;" );
+    char * source = malloc(sizeof(char)*1048);
+           sprintf( source, "%s", "#version 120\nvarying vec2 v_texCoord;" );
 
     strcat(source,"uniform sampler2D s_texture;");
     strcat(source,"uniform int useTexture;");
      strcat(source,"uniform int isTexxxt;");
         strcat(source,"uniform int numLights;");
-   strcat(source,"uniform vec2 light_Position[2];");
-     strcat(source,"uniform vec4 light_color[2];");
+  // strcat(source,"uniform vec2 light_Position;");
+    // strcat(source,"uniform vec4 light_color;");
        //  strcat(source,"varying vec4 out_light_color;");
 
     strcat(source,"void main() {");
@@ -167,23 +146,45 @@ int PE_load_shaderProgram(PEShaderProgram * program, const char * vertexShaderSo
 
     strcat(source,"} else if(useTexture==1){");
     //     strcat(source,"light_Position = vec2(0,0);");
-              
+     // strcat(source,"vec2 light_Position;");
+    // strcat(source,"vec4 light_color;");
+                  strcat(source,"vec4 light_color = vec4(1,1,1,1);");
+                      strcat(source,"vec2 light_Position=vec2(400,300);");
               strcat(source,"vec4 pixel_color = texture2D( s_texture, v_texCoord);");
-                    strcat(source,"vec3 finalLightColor ;");
-              strcat(source,"for(int i=0;i<2;i++){");
-              strcat(source,"light_Position[i]=vec2(200+(i*200),100+(i*200));");
-              strcat(source,"float dist =length(light_Position[i]-gl_FragCoord.xy);\n");
-              strcat(source,"float att = 1.0 / ( 0.5515 + (0.001*dist) + (0.000170*dist*dist) );");
-              strcat(source,"light_color[i] = vec4(0.25+(i*0.80),0.25-(i-1)*.85,0.25,1);");
-              strcat(source,"finalLightColor=finalLightColor+((vec4(att,att,att,1.0)*light_color[i]));");
-               strcat(source,"}");
+    /*            strcat(source,"vec3 normals =vec3(0,0,0);");
+                    strcat(source,"light_Position=vec2(400,300);");
+                 strcat(source,"vec2 rez=vec2(800,600);");
+                  strcat(source," vec3 LightDir = vec3(light_Position.xy - (gl_FragCoord.xy / rez.xy), 1.0);");
+                   strcat(source,"LightDir.x *= rez.x / rez.y;");
+                      strcat(source,"float D = length(LightDir);");
+  strcat(source,"if(pixel_color.a>0.5){");
+  strcat(source,"normals= vec3(0.5,0.5,1); }");
+  strcat(source,"vec3 N = normalize(normals * 2.0 - 1.0);");
+ // strcat(source," vec3 L = normalize(light_Position);");
+  strcat(source," vec3 Diffuse = (light_color.rbg * light_color.a) * N, 0.0);");
+    strcat(source," vec3 Ambient = vec3(0.6f, 0.6f, 1f)* 0.2;");
+      strcat(source," vec3 Falloff = vec3(0.4, 3, 20);");
+        strcat(source," float Attenuation = 1.0 / ( Falloff.x + (Falloff.y*D) + (Falloff.z*D*D) );");
+              strcat(source," vec3 Intensity = Ambient + Diffuse * Attenuation;");
+                strcat(source," vec3 FinalColor = pixel_color.rgb * Intensity;");
+                          strcat(source," gl_FragColor = vec4(FinalColor, pixel_color.a);");*/
+
+                    strcat(source,"vec3 finalLightColor = vec3(0.075,0.075,0.075) ;"); //base light color
+            //  strcat(source,"for(int i=1;i<2;i++){");
+          //    strcat(source,"light_Position=vec2(200+(i*200),100+(i*200));");
+              strcat(source,"float dist =length(normalize(light_Position-gl_FragCoord.xy));\n");
+              strcat(source,"float att = ( 0.4 + (.4*dist) + (20*dist*dist));");
+           // strcat(source," vec3 Diffuse = (light_color.rbg * light_color.a) * , 0.0);");
+             strcat(source,"finalLightColor=finalLightColor+(light_color.rbg/vec3(att,att,att));");
+          //     strcat(source,"}");
              // strcat(source,"if(finalLightColor.x<=0.05 || finalLightColor.y<=0.05 || finalLightColor.z<=0.05){ finalLightColor = vec3(finalLightColor.x+0.05,finalLightColor.y+0.05,finalLightColor.z+0.05);}");   
-strcat(source,"finalLightColor = vec3(finalLightColor.x+0.05,finalLightColor.y+0.05,finalLightColor.z+0.05);");   
+//strcat(source,"finalLightColor = vec3(finalLightColor.x+0.075,finalLightColor.y+0.075,finalLightColor.z+0.075);");   
 
  
   //strcat(source,"if(att<=0.5){ att=0.5;}");
    //strcat(source,"gl_FragColor = (pixel_color)*(vec4(att,att,att,1.0)*light_color);");
- strcat(source,"gl_FragColor = (pixel_color)*vec4(finalLightColor,1.0);");
+// strcat(source,"gl_FragColor = (pixel_color)*vec4(finalLightColor,1);");
+     strcat(source,"gl_FragColor=pixel_color;");
         strcat(source,"}else{"); 
     strcat(source,"gl_FragColor=gl_Color;");
      strcat(source,"}");

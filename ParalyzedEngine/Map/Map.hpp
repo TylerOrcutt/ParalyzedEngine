@@ -20,9 +20,10 @@ float imgh=32;
 };
 class PEMap{
 private:
-std::vector<PEBlock>blocks;
+//std::vector<PEBlock>blocks;
+PEBlock **blocks;
 std::vector<PETexture*> spritesheets;
-
+int width,height;
 public:
 PEMap(){
 
@@ -33,8 +34,14 @@ PEMap(const char * file){
 std::string load_map(const char *);
 void parseMap(std::string map);
 
-std::vector <PEBlock>* getBlocks(){
-    return &blocks;
+PEBlock ** getBlocks(){
+    return blocks;
+}
+int getWidth(){
+    return width;
+}
+int getHeight(){
+    return height;
 }
 
 };

@@ -26,8 +26,46 @@ void PEMap::parseMap(std::string map){
 
 PEDictionary * dic = JSONParser::parseJson(map);
 
-dic->printDictionary();
+//dic->printDictionary();
 int totalblocks=0;
+PEDictionaryItem *mapdata =  dic->get(0);
+PEDictionaryItem * mapinfo = mapdata->getItem("Map");
+if(mapinfo !=nullptr){
+  printf("found map info\n");
+ PEDictionary:: printSubItems(mapinfo->items,5);
+ printf("Map width: %d \n",atoi(mapinfo->getItem("width")->value.c_str()));
+  printf("Map height: %d \n",atoi(mapinfo->getItem("height")->value.c_str()));
+ width=atoi(mapinfo->getItem("width")->value.c_str());
+ height =atoi(mapinfo->getItem("height")->value.c_str());
+if(width<=0 || height<=0){
+  printf("failed to load map\n");
+}
+
+  blocks = (PEBlock**)malloc(sizeof(PEBlock)*width);
+  for(int i=0;i<width;i++){
+     blocks[i]= (PEBlock*)malloc(sizeof(PEBlock)*height); 
+  }
+  
+}
+
+PEDictionaryItem * blockinfo = mapdata->getItem("Blocks");
+if(blockinfo !=nullptr){
+  printf("Found %d blocks\n",blockinfo->items.size());
+    for(int i=0;i<blockinfo->items.size();i++){
+         PEDictionaryItem *blk = blockinfo->getItem(i);
+    //  printf("Block x: %d \n",atoi(blk->getItem("x")->value.c_str()));
+    // printf("Block y: %d \n",atoi(blk->getItem("y")->value.c_str()));
+     int x = atoi(blk->getItem("x")->value.c_str());
+     int y =atoi(blk->getItem("y")->value.c_str());
+     int imgx = atoi(blk->getItem("imgx")->value.c_str());
+     int imgy = atoi(blk->getItem("imgy")->value.c_str());
+     blocks[x][y].imgx=imgx;
+     blocks[x][y].imgy=imgy;
+        totalblocks++;
+
+    }
+
+}
 /*for (int i=0;i<dic->size();i++){
   if(dic->get(i)->key=="SpriteSheet"){
   //spritesheets.push_back(PE_load_texture(dic->get(i)->getItem("loc")->value.c_str()));
@@ -49,5 +87,5 @@ int totalblocks=0;
  // break;
 }*/
 delete dic;
-printf("found %i blocks total\n",totalblocks);
+printf("Loaded %i blocks\n",totalblocks);
 }

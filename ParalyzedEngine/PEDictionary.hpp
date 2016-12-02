@@ -20,6 +20,10 @@ struct PEDictionaryItem {
 
     return items[index];
   }
+
+   PEDictionaryItem * getItem(int i){
+   return &items[i];
+   }
  PEDictionaryItem * getItem(std::string pram){
   for(int i=0;i<items.size();i++ ){
     if(pram==items[i].key){
@@ -70,12 +74,12 @@ for(int i=0;i<nodes.size();i++){
   std::cout<<"key : "<<nodes[i].key<<std::endl;
   std::cout<<"value : "<<nodes[i].value<<std::endl;
   if(nodes[i].items.size()>0){
-    printSubItems(nodes[i].items,5);
+    PEDictionary::printSubItems(nodes[i].items,5);
   }
 
 }
 }
-void printSubItems(std::vector<PEDictionaryItem> item,int spaces){
+static void printSubItems(std::vector<PEDictionaryItem> item,int spaces){
   std::string spaces_str="";
   for(int i=0;i<spaces;i++){
     spaces_str+=" ";
@@ -84,7 +88,7 @@ void printSubItems(std::vector<PEDictionaryItem> item,int spaces){
      std::cout<<spaces_str<<"key : "<<item[i].key<<std::endl;
      std::cout<<spaces_str<<"value : "<<item[i].value<<std::endl;
   if(item[i].items.size()>0){
-    printSubItems(item[i].items,spaces*2);
+     PEDictionary::printSubItems(item[i].items,spaces*2);
   }
 }
 }

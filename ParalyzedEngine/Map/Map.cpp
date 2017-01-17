@@ -86,6 +86,14 @@ if(blockinfo !=nullptr){
  // printf("posX: %f\n",blocks[i].x);
  // break;
 }*/
+
+props.push_back(new PEProp("bush",10,10));
 delete dic;
 printf("Loaded %i blocks\n",totalblocks);
+}
+
+void PEMap::Update(){
+	for(int i=0;i<props.size();i++){
+		props[i]->Update();
+	}
 }

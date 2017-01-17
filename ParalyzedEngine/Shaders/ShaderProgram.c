@@ -82,40 +82,36 @@ int PE_load_shaderProgram(PEShaderProgram * program, const char * vertexShaderSo
  }
 
  const char * PE_default_vertexShader2D(){
-    char * source = malloc(sizeof(char)*1024);
+	 
+	 const char * source = "#version 120\nattribute  vec4  vPosition;\n" \
+				"uniform float vposx;\n" \
+				"uniform float vposy;\n" \
+				"uniform float vScaleX;\n" \
+				"uniform float vScaleY;\n" \
+				"uniform float tposx;\n" \
+				"uniform float tposy;\n" \
+				"uniform float tScaleX;\n" \
+				"uniform float tScaleY;\n" \
+				"attribute vec2 a_texCoord;\n" \
+				"varying vec2 v_texCoord;\n" \
+				//"uniform vec3 attenuation;\n"
+				//"uniform float intensity;\n"
+				"uniform  vec2 light_Position;" \
+				"uniform vec4 light_color;" \
+				//"varying vec4 out_light_color;"
 
-           sprintf( source, "%s", "#version 120\nattribute  vec4  vPosition;\n" );
-
-    strcat(source,"uniform float vposx;\n");
-    strcat(source,"uniform float vposy;\n");
-   strcat(source,"uniform float vScaleX;\n");
-   strcat(source,"uniform float vScaleY;\n");
-    strcat(source,"uniform float tposx;\n");
-    strcat(source,"uniform float tposy;\n");
-    strcat(source,"uniform float tScaleX;\n");
-    strcat(source,"uniform float tScaleY;\n");
-    strcat(source,"attribute vec2 a_texCoord;\n");
-    strcat(source,"varying vec2 v_texCoord;\n");    
- //strcat(source,"uniform vec3 attenuation;\n");
- //strcat(source,"uniform float intensity;\n");
-     strcat(source,"uniform  vec2 light_Position;");
-     strcat(source,"uniform vec4 light_color;");
-     //   strcat(source,"varying vec4 out_light_color;");
-    strcat(source,"void main() {\n");
-    strcat(source,"vec4 position = vPosition;\n");  
-    strcat(source,"position.x=position.x*vScaleX + vposx;\n");
-    strcat(source,"position.y=position.y*vScaleY+ vposy;\n");
-        //strcat(source,"position.z=0.000001;\n");
-     strcat(source,"gl_Position =  gl_ModelViewProjectionMatrix*position;\n");
-
-    
-    
-    strcat(source,"vec2 txtpos;\n");
-     strcat(source,"txtpos.x=( a_texCoord.x*tScaleX)+tposx;\n");
-    strcat(source,"txtpos.y=( a_texCoord.y*tScaleY)+tposy;\n");
-    strcat(source,"v_texCoord = txtpos;\n");
-     strcat(source,"gl_FrontColor = gl_Color;\n");
-      strcat(source,"}");
+		"void main() {\n" \
+			"vec4 position = vPosition;\n" \
+			"position.x=position.x*vScaleX + vposx;\n" \
+			"position.y=position.y*vScaleY+ vposy;\n" \
+			//"position.z=0.000001;\n"
+			"gl_Position =  gl_ModelViewProjectionMatrix*position;\n" \
+			"vec2 txtpos;\n"\
+			"txtpos.x=( a_texCoord.x*tScaleX)+tposx;\n" \
+			"txtpos.y=( a_texCoord.y*tScaleY)+tposy;\n" \
+			"v_texCoord = txtpos;\n" \
+			"gl_FrontColor = gl_Color;\n" \
+		"}";
 
       return source;
  }

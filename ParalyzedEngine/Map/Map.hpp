@@ -7,6 +7,8 @@
 #include <string>
 #include "../JSON/JSONParser.hpp"
 #include "../PEDictionary.hpp"
+#include "../GameObjects/PEProp.hpp"
+
 struct PEBlock{
 float x=0;
 float y=0;;
@@ -20,20 +22,22 @@ float imgh=32;
 };
 class PEMap{
 private:
-//std::vector<PEBlock>blocks;
-PEBlock **blocks;
-std::vector<PETexture*> spritesheets;
-int width,height;
+	PEBlock **blocks;
+	std::vector<PETexture*> spritesheets;
+	std::vector<PEGameObject*> props;
+	int width,height;
+	
 public:
-PEMap(){
-
-}
-PEMap(const char * file){
-    load_map(file);
-}
-std::string load_map(const char *);
-void parseMap(std::string map);
-
+	PEMap(){
+	}
+	
+	PEMap(const char * file){
+	       	load_map(file);
+	}
+	
+	std::string load_map(const char *);
+	void parseMap(std::string map);
+	void Update();
 PEBlock ** getBlocks(){
     return blocks;
 }

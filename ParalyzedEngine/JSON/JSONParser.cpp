@@ -9,7 +9,7 @@ PEDictionary * JSONParser::parseJson(std::string data){
       //ignore data till we find the value pair
     //  for(int k=i;k<data.length()-1 && data.substr(k,1)!=":";k++){i=k;}
     // i++;
-      for(int k=i;k<data.length()-1 && data.substr(k,1)!="{" ;k++ ){i=k;}
+      //for(int k=i;k<data.length()-1 && data.substr(k,1)!="{" ;k++ ){i=k;}
       //value pair
       //i++;
      /* if(data.substr(i,1)=="\""){
@@ -19,13 +19,15 @@ PEDictionary * JSONParser::parseJson(std::string data){
             for(int k=i;k<data.length() && data.substr(k,1)==",";k++){i=k;}
             i++;
       }*/
-        PEDictionaryItem  n;
+        //PEDictionaryItem  n;
         if(data.substr(i,1)=="{"){
-          i++;
+         PEDictionaryItem n; 
+	 i++;
   ///      std::cout<<"array pair\n";
         n.items=  getSubItems(data, &i,"}");
-          }
-             a->push_back(n);
+       	a->push_back(n);  
+       	}
+          //   a->push_back(n);
 //    }
     //  a->push_back(n);
     }
@@ -37,48 +39,59 @@ std::vector<PEDictionaryItem> JSONParser::getSubItems(std::string data, int *ind
 std::vector<PEDictionaryItem> a;
 //std::cout<<"getting sub items\n\n";
     PEDictionaryItem  * n = new PEDictionaryItem();
-for(int i=(*index);i<data.length() && data.substr(i,1) !=type;i++){
+for(int i=(*index);i<data.length() && data.substr(i,1)!=type ;i++){
   
   if(data.substr(i,1)=="\""){
    //get key
    i++;
+   //n = new PEDictionaryItem();
     n->key = getValue(data,&i);
      for(int k=i;k<data.length() && data.substr(k,1) != ":";k++ ){
            i++;
      }
     
  i++;
-     if(data.substr(i,1)=="\""){ // if this is false then it must be an array?
+  
+
+ 	 if(data.substr(i,1)=="\""){ // if this is false then it must be an array?
      //get  value
      i++; 
       n->value = getValue(data,&i);
        a.push_back(*n);
-        n = new PEDictionaryItem();
+     n=new PEDictionaryItem();
+       //   i++;//n = new PEDictionaryItem();
+      i--;
+    (*index)=i;
+      continue;
      }  
-
+    
+  }
+  /* if(data.substr(i,1)==type){
+	//a.push_back(*n);       
+    (*index)=i;
+    break;
    }
-   if(data.substr(i,1)==type){
-       
-    (*index)=i+1;
-   return a;
-   }
+   */
       if(data.substr(i,1)=="{") {
         i++;
    //     std::cout<<"array pair\n";
       n->items=  getSubItems(data, &i,"}");
-         a.push_back(*n);
-   n = new PEDictionaryItem();
+        a.push_back(*n);
+//	n = new PEDictionaryItem();
+       
         }else    if(data.substr(i,1)=="[") {
         i++;
      //   std::cout<<"array pair\n";
         n->items=  getSubItems(data, &i,"]");
-         a.push_back(*n);
-        n = new PEDictionaryItem();
+        a.push_back(*n);
+  //      n = new PEDictionaryItem();
         }
   
-    (*index)=i+1;
+    (*index)=i;
   }
- 
+
+
+ (*index)+=1;
   
 
   return a;

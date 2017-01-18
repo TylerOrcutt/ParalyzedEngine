@@ -7,8 +7,29 @@
 #include<GL/glx.h>
 #include<GL/glu.h>
  
+
+//PEShaderProgram *sprogram=NULL;
+float *Square_verts=NULL;
+float *tex_verts=NULL;
+GLint vPosition=0;
+GLint vposx=0;
+GLint vposy=0;
+GLint vScaleX=0;
+GLint vScaleY=0;
+
+GLint tposx=0;
+GLint tposy=0;
+GLint tScaleX=0;
+GLint tScaleY=0;
+GLint mSamplerLoc=0;
+GLint useTexture=1;
+GLint lightColor=1;
+GLint lightPosition=0;
+GLint isText=0;
+GLint mTexLoc=0;
+
 void  PE_init_sprite_renderer(PEShaderProgram * program){
-sprogram=program;
+//sprogram=program;
    //    glUseProgram(program->programID);
    // printf("init spriteRenderer\n");
      glUseProgram(program->programID);

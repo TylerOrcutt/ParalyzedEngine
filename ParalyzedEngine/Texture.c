@@ -1,6 +1,7 @@
 #include "Texture.h"
 #include "Memory/PEalloc/PEalloc.h"
-
+#include <stdlib.h>
+#include <string.h>
 
 
 
@@ -8,7 +9,10 @@ PETexture * PE_load_texture(const char * _file){
 glEnable(GL_TEXTURE_2D);
 printf("Allocating texture\n");
     PETexture *texture = malloc(sizeof (PETexture));
-
+    texture->file = (char*)malloc(sizeof(char)*strlen(_file));
+    memcpy(texture->file,(char*)_file,strlen(_file));
+    
+    printf("texture path: %s\n",texture->file);
 
 texture->textureID= SOIL_load_OGL_texture
         (
@@ -36,4 +40,5 @@ glTexParameterf(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_CLAMP_TO_EDGE);
 void PE_delete_texture(PETexture * texture){
     glDeleteTextures(1,&texture->textureID);
     free (texture);
+   
 }

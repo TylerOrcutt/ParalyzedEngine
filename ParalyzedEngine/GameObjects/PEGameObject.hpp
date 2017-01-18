@@ -3,7 +3,24 @@
 #include <stdio.h>
 #include <string>
 #include <lua.hpp>
-
+#include "../Memory/PEalloc/PEalloc.h"
+#include "../LUA/PELuaFunctions.hpp"
+struct PEGameObjectBlock{
+	int spriteSheet=0;
+	int imgx,imgy;
+};
+struct PEGameObjectData{
+	float zline=0;
+	PEGameObjectBlock**data;
+	PEGameObjectData(int width,int height){
+		data = (PEGameObjectBlock**) PE_malloc(sizeof(PEGameObjectBlock)*width);
+		for(int x=0;x<width;x++){
+			for(int y=0;y<height;y++){
+				data[x] =(PEGameObjectBlock*)PE_malloc(sizeof(PEGameObjectBlock)*height);
+			}
+		}
+	}
+};
 
 class PEGameObject{
 	
@@ -14,11 +31,7 @@ class PEGameObject{
 
 	
 	public: 
-		static int println(lua_State *s){
-			printf("%s\n",lua_tostring(s,1));
-			return LUA_OK;
-		}
-
+		float x,y;
 		int width,height;
 		std::string name="";
 		lua_State *script = luaL_newstate();
@@ -37,7 +50,7 @@ class PEGameObject{
 
 		void init_script(std::string file){
 			
-			lua_register(script,"println",PEGameObject::println);
+			pelua::register_lua_funcs(script);
 			
 			int res=luaL_loadfile(script,file.c_str());
 			if(res !=LUA_OK){
@@ -49,7 +62,7 @@ class PEGameObject{
 			//try calling update function;
 			
 			lua_pcall(script,0,0,0);
-			lua_getglobal(script,"onUpdate");
+			lua_getglobal(script,"onLoad");
 			if(lua_pcall(script,0,0,0)!=LUA_OK){
 				printf("error running update script %s\n",lua_tostring(script,-1));
 			}

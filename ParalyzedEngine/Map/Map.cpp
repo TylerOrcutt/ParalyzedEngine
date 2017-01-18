@@ -26,6 +26,7 @@ void PEMap::parseMap(std::string map){
 
 PEDictionary * dic = JSONParser::parseJson(map);
 
+dic->printDictionary();
 //dic->printDictionary();
 int totalblocks=0;
 PEDictionaryItem *mapdata =  dic->get(0);
@@ -35,9 +36,16 @@ if(mapinfo !=nullptr){
  PEDictionary:: printSubItems(mapinfo->items,5);
  printf("Map width: %d \n",atoi(mapinfo->getItem("width")->value.c_str()));
   printf("Map height: %d \n",atoi(mapinfo->getItem("height")->value.c_str()));
+
+
+
  width=atoi(mapinfo->getItem("width")->value.c_str());
  height =atoi(mapinfo->getItem("height")->value.c_str());
-if(width<=0 || height<=0){
+int spcount=atoi(mapinfo->getItem("SheetCount")->value.c_str());
+printf("Map SpriteSheets: %d\n",spcount);
+spritesheets.resize(spcount);
+ 
+ if(width<=0 || height<=0){
   printf("failed to load map\n");
 }
 
@@ -66,6 +74,18 @@ if(blockinfo !=nullptr){
     }
 
 }
+
+
+PEDictionaryItem * spinfo = mapdata->getItem("SpriteSheets");
+//PEDictionary::printSubItems(spinfo->items,5);
+	if(spinfo !=nullptr){
+		for(int i=0;i<spinfo->items.size();i++){
+			PEDictionaryItem * item = spinfo->getItem(i);
+			int id = atoi(item->getItem("id")->value.c_str());
+			spritesheets[0] =  PE_load_texture(item->getItem("File")->value.c_str());
+		}
+	}
+
 /*for (int i=0;i<dic->size();i++){
   if(dic->get(i)->key=="SpriteSheet"){
   //spritesheets.push_back(PE_load_texture(dic->get(i)->getItem("loc")->value.c_str()));
@@ -96,4 +116,15 @@ void PEMap::Update(){
 	for(int i=0;i<props.size();i++){
 		props[i]->Update();
 	}
+}
+
+void PEMap::Draw(PETwoDCamera *cam){
+	for(int x=0;x<width;x++){
+		for(int y=0;y<height;y++){
+			PEBlock *blk =&blocks[x][y];
+	//		PE_draw_sprite(
+				
+		}
+	}
+	
 }

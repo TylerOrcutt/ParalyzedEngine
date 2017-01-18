@@ -13,7 +13,7 @@
 typedef struct PETexture{
     int width;
     int  height;
- 
+    char *file; 
      
     GLuint textureID;
 }PETexture;

@@ -26,14 +26,14 @@ void PEMap::parseMap(std::string map){
 
 PEDictionary * dic = JSONParser::parseJson(map);
 
-dic->printDictionary();
+//dic->printDictionary();
 //dic->printDictionary();
 int totalblocks=0;
 PEDictionaryItem *mapdata =  dic->get(0);
 PEDictionaryItem * mapinfo = mapdata->getItem("Map");
 if(mapinfo !=nullptr){
   printf("found map info\n");
- PEDictionary:: printSubItems(mapinfo->items,5);
+ //PEDictionary:: printSubItems(mapinfo->items,5);
  printf("Map width: %d \n",atoi(mapinfo->getItem("width")->value.c_str()));
   printf("Map height: %d \n",atoi(mapinfo->getItem("height")->value.c_str()));
 
@@ -85,29 +85,38 @@ PEDictionaryItem * spinfo = mapdata->getItem("SpriteSheets");
 			spritesheets[0] =  PE_load_texture(item->getItem("File")->value.c_str());
 		}
 	}
+PEDictionaryItem * pinfo = mapdata->getItem("Props");
+if(pinfo!=nullptr){
+	for(int i=0;i<pinfo->items.size();i++){
+		PEDictionaryItem * item = pinfo->getItem(i);
+		std::string name = item->getItem("name")->value;
+		float x = atof(item->getItem("x")->value.c_str());
+		float y = atof(item->getItem("y")->value.c_str());
 
-/*for (int i=0;i<dic->size();i++){
-  if(dic->get(i)->key=="SpriteSheet"){
-  //spritesheets.push_back(PE_load_texture(dic->get(i)->getItem("loc")->value.c_str()));
- //  printf("%c \n ",dic->get(i)->getItem("loc")->value.c_str());
-    //printf("not block\n");
-    continue;
-  }
- PEBlock block;
-  block.x=atof(dic->get(i)->getItem("x")->value.c_str());
-    block.y=atof(dic->get(i)->getItem("y")->value.c_str());
-      block.width=atof(dic->get(i)->getItem("width")->value.c_str());
-        block.height=atof(dic->get(i)->getItem("height")->value.c_str());
+		int id=-1;
+		for(int p=0;p<dataObjects.size();p++){
+			if(name==dataObjects[p]->name){
+				id=p;
+				break;
+			}
+		}
+		if(id<0){
+			printf("loading Prop: %s\n",name.c_str());
+			dataObjects.push_back(new PEGameObjectData(name,std::string("Props/"+name+"/"+name+".prop")));
+			id = dataObjects.size()-1;
 
-          block.imgx=atof(dic->get(i)->getItem("imgx")->value.c_str());
-    block.imgy=atof(dic->get(i)->getItem("imgy")->value.c_str());
-        blocks.push_back(block);
-        totalblocks++;
- // printf("posX: %f\n",blocks[i].x);
- // break;
-}*/
+		}
+		props.push_back(new PEProp(name,dataObjects[id]));
+				props[props.size()-1]->x =x;
+				props[props.size()-1]->y=y;
 
-props.push_back(new PEProp("bush",10,10));
+
+	//	printf("found Prop: %s\n",name.c_str());
+	//
+	}}
+	printf("Found %d props\nFound %d unique dataobjects\n",props.size(),dataObjects.size());
+
+//props.push_back(new PEProp("bush",10,10));
 delete dic;
 printf("Loaded %i blocks\n",totalblocks);
 }
@@ -119,12 +128,28 @@ void PEMap::Update(){
 }
 
 void PEMap::Draw(PETwoDCamera *cam){
+	glBindTexture(GL_TEXTURE_2D,spritesheets[0]->textureID);
 	for(int x=0;x<width;x++){
 		for(int y=0;y<height;y++){
 			PEBlock *blk =&blocks[x][y];
-	//		PE_draw_sprite(
+			PE_draw_sprite(spritesheets[0], (x*32)-cam->getX(),(y*32)-cam->getY(),32,32,blk->imgx,blk->imgy,32,32);
 				
 		}
 	}
 	
+	for(int p=0;p<props.size();p++){
+		float x = props[p]->x;
+		float y = props[p]->y;
+		PEGameObjectData * obj = props[p]->object;
+		for(int i=0;i<obj->width;i++){
+			for(int j=0;j<obj->height;j++){
+				PEGameObjectBlock  bls = obj->blocks[i][j];
+				PE_draw_sprite(spritesheets[0], (x+(i*32))-cam->getX(),
+						(y+(j*32))-cam->getY(),32,32,bls.imgx,bls.imgy,
+						 32,32);
+
+			}
+		}
+		}
+
 }

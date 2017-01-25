@@ -6,7 +6,7 @@ class PEProp : public PEGameObject{
 	
 	public:
 		PEProp():PEGameObject(){}
-		PEProp(std::string _name,int w,int h):PEGameObject(_name,w,h){
+		PEProp(std::string _name,PEGameObjectData * obj):PEGameObject(_name,obj){
 		}
 		void Load(const char *file);
 		void Update();

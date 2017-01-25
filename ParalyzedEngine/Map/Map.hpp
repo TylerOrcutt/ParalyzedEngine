@@ -31,6 +31,7 @@ private:
 	std::vector<PEGameObject*> props;
 	int width,height;
 	std::vector<PETexture *> spritesheets;
+	std::vector<PEGameObjectData *>dataObjects;
 public:
 	PEMap(){
 	}

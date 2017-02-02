@@ -20,7 +20,7 @@ find_package(Lua REQUIRED)
 
 include_directories(${GLIB_INCLUDE_DIR} ${LUA_INCLUDE_DIRS} ${FREETYPE_INCLUDE_DIRS} ${GLIBCONFIG_INCLUDE_DIR} ${CMAKE_CURRENT_SOURCE_DIR}/include)
 
-add_library(ParalyzedEngine STATIC ParalyzedEngine.c Window.c SpriteRenderer.c  Network/WebClient.c Network/TCPClient.c Shaders/ShaderProgram.c  Texture.c TextRenderer.c PEDictionary.cpp JSON/JSONParser.cpp Map/Map.cpp Model.cpp Memory/PEalloc/PEalloc.cpp GameObjects/PEProp.cpp)
+add_library(ParalyzedEngine STATIC ParalyzedEngine.c Window.c SpriteRenderer.c  Network/WebClient.c Network/TCPClient.c Shaders/ShaderProgram.c  Texture.c TextRenderer.c PEDictionary.cpp JSON/JSONParser.cpp Map/Map.cpp Model.cpp Memory/PEalloc/PEalloc.cpp GameObjects/PEProp.cpp LUA/PELuaFunctions.cpp)
 
 target_link_libraries(ParalyzedEngine  ${FREETYPE_LIBRARY} ${LUA_LIBRARY} ${SOIL_LIBRARY} ${OPENSSL_LIBRARIES} ${GL_LIBRARY} ${GLIB_LIBRARIES}    X11 GL GLU  )
 

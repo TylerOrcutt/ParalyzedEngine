@@ -144,7 +144,7 @@ void Draw(){
     glBindVertexArray(vao);
    // glBindBuffer(GL_ARRAY_BUFFER,vbo);
    glEnableVertexAttribArray(0); 
-    glDrawElements(GL_TRIANGLES, 8,GL_UNSIGNED_INT,0);
+    glDrawElements(GL_TRIANGLES, 12,GL_UNSIGNED_INT,0);
   glDisableVertexAttribArray(0);
    // glBindBuffer(GL_ARRAY_BUFFER,0);
 glBindVertexArray(0);

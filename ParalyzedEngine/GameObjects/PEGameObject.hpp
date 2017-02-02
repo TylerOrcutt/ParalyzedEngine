@@ -98,6 +98,7 @@ class PEGameObject{
 
 	
 	public: 
+	
 		float x,y;
 		int width,height;
 		std::string name="";
@@ -110,17 +111,26 @@ class PEGameObject{
 		PEGameObject(std::string _name, PEGameObjectData * _object){
 	//		width=_width;
 	//		height=_height;
+		 
 			name =_name;
 			object = _object;
 			init_script(std::string("Props/"+_name+"/"+name+".lua").c_str());
+
 		}
 
 
 		void init_script(std::string file){
+ 
+  
+		lua_pushliteral(script, "this"); 
+    lua_pushlightuserdata(script, (void *)this); 
+    lua_settable(script, LUA_REGISTRYINDEX);
 			
+
 			pelua::register_lua_funcs(script);
 			
 			int res=luaL_loadfile(script,file.c_str());
+		
 			if(res !=LUA_OK){
 				printf("failed to load %s script\n", file.c_str());
 				return;

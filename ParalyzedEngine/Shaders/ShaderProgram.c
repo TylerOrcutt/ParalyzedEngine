@@ -201,7 +201,7 @@ int PE_load_shaderProgram(PEShaderProgram * program, const char * vertexShaderSo
 
  
     strcat(source,"void main() {");
-   // strcat(source,"gl_Position = tmatrix * vec4(position,1.0);");
+    strcat(source,"gl_Position = tmatrix * vec4(position,1.0);");
 
         strcat(source,"}");
 

@@ -11,7 +11,7 @@
 #include "../Camera/PETwoDCamera.hpp"
 #include "../SpriteRenderer.h"
 #include "../Texture.h"
-
+#define MAP_SCALE 1
 
 struct PEBlock{
 float x=0;

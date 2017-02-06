@@ -104,14 +104,14 @@ class PEGameObject{
 		std::string name="";
 		lua_State *script = luaL_newstate();
 		PEGameObjectData * object;
-		
+		float rotation=0.f;
 		PEGameObject(){}
 		
 
 		PEGameObject(std::string _name, PEGameObjectData * _object){
 	//		width=_width;
 	//		height=_height;
-		 
+		 rotation=0.0f;
 			name =_name;
 			object = _object;
 			init_script(std::string("Props/"+_name+"/"+name+".lua").c_str());
@@ -136,7 +136,7 @@ class PEGameObject{
 				return;
 			}
 
-			printf("testing LUA script\n");
+		//	printf("testing LUA script\n");
 			//try calling update function;
 			
 			lua_pcall(script,0,0,0);
@@ -168,6 +168,12 @@ class PEGameObject{
 
 		std::string getName(){
 			return name;
+		}
+		float getRotation(){
+			return rotation;
+		}
+		void setRotation(float rot){
+			rotation=rot;
 		}
 		
 };

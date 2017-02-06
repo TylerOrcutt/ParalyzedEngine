@@ -24,3 +24,16 @@ int pelua::moveRight(lua_State *scpt){
 
 	return LUA_OK;
 }
+
+int pelua::rotateObject(lua_State *scpt){
+	PEGameObject *obj = getObject(scpt);
+	int rot = lua_tointeger(scpt,1);
+	obj->rotation+=rot;
+	if(obj->rotation>360){
+		obj->rotation=obj->rotation/360;
+	}
+ 
+ 
+
+	return LUA_OK;
+}

@@ -13,10 +13,12 @@ inline int println(lua_State *s){
 extern PEGameObject * getObject(lua_State *);
 extern int moveLeft(lua_State *);
 extern int moveRight(lua_State *);
+extern int rotateObject(lua_State *);
 inline void register_lua_funcs(lua_State *state){
 	lua_register(state,"println",println);
-		lua_register(state,"moveLeft",moveLeft);
-			lua_register(state,"moveRight",moveRight);
+	lua_register(state,"moveLeft",moveLeft);
+	lua_register(state,"moveRight",moveRight);
+	lua_register(state,"rotateObject",rotateObject);
 }
 }
 

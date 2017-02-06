@@ -1,5 +1,5 @@
 #include "Map.hpp"
-
+#include <math.h>
 
 std::string PEMap::load_map(const char * file){
  std::fstream f;
@@ -123,9 +123,9 @@ printf("Loaded %i blocks\n",totalblocks);
 
 void PEMap::Update(){
 	for(int i=0;i<props.size();i++){
-		if(i==1){
+	//	if(i==1){
 		props[i]->Update();
-		}
+	//	}
 	}
 }
 
@@ -134,8 +134,9 @@ void PEMap::Draw(PETwoDCamera *cam){
 	for(int x=0;x<width;x++){
 		for(int y=0;y<height;y++){
 			PEBlock *blk =&blocks[x][y];
-			PE_draw_sprite(spritesheets[0], (x*32)-cam->getX(),(y*32)-cam->getY(),32,32,blk->imgx,blk->imgy,32,32);
-				
+ 
+ 
+			PE_draw_sprite(spritesheets[0], ((x*(32*MAP_SCALE))-cam->getX()),(y*(32*MAP_SCALE))-cam->getY(),(32*MAP_SCALE),(32*MAP_SCALE),blk->imgx,blk->imgy,32,32);
 		}
 	}
 	
@@ -143,15 +144,36 @@ void PEMap::Draw(PETwoDCamera *cam){
 		float x = props[p]->x;
 		float y = props[p]->y;
 		PEGameObjectData * obj = props[p]->object;
+		bool rot = false;
+		if(props[p]->rotation !=0){
+			glPushMatrix();
+			glLoadIdentity();
+			rot=true;
+			//printf("object rotated %f\n",props[p]->rotation);
+
+			
+				glTranslatef( x-cam->getX(),(y)-cam->getY(),0.0);
+					glRotatef(props[p]->rotation,0,0,1.f);
+		}
+
 		for(int i=0;i<obj->width;i++){
 			for(int j=0;j<obj->height;j++){
 				PEGameObjectBlock  bls = obj->blocks[i][j];
+				if(!rot){
 				PE_draw_sprite(spritesheets[0], (x+(i*32))-cam->getX(),
-						(y+(j*32))-cam->getY(),32,32,bls.imgx,bls.imgy,
+						(y+(j*32))-cam->getY() ,32,32,bls.imgx,bls.imgy,
 						 32,32);
+				}else{
+						PE_draw_sprite(spritesheets[0],(i*32)-(obj->width*32/2),
+					(j*32)-(obj->height*32/2),32,32,bls.imgx,bls.imgy,
+						 32,32);
+				}
 
 			}
 		}
+		if(rot)
+			glPopMatrix();
+	 
 		}
 
 }

@@ -11,8 +11,10 @@
 #include "../Camera/PETwoDCamera.hpp"
 #include "../SpriteRenderer.h"
 #include "../Texture.h"
+#include <map>
+#ifndef MAP_SCALE
 #define MAP_SCALE 1
-
+#endif
 struct PEBlock{
 float x=0;
 float y=0;;
@@ -32,6 +34,7 @@ private:
 	int width,height;
 	std::vector<PETexture *> spritesheets;
 	std::vector<PEGameObjectData *>dataObjects;
+
 public:
 	PEMap(){
 	}

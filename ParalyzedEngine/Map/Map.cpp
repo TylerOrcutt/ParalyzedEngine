@@ -141,7 +141,7 @@ void PEMap::Draw(PETwoDCamera *cam){
 	}
 	
 	for(int p=0;p<props.size();p++){
-		float x = props[p]->x;
+		float x = props[p]->x ;
 		float y = props[p]->y;
 		PEGameObjectData * obj = props[p]->object;
 		bool rot = false;
@@ -152,7 +152,7 @@ void PEMap::Draw(PETwoDCamera *cam){
 			//printf("object rotated %f\n",props[p]->rotation);
 
 			
-				glTranslatef( x-cam->getX(),(y)-cam->getY(),0.0);
+				glTranslatef( (x+(obj->width*32*MAP_SCALE/2)*MAP_SCALE)-cam->getX(),(y+(obj->height*32*MAP_SCALE/2)*MAP_SCALE)-cam->getY(),0.0);
 					glRotatef(props[p]->rotation,0,0,1.f);
 		}
 
@@ -160,12 +160,12 @@ void PEMap::Draw(PETwoDCamera *cam){
 			for(int j=0;j<obj->height;j++){
 				PEGameObjectBlock  bls = obj->blocks[i][j];
 				if(!rot){
-				PE_draw_sprite(spritesheets[0], (x+(i*32))-cam->getX(),
-						(y+(j*32))-cam->getY() ,32,32,bls.imgx,bls.imgy,
+				PE_draw_sprite(spritesheets[0], ((x+(i*(32*MAP_SCALE)))*MAP_SCALE)-cam->getX(),
+				((y+(j*(32)))*MAP_SCALE)-cam->getY() ,32*MAP_SCALE,32*MAP_SCALE,bls.imgx,bls.imgy,
 						 32,32);
 				}else{
-						PE_draw_sprite(spritesheets[0],(i*32)-(obj->width*32/2),
-					(j*32)-(obj->height*32/2),32,32,bls.imgx,bls.imgy,
+						PE_draw_sprite(spritesheets[0],(i*32*MAP_SCALE)-(obj->width*(32*MAP_SCALE)/2),
+					(j*32*MAP_SCALE)-(obj->height*(32*MAP_SCALE)/2),32*MAP_SCALE,32*MAP_SCALE,bls.imgx,bls.imgy,
 						 32,32);
 				}
 

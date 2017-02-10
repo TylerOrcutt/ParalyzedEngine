@@ -4,6 +4,9 @@
 #include <string>
 #include <lua.hpp>
 #include <fstream>
+#include <map>
+#include <typeinfo>
+#include "PEGameObjectController.hpp"
 #include "../JSON/JSONParser.hpp"
 #include "../PEDictionary.hpp"
 #include "../Memory/PEalloc/PEalloc.h"
@@ -89,6 +92,7 @@ struct PEGameObjectData{
 	}
 };
 
+ PEGameObjectController * (*controllerType)();
 class PEGameObject{
 	
 	
@@ -98,7 +102,8 @@ class PEGameObject{
 
 	
 	public: 
-	
+	static 	std::map<std::string,  controllerType > types;
+		PEGameObjectController * controller=NULL;
 		float x,y;
 		int width,height;
 		std::string name="";
@@ -111,10 +116,12 @@ class PEGameObject{
 		PEGameObject(std::string _name, PEGameObjectData * _object){
 	//		width=_width;
 	//		height=_height;
+
+	//    controller =  types["bush"]();
 		 rotation=0.0f;
 			name =_name;
 			object = _object;
-			init_script(std::string("Props/"+_name+"/"+name+".lua").c_str());
+		//	init_script(std::string("Props/"+_name+"/"+name+".lua").c_str());
 
 		}
 
@@ -151,10 +158,13 @@ class PEGameObject{
 		
 		virtual void Load(const char *){}
 		virtual void Update(){
-			lua_getglobal(script,"onUpdate");
+		if(controller!=NULL){
+			controller->Update();
+		}
+		/*	lua_getglobal(script,"onUpdate");
 			if(lua_pcall(script,0,0,0)!=LUA_OK){
-				printf("failed updating object bush\n");
-			}
+		//		printf("failed updating object bush\n");
+			}*/
 		}
 		virtual void Draw(){}
 		

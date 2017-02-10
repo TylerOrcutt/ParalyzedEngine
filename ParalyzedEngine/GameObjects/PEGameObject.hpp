@@ -92,7 +92,8 @@ struct PEGameObjectData{
 	}
 };
 
- PEGameObjectController * (*controllerType)();
+ typedef PEGameObjectController * (*controllerType)();
+
 class PEGameObject{
 	
 	
@@ -102,7 +103,15 @@ class PEGameObject{
 
 	
 	public: 
-	static 	std::map<std::string,  controllerType > types;
+	static 	std::map<std::string,  controllerType > objectTypes;
+	static std::string a;
+
+	static void addMap(std::string test,controllerType a){
+		 
+		objectTypes.insert(std::pair<std::string,controllerType>(test,a));
+		printf("Total Object types: %i \n",objectTypes.size());
+	}
+	
 		PEGameObjectController * controller=NULL;
 		float x,y;
 		int width,height;
@@ -117,7 +126,7 @@ class PEGameObject{
 	//		width=_width;
 	//		height=_height;
 
-	//    controller =  types["bush"]();
+	    controller =  objectTypes[_name]();
 		 rotation=0.0f;
 			name =_name;
 			object = _object;

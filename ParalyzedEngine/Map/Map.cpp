@@ -123,9 +123,9 @@ printf("Loaded %i blocks\n",totalblocks);
 
 void PEMap::Update(){
 	for(int i=0;i<props.size();i++){
-	//	if(i==1){
+		if(i<5 || props[i]->name!="bush"){
 		props[i]->Update();
-	//	}
+		}
 	}
 }
 

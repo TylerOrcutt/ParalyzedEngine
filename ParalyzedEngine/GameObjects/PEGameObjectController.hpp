@@ -3,7 +3,14 @@
 
 class PEGameObjectController{
     public:
-    static PEGameObjectController* create(){ return new PEGameObjectController;}
+    float x,y;
+    	float rotation=0.f;
+    //PEGameObject* object;
+    static PEGameObjectController* create(){ return new PEGameObjectController();}
+   
+   PEGameObjectController(){
+    //   object=obj;
+   }
     virtual void Update(){
 
     }

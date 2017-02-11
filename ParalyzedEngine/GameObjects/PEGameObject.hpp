@@ -113,12 +113,12 @@ class PEGameObject{
 	}
 	
 		PEGameObjectController * controller=NULL;
-		float x,y;
+		//float x,y;
 		int width,height;
 		std::string name="";
 		lua_State *script = luaL_newstate();
 		PEGameObjectData * object;
-		float rotation=0.f;
+	
 		PEGameObject(){}
 		
 
@@ -127,7 +127,7 @@ class PEGameObject{
 	//		height=_height;
 
 	    controller =  objectTypes[_name]();
-		 rotation=0.0f;
+	
 			name =_name;
 			object = _object;
 		//	init_script(std::string("Props/"+_name+"/"+name+".lua").c_str());
@@ -188,12 +188,7 @@ class PEGameObject{
 		std::string getName(){
 			return name;
 		}
-		float getRotation(){
-			return rotation;
-		}
-		void setRotation(float rot){
-			rotation=rot;
-		}
+
 		
 };
 #endif

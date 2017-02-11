@@ -107,8 +107,8 @@ if(pinfo!=nullptr){
 
 		}
 		props.push_back(new PEProp(name,dataObjects[id]));
-				props[props.size()-1]->x =x;
-				props[props.size()-1]->y=y;
+				props[props.size()-1]->controller->x =x;
+				props[props.size()-1]->controller->y=y;
 
 
 	//	printf("found Prop: %s\n",name.c_str());
@@ -123,9 +123,9 @@ printf("Loaded %i blocks\n",totalblocks);
 
 void PEMap::Update(){
 	for(int i=0;i<props.size();i++){
-		if(i<5 || props[i]->name!="bush"){
+	//	if(i<5 || props[i]->name!="bush"){
 		props[i]->Update();
-		}
+	//	}
 	}
 }
 
@@ -141,19 +141,19 @@ void PEMap::Draw(PETwoDCamera *cam){
 	}
 	
 	for(int p=0;p<props.size();p++){
-		float x = props[p]->x ;
-		float y = props[p]->y;
+		float x = props[p]->controller->x ;
+		float y = props[p]->controller->y;
 		PEGameObjectData * obj = props[p]->object;
 		bool rot = false;
-		if(props[p]->rotation !=0){
+		if(props[p]->controller->rotation !=0){
 			glPushMatrix();
 			glLoadIdentity();
 			rot=true;
-			//printf("object rotated %f\n",props[p]->rotation);
+	//	printf("object rotated %f\n",props[p]->controller->rotation);
 
 			
 				glTranslatef( (x+(obj->width*32*MAP_SCALE/2)*MAP_SCALE)-cam->getX(),(y+(obj->height*32*MAP_SCALE/2)*MAP_SCALE)-cam->getY(),0.0);
-					glRotatef(props[p]->rotation,0,0,1.f);
+					glRotatef(props[p]->controller->rotation,0,0,1.f);
 		}
 
 		for(int i=0;i<obj->width;i++){

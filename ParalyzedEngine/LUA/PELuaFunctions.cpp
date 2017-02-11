@@ -13,26 +13,26 @@ PEGameObject* pelua::getObject(lua_State *scpt){
 int pelua::moveLeft(lua_State *scpt){
 
 	PEGameObject *obj = getObject(scpt);
-	obj->x--;
+	//obj->x--;
 
 	return LUA_OK;
 }
 int pelua::moveRight(lua_State *scpt){
 
 	PEGameObject *obj = getObject(scpt);
-	obj->x++;
+	//obj->x++;
 
 	return LUA_OK;
 }
 
 int pelua::rotateObject(lua_State *scpt){
 	PEGameObject *obj = getObject(scpt);
-	int rot = lua_tointeger(scpt,1);
+	/*int rot = lua_tointeger(scpt,1);
 	obj->rotation+=rot;
 	if(obj->rotation>360){
 		obj->rotation=obj->rotation/360;
 	}
- 
+ */
  
 
 	return LUA_OK;

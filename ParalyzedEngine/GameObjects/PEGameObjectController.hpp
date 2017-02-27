@@ -14,6 +14,9 @@ class PEGameObjectController{
     virtual void Update(){
 
     }
+    virtual void onCollide(PEGameObjectController *obj){
+
+    }
 };
 
 /*

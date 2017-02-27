@@ -152,7 +152,7 @@ void PEMap::Draw(PETwoDCamera *cam){
 	//	printf("object rotated %f\n",props[p]->controller->rotation);
 
 			
-				glTranslatef( (x+(obj->width*32*MAP_SCALE/2)*MAP_SCALE)-cam->getX(),(y+(obj->height*32*MAP_SCALE/2)*MAP_SCALE)-cam->getY(),0.0);
+				glTranslatef( (x+(obj->width*32*MAP_SCALE)*MAP_SCALE)-cam->getX(),(y+(obj->height*32*MAP_SCALE)*MAP_SCALE)-cam->getY(),0.0);
 					glRotatef(props[p]->controller->rotation,0,0,1.f);
 		}
 

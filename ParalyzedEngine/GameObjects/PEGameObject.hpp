@@ -125,9 +125,11 @@ class PEGameObject{
 		PEGameObject(std::string _name, PEGameObjectData * _object){
 	//		width=_width;
 	//		height=_height;
-
-	    controller =  objectTypes[_name]();
-	
+	 if(objectTypes[_name]!=NULL){
+	   controller =  objectTypes[_name]();
+	 }else{
+		 controller= PEGameObjectController::create();
+	 }
 			name =_name;
 			object = _object;
 		//	init_script(std::string("Props/"+_name+"/"+name+".lua").c_str());

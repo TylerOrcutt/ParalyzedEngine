@@ -1,5 +1,5 @@
-rm -R build
-mkdir build
-cd build
-cmake ../
-make 
+#rm -R build
+#mkdir build
+#cd build
+#cmake ../
+#make 

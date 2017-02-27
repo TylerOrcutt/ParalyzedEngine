@@ -7,6 +7,6 @@ void * PE_malloc(size_t size){
     if(UNLIKELY(!pt && size)){
         return NULL;
     }
-    printf("allocated %i bytes\n",size);
+    //printf("allocated %i bytes\n",size);
     return pt;
 }
